@@ -1,0 +1,10 @@
+/*.sass*/
+
+# Ignore all logfiles and tempfiles.
+/log/*.log
+/tmp
+
+#ignore the public directory
+#public/**
+/*config/database.yml*/
+.sass-cache

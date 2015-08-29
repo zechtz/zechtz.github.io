@@ -111,3 +111,13 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     width: 90%;
     margin: 0 auto;
 }
+/*========================================
+  Content
+========================================*/
+.content{
+  padding: 3em 0;
+  text-align: center;
+  .wrapper{
+    width: 60%;
+  }
+}

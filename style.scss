@@ -159,6 +159,7 @@ Header
       font-weight: 700;
       color: #fff;
       text-transform: uppercase;
+      margin-bottom: 1em;
     }
     p{
       text-transform: uppercase;
@@ -168,6 +169,9 @@ Header
       margin-bottom: 1em;
       font-family: 'Cabin';
       letter-spacing: 3px;
+      &.baseline{
+        font-size: 1.2rem;
+      }
       em{
         font-style: italic;
         font-family: 'Playfair Display', serif;

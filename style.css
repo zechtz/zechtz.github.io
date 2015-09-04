@@ -7,7 +7,6 @@
 /* ===========================================
 SASS VARIABLES
 ============================================ */
-/*@import 'css/color-pallete';*/
 /* ===========================================
 THE USUAL STUFF BODY, RESET ETC
 =========================================== */
@@ -161,6 +160,44 @@ Header
         background-color: #fff;
         padding: 15px 35px;
         color: #000; }
+    .header .container ul li {
+      display: inline; }
+      .header .container ul li a {
+        color: #cecece;
+        padding: 1em;
+        font-size: 1.2em; }
+      .header .container ul li i {
+        color: #cecece; }
+
+/*=======================================
+About Me
+=======================================*/
+.about {
+  height: 100%;
+  position: relative;
+  top: 0;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .about .container {
+    width: 60%;
+    margin: 0 auto; }
+    .about .container p {
+      margin-bottom: 1em;
+      font-family: 'Cabin';
+      font-size: 1em; }
+      .about .container p.intro {
+        text-transform: uppercase;
+        color: #000;
+        letter-spacing: 3px; }
+    .about .container h2 {
+      font-family: 'Cabin';
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      font-weight: 700; }
 
 /*========================================
 Content

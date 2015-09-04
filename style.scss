@@ -220,7 +220,7 @@ Header
     a.link-zack{
       font-weight: 700;
       text-transform: uppercase;
-      font-size: 9em;
+      font-size: 5em;
       color: #fff;
       padding: 0 0 0.125em;
       &::before{
@@ -259,10 +259,10 @@ Header
         outline: none;
         text-decoration: none;
         position: relative;
-        font-size: 10em;
+        font-size: 3em;
         line-height: 1;
         color: #fff;
-        letter-spacing: 20px;
+        letter-spacing: 10px;
         display: inline-block;
       }
     }

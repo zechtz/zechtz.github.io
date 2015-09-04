@@ -242,12 +242,34 @@ Header
     width: 90%;
     position: absolute;
     top: 30px; }
-    .header .nav-container .nav ul li {
-      display: inline; }
-      .header .nav-container .nav ul li a {
-        padding: 0 1em;
-        color: #fff;
-        text-transform: uppercase; }
+    .header .nav-container .nav ul {
+      margin-top: 10px; }
+      .header .nav-container .nav ul li {
+        display: inline; }
+        .header .nav-container .nav ul li a {
+          padding: 0 1em;
+          color: #fff;
+          text-transform: uppercase; }
+    .header .nav-container .logo {
+      background: url("images/logo.svg") no-repeat;
+      width: 273px;
+      height: 60px;
+      position: absolute;
+      top: -15px;
+      float: left; }
+      @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        .header .nav-container .logo {
+          top: 13px;
+          width: 22%; } }
+      @media only screen and (max-width: 768px) {
+        .header .nav-container .logo {
+          top: 20px;
+          width: 30%;
+          margin-left: 0.5em; } }
+      @media only screen and (max-width: 420px) {
+        .header .nav-container .logo {
+          top: 22px;
+          width: 50%; } }
 
 /*=======================================
 About Me

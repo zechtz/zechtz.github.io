@@ -161,14 +161,26 @@ Header
         background-color: #fff;
         padding: 15px 35px;
         color: #000; }
-    .header .container ul li {
-      display: inline; }
-      .header .container ul li a {
-        color: #cecece;
-        padding: 1em;
-        font-size: 1.2em; }
-      .header .container ul li i {
-        color: #cecece; }
+    .header .container em {
+      font-style: italic;
+      font-family: 'Playfair Display', serif; }
+    .header .container ul {
+      margin-top: 2em; }
+      .header .container ul li {
+        display: inline; }
+        .header .container ul li a {
+          color: #cecece;
+          padding: 1em;
+          font-size: 1em;
+          text-transform: uppercase;
+          -webkit-transition: all 0.5s ease-in-out;
+          -moz-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
+          font-weight: bold; }
+          .header .container ul li a:hover {
+            color: #ddd; }
+        .header .container ul li i {
+          color: #cecece; }
     .header .container a.link-zack {
       font-weight: 700;
       text-transform: uppercase;
@@ -224,7 +236,9 @@ Header
       position: absolute;
       bottom: 20px;
       left: 70%;
-      background: #00a65a; }
+      font-weight: 700;
+      background: #00a65a;
+      font-family: 'Cabin'; }
 
 /*=======================================
 About Me

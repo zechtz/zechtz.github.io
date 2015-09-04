@@ -191,13 +191,26 @@ Header
         color: #000;
       }
     }
+    em{
+      font-style: italic;
+      font-family: 'Playfair Display', serif;
+    }
     ul{
+      margin-top: 2em;
       li{
         display: inline;
         a{
           color: #cecece;
           padding: 1em;
-          font-size: 1.2em;
+          font-size: 1em;
+          text-transform: uppercase;
+          -webkit-transition: all 0.5s ease-in-out;
+          -moz-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
+          font-weight: bold;
+          &:hover{
+            color: #ddd;
+          }
         }
         i{
           color: #cecece;
@@ -267,7 +280,9 @@ Header
       position: absolute;
       bottom: 20px;
       left: 70%;
+      font-weight: 700;
       background: $green;
+      font-family: 'Cabin';
     }
   }
 }

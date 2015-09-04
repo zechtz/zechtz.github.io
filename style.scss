@@ -208,7 +208,7 @@ Header
       font-weight: 700;
       text-transform: uppercase;
       font-size: 9em;
-      color: #cecece;
+      color: #fff;
       padding: 0 0 0.125em;
       &::before{
         right: 0;
@@ -246,9 +246,10 @@ Header
         outline: none;
         text-decoration: none;
         position: relative;
-        font-size: 8em;
+        font-size: 10em;
         line-height: 1;
-        color: #9e9ba4;
+        color: #fff;
+        letter-spacing: 20px;
         display: inline-block;
       }
     }
@@ -259,8 +260,14 @@ Header
     }
     &:hover{
       span{
-        color: transparent;
+        color: lighten(#fff, 0.1);
       }
+    }
+    a.view-project{
+      position: absolute;
+      bottom: 20px;
+      left: 70%;
+      background: $green;
     }
   }
 }

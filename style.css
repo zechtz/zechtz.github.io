@@ -173,7 +173,7 @@ Header
       font-weight: 700;
       text-transform: uppercase;
       font-size: 9em;
-      color: #cecece;
+      color: #fff;
       padding: 0 0 0.125em; }
       .header .container a.link-zack::before {
         right: 0;
@@ -209,16 +209,22 @@ Header
         outline: none;
         text-decoration: none;
         position: relative;
-        font-size: 8em;
+        font-size: 10em;
         line-height: 1;
-        color: #9e9ba4;
+        color: #fff;
+        letter-spacing: 20px;
         display: inline-block; }
     .header .container span {
       position: relative;
       -webkit-transition: color 0.3s;
       transition: color 0.3s; }
     .header .container:hover span {
-      color: transparent; }
+      color: white; }
+    .header .container a.view-project {
+      position: absolute;
+      bottom: 20px;
+      left: 70%;
+      background: #00a65a; }
 
 /*=======================================
 About Me

@@ -285,6 +285,24 @@ Header
       font-family: 'Cabin';
     }
   }
+  .nav-container{
+    margin: 0 auto;
+    width: 90%;
+    position: absolute;
+    top: 30px;
+  .nav{
+    ul{
+      li{
+        display: inline;
+        a{
+          padding: 0 1em;
+          color: #fff;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
 }
 /*=======================================
 About Me

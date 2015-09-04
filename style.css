@@ -239,6 +239,17 @@ Header
       font-weight: 700;
       background: #00a65a;
       font-family: 'Cabin'; }
+  .header .nav-container {
+    margin: 0 auto;
+    width: 90%;
+    position: absolute;
+    top: 30px; }
+    .header .nav-container .nav ul li {
+      display: inline; }
+      .header .nav-container .nav ul li a {
+        padding: 0 1em;
+        color: #fff;
+        text-transform: uppercase; }
 
 /*=======================================
 About Me

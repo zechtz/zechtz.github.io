@@ -13,8 +13,8 @@ THE USUAL STUFF BODY, RESET ETC
 =========================================== */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
   border: 0;
-  font: inherit;
   font-size: 100%;
+  font: inherit;
   margin: 0;
   padding: 0;
   vertical-align: baseline; }
@@ -34,10 +34,10 @@ table {
   border-spacing: 0; }
 
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   *behavior: url(/assets/boxsizing.htc);
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   word-wrap: break-word; }
 
 body, html {
@@ -46,10 +46,10 @@ body, html {
   padding: 0; }
 
 body {
+  -webkit-font-smoothing: antialiased;
   background: #fff;
   color: #444;
-  font: 15px/1.6 'Cabin',OpenSansRegular, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased; }
+  font: 15px/1.6 'Cabin',OpenSansRegular, Helvetica, Arial, sans-serif; }
 
 strong {
   font-weight: bold; }
@@ -69,12 +69,12 @@ iframe {
   max-width: 100%; }
 
 a {
-  color: #006ea5;
-  text-decoration: none;
-  -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   -ms-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  color: #006ea5;
+  text-decoration: none;
   transition: all 0.25s ease-in-out; }
 
 a:hover {
@@ -97,23 +97,23 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   display: block; }
 
 .wrapper {
-  width: 90%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 90%; }
 
 /*========================================
   Header
 ========================================*/
 header {
-  min-height: 100vh;
-  height: 382px;
   background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(#4678b2), to(#7b5283));
-  line-height: 100vh; }
+  height: 382px;
+  line-height: 100vh;
+  min-height: 100vh; }
 
 /*========================================
   Content
 ========================================*/
 .content {
-  padding: 3em 0;
-  text-align: center; }
+  width: 60%; }
   .content .wrapper {
-    width: 60%; }
+    padding: 3em 0;
+    text-align: center; }

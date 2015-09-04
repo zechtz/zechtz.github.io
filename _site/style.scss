@@ -385,29 +385,32 @@ About Me
         }
       }
       .title{
+        display: block;
         text-align: center;
-        font-size: 13px;
-        line-height: 2em;
-        text-shadow: #cbcccc 0 1px 0;
-        color: #474747;
-        font-weight: normal;
-        margin-bottom: 0;
-        -moz-border-radius-topleft: 5px;
-        -webkit-border-top-left-radius: 5px;
-        border-top-left-radius: 5px;
-        -moz-border-radius-topright: 5px;
-        -webkit-border-top-right-radius: 5px;
-        border-top-right-radius: 5px;
-        font-family: "Helvetica Neue", Arial, "Lucida Grande", "Lucida Sans Unicode", Lucida, sans-serif;
-        background: #aaa url('images/code_bg.png') top repeat-x;
-        border: 1px solid #565656;
-        border-top-color: #cbcbcb;
-        border-left-color: #a5a5a5;
-        border-right-color: #a5a5a5;
-        border-bottom: 0
+        margin: 0 2px -2px 0;
+        padding: 5px 0;
+        -webkit-border-radius: 5px 5px 0 0;
+        -moz-border-radius: 5px 5px 0 0;
+        border-radius: 5px 5px 0 0;
+        -webkit-box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+        -moz-box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+        box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+        font: 400 16px/24px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        color: #444;
+        text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+        background-color: #f7f7f7;
+        background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…IgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), color-stop(7%, #cfcfcf), to(#aaa));
+        background-image: -webkit-linear-gradient(top, #f7f7f7 0%, #cfcfcf 7%, #aaa 100%);
+        background-image: -moz-linear-gradient(top, #f7f7f7 0%, #cfcfcf 7%, #aaa 100%);
+        background-image: -o-linear-gradient(top, #f7f7f7 0%, #cfcfcf 7%, #aaa 100%);
+        background-image: linear-gradient(top, #f7f7f7 0%, #cfcfcf 7%, #aaa 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#aaaaaa',GradientType=0 );
+        border-bottom: 1px solid #111;
       }
       code{
         background-color: transparent;
+        padding: 10px;
         .lineno{
           text-align: right;
           font-size: 13px;

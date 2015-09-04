@@ -146,7 +146,8 @@ Header
       font-family: 'Cabin';
       letter-spacing: 3px; }
       .header .container p em {
-        font-family: 'serif'; }
+        font-style: italic;
+        font-family: 'Playfair Display', serif; }
     .header .container .button {
       background-color: transparent;
       border: 1px solid #fff;

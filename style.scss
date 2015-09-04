@@ -332,17 +332,12 @@ Header
 About Me
 =======================================*/
 .about{
-  height: 100%;
+  overflow: hidden;
+  height: 100vh;
   position: relative;
   top: 0;
   width: 100%;
-  min-height: 100vh;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   .container{
-    width: 60%;
     margin: 0 auto;
     p{
       margin-bottom: 1em;
@@ -355,6 +350,20 @@ About Me
       }
     }
     h2{
+      font-family: 'Cabin';
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+  }
+  .feature-image{
+    position: absolute;
+    top: 150px;
+    left: 61%;
+  }
+  .text{
+    padding: 10em 0 0 0;
+    h1{
       font-family: 'Cabin';
       font-size: 2.5rem;
       text-transform: uppercase;

@@ -278,17 +278,12 @@ Header
 About Me
 =======================================*/
 .about {
-  height: 100%;
+  overflow: hidden;
+  height: 100vh;
   position: relative;
   top: 0;
-  width: 100%;
-  min-height: 100vh;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; }
+  width: 100%; }
   .about .container {
-    width: 60%;
     margin: 0 auto; }
     .about .container p {
       margin-bottom: 1em;
@@ -299,6 +294,17 @@ About Me
         color: #000;
         letter-spacing: 3px; }
     .about .container h2 {
+      font-family: 'Cabin';
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      font-weight: 700; }
+  .about .feature-image {
+    position: absolute;
+    top: 150px;
+    left: 61%; }
+  .about .text {
+    padding: 10em 0 0 0; }
+    .about .text h1 {
       font-family: 'Cabin';
       font-size: 2.5rem;
       text-transform: uppercase;

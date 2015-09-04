@@ -105,17 +105,34 @@ Header
 ========================================*/
 .header {
   background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(#489bce), to(#2d274e));
+  height: 100%;
+  position: relative;
+  top: 0;
+  width: 100%;
   min-height: 100vh;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: center;
+  z-index: 1; }
+  .header:after {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    opacity: .4;
+    background: url("images/bg_top.jpg") no-repeat;
+    background-position: center center;
+    background-size: cover !important; }
   .header .container {
     text-align: center; }
     .header .container h1 {
       font-size: 160px;
       letter-spacing: 20px;
-      font-weight: 500;
+      font-weight: 700;
       color: #fff;
       text-transform: uppercase;
       line-height: 160px;

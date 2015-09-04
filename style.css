@@ -82,15 +82,15 @@ a:hover {
   text-decoration: none; }
 
 h1, .h1 {
-  font: 52px/62px OpenSansLight, Helvetica, Arial, sans-serif;
+  font: 52px/62px 'Cabin',OpenSansRegular, Helvetica, Arial, sans-serif;
   margin-bottom: 15px; }
 
 h2, .h2 {
-  font: 20px/1.125 OpenSansRegular, Helvetica, Arial, sans-serif;
+  font: 20px/1.125 'Cabin', OpenSansRegular, Helvetica, Arial, sans-serif;
   margin-bottom: 5px; }
 
 h3, .h3 {
-  font: bold 15px/1.33333333 OpenSansRegular, Helvetica, Arial, sans-serif;
+  font: bold 15px/1.33333333 'Cabin', OpenSansRegular, Helvetica, Arial, sans-serif;
   margin-bottom: 2px; }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -101,16 +101,43 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   width: 90%; }
 
 /*========================================
-  Header
+Header
 ========================================*/
-header {
-  background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(#4678b2), to(#7b5283));
-  height: 382px;
-  line-height: 100vh;
-  min-height: 100vh; }
+.header {
+  background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(#489bce), to(#2d274e));
+  min-height: 100vh;
+  height: 100%;
+  text-align: center; }
+  .header .container {
+    padding: 5em 0 0 0; }
+    .header .container h1 {
+      font-size: 160px;
+      letter-spacing: 20px;
+      font-weight: 500;
+      color: #fff;
+      text-transform: uppercase;
+      line-height: 160px;
+      margin: 20px 0;
+      text-indent: 40px; }
+    .header .container p {
+      text-transform: uppercase;
+      color: #cecece;
+      display: block;
+      font-size: 1.1rem;
+      margin-bottom: 1em;
+      font-family: 'Cabin';
+      letter-spacing: 3px; }
+      .header .container p em {
+        font-family: 'serif'; }
+    .header .container .button {
+      background-color: transparent;
+      border: 1px solid #fff;
+      padding: 20px;
+      display: inline-block;
+      text-transform: uppercase; }
 
 /*========================================
-  Content
+Content
 ========================================*/
 .content {
   width: 60%; }

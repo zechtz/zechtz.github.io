@@ -11,49 +11,49 @@
 /*@import 'css/color-pallete';*/
 
 @mixin click-rotator {
-    -moz-transform: rotate(90deg);
-    -moz-transition-duration: 0.3s;
-    -ms-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -o-transition-duration: 0.3s;
-    -webkit-transform: rotate(90deg);
-    -webkit-transition-duration: 0.3s;
-    transform: rotate(90deg);
-    transition-duration: 0.3s;
+  -moz-transform: rotate(90deg);
+  -moz-transition-duration: 0.3s;
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -o-transition-duration: 0.3s;
+  -webkit-transform: rotate(90deg);
+  -webkit-transition-duration: 0.3s;
+  transform: rotate(90deg);
+  transition-duration: 0.3s;
 }
 
 /* ===========================================
 THE USUAL STUFF BODY, RESET ETC
 =========================================== */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    margin: 0;
-    padding: 0;
-    vertical-align: baseline;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
 }
 ol, ul {
-    list-style: none;
+  list-style: none;
 }
 blockquote, q {
-    quotes: none;
+  quotes: none;
 }
 blockquote:before, blockquote:after, q:before, q:after {
-    content: '';
-    content: none;
+  content: '';
+  content: none;
 }
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 * {
-    *behavior: url(/assets/boxsizing.htc);
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    word-wrap: break-word;
+  *behavior: url(/assets/boxsizing.htc);
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
 }
 body, html{
   height: 100%;
@@ -61,77 +61,109 @@ body, html{
   padding: 0;
 }
 body {
-    -webkit-font-smoothing: antialiased;
-    background: #fff;
-    color: #444;
-    font: 15px/1.6 'Cabin',OpenSansRegular, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: #fff;
+  color: #444;
+  font: 15px/1.6 'Cabin',OpenSansRegular, Helvetica, Arial, sans-serif;
 }
 strong {
-    font-weight: bold;
+  font-weight: bold;
 }
 em {
-    font-style: italic;
+  font-style: italic;
 }
 img {
-    display: block;
-    max-width: 100%
+  display: block;
+  max-width: 100%
 }
 .lte7 img {
-    -ms-interpolation-mode: bicubic;
+  -ms-interpolation-mode: bicubic;
 }
 iframe {
-    display: block;
-    max-width: 100%
+  display: block;
+  max-width: 100%
 }
 a {
-    -moz-transition: all 0.25s ease-in-out;
-    -ms-transition: all 0.25s ease-in-out;
-    -o-transition: all 0.25s ease-in-out;
-    -webkit-transition: all 0.25s ease-in-out;
-    color: #006ea5;
-    text-decoration: none;
-    transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  color: #006ea5;
+  text-decoration: none;
+  transition: all 0.25s ease-in-out;
 }
 a:hover {
-    color: #0493da;
-    text-decoration: none;
+  color: #0493da;
+  text-decoration: none;
 }
 h1, .h1 {
-    font: 52px/62px OpenSansLight, Helvetica, Arial, sans-serif;
-    margin-bottom: 15px;
+  font: 52px/62px 'Cabin',OpenSansRegular, Helvetica, Arial, sans-serif;
+  margin-bottom: 15px;
 }
 h2, .h2 {
-    font: 20px/1.125 OpenSansRegular, Helvetica, Arial, sans-serif;
-    margin-bottom: 5px;
+  font: 20px/1.125 'Cabin', OpenSansRegular, Helvetica, Arial, sans-serif;
+  margin-bottom: 5px;
 }
 h3, .h3 {
-    font: bold 15px/1.33333333 OpenSansRegular, Helvetica, Arial, sans-serif;
-    margin-bottom: 2px;
+  font: bold 15px/1.33333333 'Cabin', OpenSansRegular, Helvetica, Arial, sans-serif;
+  margin-bottom: 2px;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-    display: block;
+  display: block;
 }
 
 .wrapper{
-    margin: 0 auto;
-    width: 90%;
+  margin: 0 auto;
+  width: 90%;
 }
 /*========================================
-  Header
+Header
 ========================================*/
-header{
-  background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgb(70, 120, 178)), to(rgb(123, 82, 131)));
-  height: 382px;
-  line-height: 100vh;
+.header{
+  background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgb(72, 155, 206)), to(rgb(45, 39, 78)));
   min-height: 100vh;
+  height: 100%;
+  text-align: center;
+  .container{
+    padding: 5em 0 0 0;
+    h1{
+      font-size: 160px;
+      letter-spacing: 20px;
+      font-weight: 500;
+      color: #fff;
+      text-transform: uppercase;
+      line-height: 160px;
+      margin: 20px 0;
+      text-indent: 40px;
+    }
+    p{
+      text-transform: uppercase;
+      color: #cecece;
+      display: block;
+      font-size: 1.1rem;
+      margin-bottom: 1em;
+      font-family: 'Cabin';
+      letter-spacing: 3px;
+      em{
+        font-family: 'serif';
+      }
+    }
+    .button{
+      background-color: transparent;
+      border: 1px solid #fff;
+      padding: 20px;
+      display: inline-block;
+      text-transform: uppercase;
+    }
+  }
 }
 /*========================================
-  Content
+Content
 ========================================*/
 .content{
-    width: 60%;
+  width: 60%;
   .wrapper{
-  padding: 3em 0;
-  text-align: center;
+    padding: 3em 0;
+    text-align: center;
   }
 }

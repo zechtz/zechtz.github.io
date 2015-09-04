@@ -107,9 +107,11 @@ Header
   background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(#489bce), to(#2d274e));
   min-height: 100vh;
   height: 100%;
-  text-align: center; }
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
   .header .container {
-    padding: 5em 0 0 0; }
+    text-align: center; }
     .header .container h1 {
       font-size: 160px;
       letter-spacing: 20px;

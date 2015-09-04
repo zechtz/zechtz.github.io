@@ -22,6 +22,14 @@
   transition-duration: 0.3s;
 }
 
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 /* ===========================================
 THE USUAL STUFF BODY, RESET ETC
 =========================================== */
@@ -123,9 +131,11 @@ Header
   background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgb(72, 155, 206)), to(rgb(45, 39, 78)));
   min-height: 100vh;
   height: 100%;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   .container{
-    padding: 5em 0 0 0;
+    text-align: center;
     h1{
       font-size: 160px;
       letter-spacing: 20px;

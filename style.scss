@@ -151,9 +151,17 @@ Header
     .button{
       background-color: transparent;
       border: 1px solid #fff;
-      padding: 20px;
+      padding: 15px 20px;
       display: inline-block;
       text-transform: uppercase;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      &:hover{
+        background-color: #fff;
+        padding: 15px 35px;
+        color: #000;
+      }
     }
   }
 }

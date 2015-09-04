@@ -1,0 +1,320 @@
+/* ----------------------------------------
+ * Project: Personal Page
+ * Date:September 2015
+ * Developer:Zech (@zechtz) www.watabelabs.com
+ * My Personal Github Page
+ /* ---------------------------------------- */
+/* ===========================================
+SASS VARIABLES
+============================================ */
+/* ===========================================
+THE USUAL STUFF BODY, RESET ETC
+=========================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  *behavior: url(/assets/boxsizing.htc);
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word; }
+
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background: #fff;
+  color: #444;
+  font: 15px/1.6 'Cabin',OpenSansRegular, Helvetica, Arial, sans-serif; }
+
+strong {
+  font-weight: bold; }
+
+em {
+  font-style: italic; }
+
+img {
+  display: block;
+  max-width: 100%; }
+
+.lte7 img {
+  -ms-interpolation-mode: bicubic; }
+
+iframe {
+  display: block;
+  max-width: 100%; }
+
+a {
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  color: #006ea5;
+  text-decoration: none;
+  transition: all 0.25s ease-in-out; }
+
+a:hover {
+  color: #0493da;
+  text-decoration: none; }
+
+h1, .h1 {
+  font: 52px/62px 'Cabin',OpenSansRegular, Helvetica, Arial, sans-serif;
+  margin-bottom: 15px; }
+
+h2, .h2 {
+  font: 20px/1.125 'Cabin', OpenSansRegular, Helvetica, Arial, sans-serif;
+  margin-bottom: 5px; }
+
+h3, .h3 {
+  font: bold 15px/1.33333333 'Cabin', OpenSansRegular, Helvetica, Arial, sans-serif;
+  margin-bottom: 2px; }
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  display: block; }
+
+.wrapper {
+  margin: 0 auto;
+  width: 90%; }
+
+/*========================================
+Header
+========================================*/
+.header {
+  background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(#489bce), to(#2d274e));
+  height: 100%;
+  position: relative;
+  top: 0;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1; }
+  .header:after {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    opacity: .4;
+    background: url("images/bg_top.jpg") no-repeat;
+    background-position: center center;
+    background-size: cover !important; }
+  .header .container {
+    text-align: center; }
+    .header .container h1 {
+      font-size: 3em;
+      letter-spacing: 10px;
+      font-weight: 700;
+      color: #fff;
+      text-transform: uppercase;
+      margin-bottom: 1em; }
+    .header .container p {
+      text-transform: uppercase;
+      color: #cecece;
+      display: block;
+      font-size: 1.1rem;
+      margin-bottom: 1em;
+      font-family: 'Cabin';
+      letter-spacing: 3px; }
+      .header .container p.baseline {
+        font-size: 1.2rem; }
+      .header .container p em {
+        font-style: italic;
+        font-family: 'Playfair Display', serif; }
+    .header .container .button {
+      background-color: transparent;
+      border: 1px solid #fff;
+      padding: 15px 20px;
+      display: inline-block;
+      text-transform: uppercase;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+      .header .container .button:hover {
+        background-color: #fff;
+        padding: 15px 35px;
+        color: #000; }
+    .header .container em {
+      font-style: italic;
+      font-family: 'Playfair Display', serif; }
+    .header .container ul {
+      margin-top: 2em; }
+      .header .container ul li {
+        display: inline; }
+        .header .container ul li a {
+          color: #cecece;
+          padding: 1em;
+          font-size: 1em;
+          text-transform: uppercase;
+          -webkit-transition: all 0.5s ease-in-out;
+          -moz-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
+          font-weight: bold; }
+          .header .container ul li a:hover {
+            color: #ddd; }
+        .header .container ul li i {
+          color: #cecece; }
+    .header .container a.link-zack {
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 5em;
+      color: #fff;
+      padding: 0 0 0.125em; }
+      .header .container a.link-zack::before {
+        right: 0;
+        top: 0;
+        -webkit-transform-origin: 100% 50%;
+        transform-origin: 100% 50%;
+        content: '';
+        width: 100%;
+        height: 3px;
+        z-index: -1;
+        background: #3A4945;
+        position: absolute;
+        -webkit-transform: scale3d(0, 1, 1);
+        transform: scale3d(0, 1, 1);
+        -webkit-transition: -webkit-transform 0.5s;
+        transition: transform 0.5s; }
+      .header .container a.link-zack::after {
+        left: 0;
+        bottom: 0;
+        -webkit-transform-origin: 0 50%;
+        transform-origin: 0 50%;
+        content: '';
+        width: 100%;
+        height: 3px;
+        z-index: -1;
+        background: #3A4945;
+        position: absolute;
+        -webkit-transform: scale3d(0, 1, 1);
+        transform: scale3d(0, 1, 1);
+        -webkit-transition: -webkit-transform 0.5s;
+        transition: transform 0.5s; }
+      .header .container a.link-zack.link {
+        outline: none;
+        text-decoration: none;
+        position: relative;
+        font-size: 3em;
+        line-height: 1;
+        color: #fff;
+        letter-spacing: 10px;
+        display: inline-block; }
+    .header .container span {
+      position: relative;
+      -webkit-transition: color 0.3s;
+      transition: color 0.3s; }
+    .header .container:hover span {
+      color: white; }
+    .header .container a.view-project {
+      display: none;
+      position: absolute;
+      top: 65%;
+      left: 80%;
+      font-weight: 700;
+      background: #00a65a;
+      font-family: 'Cabin'; }
+  .header .nav-container {
+    margin: 0 auto;
+    width: 90%;
+    position: absolute;
+    top: 30px; }
+    .header .nav-container .nav ul {
+      margin-top: 10px; }
+      .header .nav-container .nav ul li {
+        display: inline; }
+        .header .nav-container .nav ul li a {
+          padding: 0 1em;
+          color: #fff;
+          text-transform: uppercase; }
+    .header .nav-container .logo {
+      background: url("images/logo.svg") no-repeat;
+      width: 273px;
+      height: 60px;
+      position: absolute;
+      top: -15px;
+      float: left; }
+      @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        .header .nav-container .logo {
+          top: 13px;
+          width: 22%; } }
+      @media only screen and (max-width: 768px) {
+        .header .nav-container .logo {
+          top: 20px;
+          width: 30%;
+          margin-left: 0.5em; } }
+      @media only screen and (max-width: 420px) {
+        .header .nav-container .logo {
+          top: 22px;
+          width: 50%; } }
+
+/*=======================================
+About Me
+=======================================*/
+.about {
+  overflow: hidden;
+  height: 100vh;
+  position: relative;
+  top: 0;
+  width: 100%; }
+  .about .container {
+    margin: 0 auto; }
+    .about .container p {
+      margin-bottom: 1em;
+      font-family: 'Cabin';
+      font-size: 1em; }
+      .about .container p.intro {
+        text-transform: uppercase;
+        color: #000;
+        letter-spacing: 3px; }
+    .about .container h2 {
+      font-family: 'Cabin';
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      font-weight: 700; }
+  .about .feature-image {
+    position: absolute;
+    top: 150px;
+    left: 61%; }
+  .about .text {
+    padding: 10em 0 0 0; }
+    .about .text h1 {
+      font-family: 'Cabin';
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      font-weight: 700; }
+
+/*========================================
+Content
+========================================*/
+.content {
+  width: 60%; }
+  .content .wrapper {
+    padding: 3em 0;
+    text-align: center; }

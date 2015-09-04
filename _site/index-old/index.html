@@ -1,9 +1,19 @@
----
-layout: default
----
-
 <div class="header">
-  {% include navigation.html %}
+  <div class="nav-container">
+  <div class="nav left">
+    <a href="/">
+      <div class="logo"></div>
+    </a>
+  </div>
+  <nav class="nav right">
+    <ul>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#">Mtabe Musings</a></li>
+      <li><a href="#">My Projects</a></li>
+    </ul>
+  </nav>
+</div>
+
   <div class="wrapper">
     <div class="container">
       <p>Hello, i am</p>
@@ -25,7 +35,7 @@ layout: default
 </div>
 <!--about me-->
 <div class="about" id="about">
-  <div class="clearfix"></div>
+<div class="clearfix"></div>
   <section class="features section-padding" id="features">
     <div class="container">
       <div class="row">
@@ -40,19 +50,17 @@ layout: default
 
           </div>
             <div class="code-block">
-              {% highlight ruby linenos %}
-              def show
-                puts "Outputting a very lo-o-o-o-o-o-o-ng line"
-                @widget = Widget(params[:id])
-                respond_to do |format|
-                  format.html # show.html.erb
-                  format.json { render json: @widget }
-                end
-              end
-              {% endhighlight %}
+              <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="lineno">1</span> <span class="k">def</span> <span class="nf">show</span>
+<span class="lineno">2</span>                 <span class="nb">puts</span> <span class="s2">&quot;Outputting a very lo-o-o-o-o-o-o-ng line&quot;</span>
+<span class="lineno">3</span>                 <span class="vi">@widget</span> <span class="o">=</span> <span class="no">Widget</span><span class="p">(</span><span class="n">params</span><span class="o">[</span><span class="ss">:id</span><span class="o">]</span><span class="p">)</span>
+<span class="lineno">4</span>                 <span class="n">respond_to</span> <span class="k">do</span> <span class="o">|</span><span class="nb">format</span><span class="o">|</span>
+<span class="lineno">5</span>                   <span class="nb">format</span><span class="o">.</span><span class="n">html</span> <span class="c1"># show.html.erb</span>
+<span class="lineno">6</span>                   <span class="nb">format</span><span class="o">.</span><span class="n">json</span> <span class="p">{</span> <span class="n">render</span> <span class="ss">json</span><span class="p">:</span> <span class="vi">@widget</span> <span class="p">}</span>
+<span class="lineno">7</span>                 <span class="k">end</span>
+<span class="lineno">8</span>               <span class="k">end</span></code></pre></div>
             </div>
         </div>
-        </div>
+      </div>
       </div>
     </div>
     <div class="feature-image"><img src="images/zech_profile.svg" alt="responsive devices"></div>

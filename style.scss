@@ -363,7 +363,7 @@ About Me
     left: 61%;
   }
   .text{
-    padding: 12em 0 0 0;
+    padding: 5em 0 0 0;
     h1{
       font-family: 'Cabin';
       font-size: 2.5rem;
@@ -375,6 +375,59 @@ About Me
       font-size: 1.2em;
       color: #545454;
     }
+    .code-block{
+      .highlight{
+        border: 1px solid #ccc;
+        border-radius: 3px; 
+        pre{
+          overflow-y: hidden;
+          overflow-x: auto;
+        }
+      }
+      .title{
+        text-align: center;
+        font-size: 13px;
+        line-height: 2em;
+        text-shadow: #cbcccc 0 1px 0;
+        color: #474747;
+        font-weight: normal;
+        margin-bottom: 0;
+        -moz-border-radius-topleft: 5px;
+        -webkit-border-top-left-radius: 5px;
+        border-top-left-radius: 5px;
+        -moz-border-radius-topright: 5px;
+        -webkit-border-top-right-radius: 5px;
+        border-top-right-radius: 5px;
+        font-family: "Helvetica Neue", Arial, "Lucida Grande", "Lucida Sans Unicode", Lucida, sans-serif;
+        background: #aaa url('images/code_bg.png') top repeat-x;
+        border: 1px solid #565656;
+        border-top-color: #cbcbcb;
+        border-left-color: #a5a5a5;
+        border-right-color: #a5a5a5;
+        border-bottom: 0
+      }
+      code{
+        background-color: transparent;
+        .lineno{
+          text-align: right;
+          font-size: 13px;
+          line-height: 1.45em;
+          background: #073642 url('images/noise.png') top left !important;
+          border-right: 1px solid #00232c !important;
+          -webkit-box-shadow: #083e4b -1px 0 inset;
+          -moz-box-shadow: #083e4b -1px 0 inset;
+          box-shadow: #083e4b -1px 0 inset;
+          text-shadow: #021014 0 -1px;
+          padding: .8em !important;
+          -webkit-border-radius: 0;
+          -moz-border-radius: 0;
+          -ms-border-radius: 0;
+          -o-border-radius: 0;
+          border-radius: 0;
+          color: #93a1a1;
+        }
+      }
+    }
   }
 }
 /*========================================
@@ -382,7 +435,7 @@ Content
 ========================================*/
 .content{
   width: 60%;
-  .wrapper{
+  .wcorapper{
     padding: 3em 0;
     text-align: center;
   }

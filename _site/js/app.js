@@ -44,12 +44,3 @@ $(document).ready(function () {
 		$(this).find('>:first').toggleClass('fa-bars fa-close');
 	});
 });
-/*-----------------------------------------------------------------------------------*/
-/*  STICKY NAVIGATION
-/*-----------------------------------------------------------------------------------*/
-(function($) {
-  "use strict";
-$(document).ready(function(){
-    $(".sticky").sticky({topSpacing:0});
-});
-})(jQuery);

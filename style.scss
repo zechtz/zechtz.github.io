@@ -55,10 +55,15 @@ table {
     *behavior: url(/assets/boxsizing.htc);
     word-wrap: break-word;
 }
+body, html{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 body {
     background: #fff;
     color: #444;
-    font: 15px/1.6 OpenSansRegular, Helvetica, Arial, sans-serif;
+    font: 15px/1.6 'Cabin',OpenSansRegular, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
 }
 strong {
@@ -110,6 +115,15 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 .wrapper{
     width: 90%;
     margin: 0 auto;
+}
+/*========================================
+  Header
+========================================*/
+header{
+  min-height: 100vh;
+  height: 382px;
+  background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgb(70, 120, 178)), to(rgb(123, 82, 131)));
+  line-height: 100vh;
 }
 /*========================================
   Content

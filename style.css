@@ -129,14 +129,11 @@ Header
   .header .container {
     text-align: center; }
     .header .container h1 {
-      font-size: 160px;
-      letter-spacing: 20px;
+      font-size: 3em;
+      letter-spacing: 10px;
       font-weight: 700;
       color: #fff;
-      text-transform: uppercase;
-      line-height: 160px;
-      margin: 20px 0;
-      text-indent: 40px; }
+      text-transform: uppercase; }
     .header .container p {
       text-transform: uppercase;
       color: #cecece;
@@ -233,9 +230,10 @@ Header
     .header .container:hover span {
       color: white; }
     .header .container a.view-project {
+      display: none;
       position: absolute;
-      bottom: 20px;
-      left: 70%;
+      top: 65%;
+      left: 80%;
       font-weight: 700;
       background: #00a65a;
       font-family: 'Cabin'; }

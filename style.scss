@@ -154,14 +154,11 @@ Header
   .container{
     text-align: center;
     h1{
-      font-size: 160px;
-      letter-spacing: 20px;
+      font-size: 3em;
+      letter-spacing: 10px;
       font-weight: 700;
       color: #fff;
       text-transform: uppercase;
-      line-height: 160px;
-      margin: 20px 0;
-      text-indent: 40px;
     }
     p{
       text-transform: uppercase;
@@ -277,9 +274,10 @@ Header
       }
     }
     a.view-project{
+      display: none;
       position: absolute;
-      bottom: 20px;
-      left: 70%;
+      top: 65%;
+      left: 80%;
       font-weight: 700;
       background: $green;
       font-family: 'Cabin';

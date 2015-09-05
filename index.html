@@ -1,0 +1,60 @@
+---
+layout: default
+---
+
+<div class="header">
+  {% include new_nav.html %}
+  <div class="wrapper">
+    <div class="container">
+      <p>Hello, i am</p>
+      <a class="link link-zack" href="#"><span data-letters-l="ZA" data-letters-r="CH">ZACHARIAH Ngonyani</span></a>
+      <p class="baseline">A Rubyst <em>&amp;</em> Front-end Web Developer from Tanzania</p>
+      <a class="button round" href="#about">About me <em>&amp;</em> contact</a>
+      <div class="clearfix"></div>
+      <div class="clearfix"></div>
+      <div class="social">
+        <ul>
+          <li><i class="fa fa-inbox"></i><a href="#">zachariahn@gmail.com</a></li>
+          <li><i class="fa fa-github"></i><a href="https://github.com/zechtz/">github/zechtz</a></li>
+          <li><i class="fa fa-twitter"></i><a href="https://twitter.com/zechtz">twitter/zechtz</a></li>
+        </ul>
+      </div>
+      <a class="button round view-project" href="#">view my skills</a>
+    </div>
+  </div>
+</div>
+<!--about me-->
+<div class="about" id="about">
+  <div class="clearfix"></div>
+  <section class="features section-padding" id="features">
+    <div class="container">
+      <div class="row">
+        <div class="medium-7 medium-push-right-5">
+          <div class="text">
+            <div class="feature-list">
+              <h1>01/ About Me</h1>
+              <p>This is where i talk about me, but i am a bit keyword shy today to i'll just placehold this section with some jibber </p>
+              <p>I am a geek who spend my time traveling through East Africa. I splimt most of my time between Mombasa, Kenya and Arusha, Tanzania which is where I am basically based</p>
+              <p>I am a self taught computer programmer and an overall nice guy, but i am not a very 'politically correct' kind of guy,so i will always tell you as it is even if you won't like it</p>
+              <p>I love making web based software applications and I am the founder of WatabeLabs(link), a web dev shop in Arusha</p>
+            </div>
+            <div class="code-block">
+              <p class="title">ruby</p>
+              {% highlight ruby linenos %}
+              def name(name)
+              @widget = Widget.new
+              respond_to do |format|
+              format.html # show.html.erb
+              format.json { render json: @widget }
+              end
+              end
+              {% endhighlight %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="feature-image"><img src="images/zech_profile.svg" alt="responsive devices"></div>
+  </section>
+</div>
+<!--about me ends-->

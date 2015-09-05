@@ -1,4 +1,3 @@
-
 My Persoanal Github Homepage
 ====================
 
@@ -17,4 +16,11 @@ neccesary though.
 The site is powered by Jekyll and styling done using 
 SASS so be sure to have sass installed if you want to make additional
 contributions
+
+### So in a nutshell these are technologies used
+
+- Javascript
+- Jekyll
+- Sass
+- Normal HTML ( will use markdown later)
 

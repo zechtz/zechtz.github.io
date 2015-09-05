@@ -364,6 +364,8 @@ About Me
         -o-border-radius: 0;
         border-radius: 0;
         color: #93a1a1; }
+  .about em {
+    font-family: 'Playfair Display', serif; }
 
 /*========================================
 Content

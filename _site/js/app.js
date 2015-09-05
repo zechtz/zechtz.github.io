@@ -5,7 +5,7 @@ jQuery(document).ready(function($) {
 });
 
 function moveToContainer() {
-    $('.overlay-menu a[href^="#"]').on('click', function(e) {
+    $('.overlay-menu a[href^="#"], a.button').on('click', function(e) {
         $('a[href^="#"]').removeClass('active');
         $(this).addClass('active');
         e.preventDefault();

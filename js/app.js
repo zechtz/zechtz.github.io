@@ -44,3 +44,17 @@ $(document).ready(function () {
 		$(this).find('>:first').toggleClass('fa-bars fa-close');
 	});
 });
+
+//Overlay navigation bar
+
+$(document).ready(function(){
+    $(".button a").click(function(){
+        $(".overlay").fadeToggle(200);
+       $(this).toggleClass('btn-open').toggleClass('btn-close');
+    });
+});
+$('.overlay').on('click', function(){
+    $(".overlay").fadeToggle(200);   
+    $(".button a").toggleClass('btn-open').toggleClass('btn-close');
+    open = false;
+});

@@ -5,7 +5,7 @@ jQuery(document).ready(function($) {
 });
 
 function moveToContainer() {
-    $('.nav a[href^="#"]').on('click', function(e) {
+    $('.overlay-menu a[href^="#"]').on('click', function(e) {
         $('a[href^="#"]').removeClass('active');
         $(this).addClass('active');
         e.preventDefault();
@@ -46,15 +46,7 @@ $(document).ready(function () {
 });
 
 //Overlay navigation bar
-
-$(document).ready(function(){
-    $(".button a").click(function(){
-        $(".overlay").fadeToggle(200);
-       $(this).toggleClass('btn-open').toggleClass('btn-close');
-    });
-});
-$('.overlay').on('click', function(){
-    $(".overlay").fadeToggle(200);   
-    $(".button a").toggleClass('btn-open').toggleClass('btn-close');
-    open = false;
+$('#toggle').click(function() {
+   $(this).toggleClass('active');
+   $('#overlay').toggleClass('open');
 });

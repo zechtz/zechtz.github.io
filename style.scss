@@ -492,7 +492,7 @@ Overlay Navigation Bar
     text-align: center;
     font-family: 'Vollkorn', serif;
   }
-  .button_container {
+  .button-container {
     position: fixed;
     top: 5%;
     right: 10%;
@@ -640,17 +640,18 @@ Overlay Navigation Bar
     &:hover {
       opacity: .7;
     }
-    .phone-icon{
-      background: url('images/phone.png') no-repeat;
+    i{
       width: 28px;
       height: 30px;
       display: inline-block;
       background-size: 28px 30px;
-      top: 0;
+      top: -3px;
       position: absolute;
       right: 60px;
       margin-left: 8px;
       display: block;
+      font-size: 2.5em;
+      color: $antolian-khaki;
     }
   }
 }

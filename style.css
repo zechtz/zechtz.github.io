@@ -415,7 +415,7 @@ Overlay Navigation Bar
     position: relative;
     text-align: center;
     font-family: 'Vollkorn', serif; }
-  .main-navigation .button_container {
+  .main-navigation .button-container {
     position: fixed;
     top: 5%;
     right: 10%;
@@ -424,18 +424,18 @@ Overlay Navigation Bar
     cursor: pointer;
     z-index: 100;
     transition: opacity .25s ease; }
-    .main-navigation .button_container:hover {
+    .main-navigation .button-container:hover {
       opacity: .7; }
-    .main-navigation .button_container.active .top {
+    .main-navigation .button-container.active .top {
       transform: translateY(11px) translateX(0) rotate(45deg);
       background: #FFF; }
-    .main-navigation .button_container.active .middle {
+    .main-navigation .button-container.active .middle {
       opacity: 0;
       background: #FFF; }
-    .main-navigation .button_container.active .bottom {
+    .main-navigation .button-container.active .bottom {
       transform: translateY(-11px) translateX(0) rotate(-45deg);
       background: #FFF; }
-    .main-navigation .button_container span {
+    .main-navigation .button-container span {
       background: #7B8372;
       border: none;
       height: 5px;
@@ -445,9 +445,9 @@ Overlay Navigation Bar
       left: 0;
       transition: all .35s ease;
       cursor: pointer; }
-      .main-navigation .button_container span:nth-of-type(2) {
+      .main-navigation .button-container span:nth-of-type(2) {
         top: 11px; }
-      .main-navigation .button_container span:nth-of-type(3) {
+      .main-navigation .button-container span:nth-of-type(3) {
         top: 22px; }
   .main-navigation .overlay {
     position: fixed;
@@ -535,14 +535,15 @@ Overlay Navigation Bar
     transition: opacity .25s ease; }
     .main-navigation .phone-container:hover {
       opacity: .7; }
-    .main-navigation .phone-container .phone-icon {
-      background: url("images/phone.png") no-repeat;
+    .main-navigation .phone-container i {
       width: 28px;
       height: 30px;
       display: inline-block;
       background-size: 28px 30px;
-      top: 0;
+      top: -3px;
       position: absolute;
       right: 60px;
       margin-left: 8px;
-      display: block; }
+      display: block;
+      font-size: 2.5em;
+      color: #7B8372; }

@@ -546,4 +546,9 @@ Overlay Navigation Bar
       margin-left: 8px;
       display: block;
       font-size: 2.5em;
-      color: #7B8372; }
+      color: #7B8372;
+      transition: all .35s ease-in-out;
+      -moz-transition: all .35s ease-in-out;
+      -webkit-transition: all .35s ease-in-out; }
+      .main-navigation .phone-container i.khaki {
+        color: #FFF !important; }

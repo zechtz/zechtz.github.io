@@ -305,12 +305,13 @@ Header
         }
       }
     }
+  }
     .logo {
       background: url('images/logo.svg') no-repeat;
       width: 273px;
       height: 60px;
       position: absolute;
-      top: -15px;
+      top: 20px;
       float: left;
       @media only screen and (min-width:768px) and (max-width:1024px) {
         top: 13px;
@@ -326,7 +327,6 @@ Header
         width: 50%;
       }
     }
-  }
 }
 /*=======================================
 About Me
@@ -626,6 +626,31 @@ Overlay Navigation Bar
     100% {
       opacity: 1;
       left: 0;
+    }
+  }
+  .phone-container {
+    position: fixed;
+    top: 5%;
+    right: 10%;
+    height: $button-height;
+    width: $button-width;
+    cursor: pointer;
+    z-index: 100;
+    transition: opacity .25s ease;
+    &:hover {
+      opacity: .7;
+    }
+    .phone-icon{
+      background: url('images/phone.png') no-repeat;
+      width: 28px;
+      height: 30px;
+      display: inline-block;
+      background-size: 28px 30px;
+      top: 0;
+      position: absolute;
+      right: 60px;
+      margin-left: 8px;
+      display: block;
     }
   }
 }

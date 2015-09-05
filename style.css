@@ -255,26 +255,26 @@ Header
           padding: 0 1em;
           color: #fff;
           text-transform: uppercase; }
-    .header .nav-container .logo {
-      background: url("images/logo.svg") no-repeat;
-      width: 273px;
-      height: 60px;
-      position: absolute;
-      top: -15px;
-      float: left; }
-      @media only screen and (min-width: 768px) and (max-width: 1024px) {
-        .header .nav-container .logo {
-          top: 13px;
-          width: 22%; } }
-      @media only screen and (max-width: 768px) {
-        .header .nav-container .logo {
-          top: 20px;
-          width: 30%;
-          margin-left: 0.5em; } }
-      @media only screen and (max-width: 420px) {
-        .header .nav-container .logo {
-          top: 22px;
-          width: 50%; } }
+  .header .logo {
+    background: url("images/logo.svg") no-repeat;
+    width: 273px;
+    height: 60px;
+    position: absolute;
+    top: 20px;
+    float: left; }
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      .header .logo {
+        top: 13px;
+        width: 22%; } }
+    @media only screen and (max-width: 768px) {
+      .header .logo {
+        top: 20px;
+        width: 30%;
+        margin-left: 0.5em; } }
+    @media only screen and (max-width: 420px) {
+      .header .logo {
+        top: 22px;
+        width: 50%; } }
 
 /*=======================================
 About Me
@@ -525,3 +525,25 @@ Overlay Navigation Bar
   100% {
     opacity: 1;
     left: 0; } }
+  .main-navigation .phone-container {
+    position: fixed;
+    top: 5%;
+    right: 10%;
+    height: 27px;
+    width: 35px;
+    cursor: pointer;
+    z-index: 100;
+    transition: opacity .25s ease; }
+    .main-navigation .phone-container:hover {
+      opacity: .7; }
+    .main-navigation .phone-container .phone-icon {
+      background: url("images/phone.png") no-repeat;
+      width: 28px;
+      height: 30px;
+      display: inline-block;
+      background-size: 28px 30px;
+      top: 0;
+      position: absolute;
+      right: 60px;
+      margin-left: 8px;
+      display: block; }

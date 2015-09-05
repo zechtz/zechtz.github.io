@@ -42,11 +42,11 @@ layout: default
               <p class="title">ruby</p>
               {% highlight ruby linenos %}
               def name(name)
-              @widget = Widget.new
-              respond_to do |format|
-              format.html # show.html.erb
-              format.json { render json: @widget }
-              end
+                @widget = Widget.new
+                respond_to do |format|
+                  format.html # show.html.erb
+                  format.json { render json: @widget }
+                end
               end
               {% endhighlight %}
             </div>

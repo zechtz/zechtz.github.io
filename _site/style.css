@@ -162,8 +162,8 @@ Header
       -webkit-transition: all 0.3s ease-in-out;
       -moz-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out;
-      margin-top: 10px;
-      margin-bottom: 0; }
+      margin-top: 20px;
+      margin-bottom: 10px; }
       .header .container .button:hover {
         background-color: #fff;
         padding: 15px 35px;
@@ -172,7 +172,7 @@ Header
       font-style: italic;
       font-family: 'Playfair Display', serif; }
     .header .container ul {
-      margin-top: 2em; }
+      margin-top: 10px; }
       .header .container ul li {
         display: inline; }
         .header .container ul li a {

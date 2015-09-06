@@ -179,7 +179,7 @@ Header
           transition: all 0.5s ease-in-out;
           font-weight: bold; }
           .header .container ul li a:hover {
-            color: #ddd; }
+            opacity: .7; }
         .header .container ul li i {
           color: #cecece; }
     .header .container a.link-zack {
@@ -554,3 +554,51 @@ Overlay Navigation Bar
       -webkit-transition: all .35s ease-in-out; }
       .main-navigation .phone-container i.khaki {
         color: #FFF !important; }
+
+/*===========================================
+Footer
+===========================================*/
+footer {
+  background: #26262a; }
+  footer .cta {
+    background: #353439;
+    padding: 1em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    footer .cta h1 {
+      color: #fff;
+      font-size: 2em;
+      margin-bottom: 0; }
+    footer .cta .button {
+      background-color: #1a1a1a;
+      border: 1px solid #fff;
+      padding: 15px 20px;
+      display: inline-block;
+      text-transform: uppercase;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      margin-bottom: 0; }
+      footer .cta .button:hover {
+        background-color: #26262a;
+        color: #fff; }
+    footer .cta .wrapper {
+      width: 80%; }
+  footer .nav {
+    padding: 1em 0; }
+    footer .nav .name h1 {
+      text-align: center;
+      color: #7B8372;
+      font-size: 1em;
+      text-transform: uppercase;
+      margin-bottom: 0; }
+    footer .nav .navigation {
+      padding: 1.4em 0;
+      text-align: center; }
+      footer .nav .navigation ul li {
+        display: inline; }
+        footer .nav .navigation ul li a {
+          text-transform: uppercase;
+          padding: 0 1em;
+          color: #7B8372; }

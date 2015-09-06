@@ -315,8 +315,9 @@ About Me
       font-weight: 700;
       color: #7B8372; }
     .about .text p {
-      font-size: 1.2em;
-      color: #545454; }
+      font-size: 1.3em;
+      /*color: #545454;*/
+      color: #000; }
     .about .text .code-block .highlight {
       border: 1px solid #ccc;
       border-radius: 3px; }

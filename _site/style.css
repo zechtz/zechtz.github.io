@@ -290,8 +290,9 @@ About Me
     .about .container p {
       margin-bottom: 1em;
       font-family: 'anisette-std-petite-2','museo-slab';
-      font-size: 1.2em;
-      font-weight: 100; }
+      font-size: 1.3em;
+      font-weight: 100;
+      color: #000; }
       .about .container p.intro {
         text-transform: uppercase;
         color: #000;

@@ -148,7 +148,8 @@ Header
       font-family: 'Cabin';
       letter-spacing: 3px; }
       .header .container p.baseline {
-        font-size: 1.2rem; }
+        font-size: 1.2rem;
+        margin-bottom: 0; }
       .header .container p em {
         font-style: italic;
         font-family: 'Playfair Display', serif; }
@@ -160,7 +161,9 @@ Header
       text-transform: uppercase;
       -webkit-transition: all 0.3s ease-in-out;
       -moz-transition: all 0.3s ease-in-out;
-      transition: all 0.3s ease-in-out; }
+      transition: all 0.3s ease-in-out;
+      margin-top: 10px;
+      margin-bottom: 0; }
       .header .container .button:hover {
         background-color: #fff;
         padding: 15px 35px;
@@ -191,7 +194,8 @@ Header
       font-size: 5em;
       color: #fff;
       padding: 0 0 0.125em;
-      font-family: 'Cabin'; }
+      font-family: 'Cabin';
+      margin-bottom: 10px; }
       .header .container a.link-zack::before {
         right: 0;
         top: 0;

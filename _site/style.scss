@@ -150,9 +150,9 @@ Header
     left: 0;
     content: '';
     opacity: .4;
-    background: url('images/bg_top.jpg') no-repeat;
-    /*background-position: center center;*/
-    /*background-size: cover !important;*/
+    background: url('images/hero-1.jpg') no-repeat;
+    background-position: center center;
+    background-size: cover !important;
   }
   .container{
     text-align: center;
@@ -533,7 +533,7 @@ Overlay Navigation Bar
       }
     }
     span {
-      background: $antolian-khaki;
+      background: #fff;
       border: none;
       height: 5px;
       width: 100%;
@@ -665,7 +665,7 @@ Overlay Navigation Bar
       margin-left: 8px;
       display: block;
       font-size: 2.5em;
-      color: $antolian-khaki;
+      color: #fff;
       transition: all .35s ease-in-out;
       -moz-transition: all .35s ease-in-out;
       -webkit-transition: all .35s ease-in-out;

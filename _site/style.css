@@ -127,9 +127,9 @@ Header
     left: 0;
     content: '';
     opacity: .4;
-    background: url("images/bg_top.jpg") no-repeat;
-    /*background-position: center center;*/
-    /*background-size: cover !important;*/ }
+    background: url("images/hero-1.jpg") no-repeat;
+    background-position: center center;
+    background-size: cover !important; }
   .header .container {
     text-align: center; }
     .header .container h1 {
@@ -449,7 +449,7 @@ Overlay Navigation Bar
       transform: translateY(-11px) translateX(0) rotate(-45deg);
       background: #FFF; }
     .main-navigation .button-container span {
-      background: #7B8372;
+      background: #fff;
       border: none;
       height: 5px;
       width: 100%;
@@ -559,7 +559,7 @@ Overlay Navigation Bar
       margin-left: 8px;
       display: block;
       font-size: 2.5em;
-      color: #7B8372;
+      color: #fff;
       transition: all .35s ease-in-out;
       -moz-transition: all .35s ease-in-out;
       -webkit-transition: all .35s ease-in-out; }

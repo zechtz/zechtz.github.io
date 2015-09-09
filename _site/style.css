@@ -149,7 +149,9 @@ Header
       letter-spacing: 3px; }
       .header .container p.baseline {
         font-size: 1.2rem;
-        margin-bottom: 0; }
+        margin-bottom: 0;
+        font-family: 'GTHaptik';
+        font-weight: 300; }
       .header .container p em {
         font-style: italic;
         font-family: 'Playfair Display', serif; }
@@ -617,5 +619,3 @@ footer {
           text-transform: uppercase;
           padding: 0 1em;
           color: #7B8372; }
-
-/*# sourceMappingURL=style.css.map */

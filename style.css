@@ -310,6 +310,10 @@ About Me
       font-size: 2.5rem;
       text-transform: uppercase;
       font-weight: 700; }
+    .about .container h1.intro {
+      font-family: 'GTHaptik';
+      font-weight: 100;
+      text-transform: none; }
   .about .feature-image {
     position: absolute;
     top: 150px;
@@ -613,3 +617,5 @@ footer {
           text-transform: uppercase;
           padding: 0 1em;
           color: #7B8372; }
+
+/*# sourceMappingURL=style.css.map */

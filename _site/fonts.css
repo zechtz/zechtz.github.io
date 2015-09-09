@@ -1,0 +1,171 @@
+@font-face {
+  font-family: 'GTHaptik-Oblique';
+  src: url('fonts/GTHaptikBlack-Oblique.eot');
+  src: url('fonts/GTHaptikBlack-Oblique.eot?#iefix') format('embedded-opentype'),
+  url('fonts/GTHaptikBlack-Oblique.woff') format('woff'),
+  url('fonts/GTHaptikBlack-Oblique.ttf')  format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'GTHaptik-Rotalic';
+  src: url('fonts/GTHaptikThin-Rotalic.eot');
+  src: url('fonts/GTHaptikThin-Rotalic.eot?#iefix') format('embedded-opentype'),
+  url('fonts/GTHaptikThin-Rotalic.woff') format('woff'),
+  url('fonts/GTHaptikThin-Rotalic.ttf')  format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'GTHaptik';
+  src: url('fonts/GTHaptik-Medium.eot');
+  src: url('fonts/GTHaptik-Medium.eot?#iefix') format('embedded-opentype'),
+  url('fonts/GTHaptik-Medium.woff') format('woff'),
+  url('fonts/GTHaptik-Medium.ttf')  format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GTHaptik-Rotalic';
+  src: url('fonts/GTHaptikBlack-Rotalic.eot');
+  src: url('fonts/GTHaptikBlack-Rotalic.eot?#iefix') format('embedded-opentype'),
+  url('fonts/GTHaptikBlack-Rotalic.woff') format('woff'),
+  url('fonts/GTHaptikBlack-Rotalic.ttf')  format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'GTHaptik-Oblique';
+  src: url('fonts/GTHaptikBold-Oblique.eot');
+  src: url('fonts/GTHaptikBold-Oblique.eot?#iefix') format('embedded-opentype'),
+  url('fonts/GTHaptikBold-Oblique.woff') format('woff'),
+  url('fonts/GTHaptikBold-Oblique.ttf')  format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'GTHaptikLazer-Rotalic';
+  src: url('fonts/GTHaptikLazer-Rotalic.eot');
+  src: url('fonts/GTHaptikLazer-Rotalic.eot?#iefix') format('embedded-opentype'),
+  url('fonts/GTHaptikLazer-Rotalic.woff') format('woff'),
+  url('fonts/GTHaptikLazer-Rotalic.ttf')  format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'GTHaptikLazer-Oblique';
+  src: url('fonts/GTHaptikLazer-Oblique.eot');
+  src: url('fonts/GTHaptikLazer-Oblique.eot?#iefix') format('embedded-opentype'),
+  url('fonts/GTHaptikLazer-Oblique.woff') format('woff'),
+  url('fonts/GTHaptikLazer-Oblique.ttf')  format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'GTHaptik-Rotalic';
+  src: url('fonts/GTHaptikMedium-Rotalic.eot');
+  src: url('fonts/GTHaptikMedium-Rotalic.eot?#iefix') format('embedded-opentype'),
+  url('fonts/GTHaptikMedium-Rotalic.woff') format('woff'),
+  url('fonts/GTHaptikMedium-Rotalic.ttf')  format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'GTHaptik-Oblique';
+  src: url('fonts/GTHaptikLight-Oblique.eot');
+  src: url('fonts/GTHaptikLight-Oblique.eot?#iefix') format('embedded-opentype'),
+  url('fonts/GTHaptikLight-Oblique.woff') format('woff'),
+  url('fonts/GTHaptikLight-Oblique.ttf')  format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'GTHaptik-Rotalic';
+  src: url('fonts/GTHaptikBold-Rotalic.eot');
+  src: url('fonts/GTHaptikBold-Rotalic.eot?#iefix') format('embedded-opentype'),
+  url('fonts/GTHaptikBold-Rotalic.woff') format('woff'),
+  url('fonts/GTHaptikBold-Rotalic.ttf')  format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'GTHaptik-Oblique';
+  src: url('fonts/GTHaptikRegular-Oblique.eot');
+  src: url('fonts/GTHaptikRegular-Oblique.eot?#iefix') format('embedded-opentype'),
+  url('fonts/GTHaptikRegular-Oblique.woff') format('woff'),
+  url('fonts/GTHaptikRegular-Oblique.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'GTHaptik';
+  src: url('fonts/GTHaptik-Bold.eot');
+  src: url('fonts/GTHaptik-Bold.eot?#iefix') format('embedded-opentype'),
+  url('fonts/GTHaptik-Bold.woff') format('woff'),
+  url('fonts/GTHaptik-Bold.ttf')  format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GTHaptik-Lazer';
+  src: url('fonts/GTHaptik-Lazer.eot');
+  src: url('fonts/GTHaptik-Lazer.eot?#iefix') format('embedded-opentype'),
+  url('fonts/GTHaptik-Lazer.woff') format('woff'),
+  url('fonts/GTHaptik-Lazer.ttf')  format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GTHaptik';
+  src: url('fonts/GTHaptik-Black.eot');
+  src: url('fonts/GTHaptik-Black.eot?#iefix') format('embedded-opentype'),
+  url('fonts/GTHaptik-Black.woff') format('woff'),
+  url('fonts/GTHaptik-Black.ttf')  format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GTHaptik-Rotalic';
+  src: url('fonts/GTHaptikRegular-Rotalic.eot');
+  src: url('fonts/GTHaptikRegular-Rotalic.eot?#iefix') format('embedded-opentype'),
+  url('fonts/GTHaptikRegular-Rotalic.woff') format('woff'),
+  url('fonts/GTHaptikRegular-Rotalic.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'GTHaptik-Oblique';
+  src: url('fonts/GTHaptikThin-Oblique.eot');
+  src: url('fonts/GTHaptikThin-Oblique.eot?#iefix') format('embedded-opentype'),
+  url('fonts/GTHaptikThin-Oblique.woff') format('woff'),
+  url('fonts/GTHaptikThin-Oblique.ttf')  format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'GTHaptik';
+  src: url('fonts/GTHaptik-Thin.eot');
+  src: url('fonts/GTHaptik-Thin.eot?#iefix') format('embedded-opentype'),
+  url('fonts/GTHaptik-Thin.woff') format('woff'),
+  url('fonts/GTHaptik-Thin.ttf')  format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GTHaptik-Oblique';
+  src: url('fonts/GTHaptikMedium-Oblique.eot');
+  src: url('fonts/GTHaptikMedium-Oblique.eot?#iefix') format('embedded-opentype'),
+  url('fonts/GTHaptikMedium-Oblique.woff') format('woff'),
+  url('fonts/GTHaptikMedium-Oblique.ttf')  format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'GTHaptik';
+  src: url('fonts/GTHaptik-Light.eot');
+  src: url('fonts/GTHaptik-Light.eot?#iefix') format('embedded-opentype'),
+  url('fonts/GTHaptik-Light.woff') format('woff'),
+  url('fonts/GTHaptik-Light.ttf')  format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}

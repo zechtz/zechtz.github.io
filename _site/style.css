@@ -572,6 +572,68 @@ Overlay Navigation Bar
       .main-navigation .phone-container i.khaki {
         color: #FFF !important; }
 
+/**
+ *---------------------------------------------------------
+ * Blog
+ *---------------------------------------------------------*/
+.blog {
+  padding: 4em 0; }
+  .blog .blog-content {
+    position: relative;
+    background: #fff;
+    border-radius: 2px;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+    color: #333;
+    cursor: pointer;
+    border: 1px solid #E9E9E9;
+    padding: 0; }
+    .blog .blog-content .blog-header {
+      padding: 10px 30px; }
+      .blog .blog-content .blog-header .blog-info {
+        width: 100%;
+        color: #8B8B8B; }
+        .blog .blog-content .blog-header .blog-info .blog-author {
+          color: #D8262C;
+          text-decoration: none;
+          color: #000;
+          font-weight: 300; }
+        .blog .blog-content .blog-header .blog-info .blog-length {
+          text-align: right; }
+      .blog .blog-content .blog-header .blog-title {
+        font-size: 30px;
+        line-height: 37px;
+        font-family: 'GTHaptik';
+        font-style: normal;
+        font-weight: 600; }
+        .blog .blog-content .blog-header .blog-title a {
+          color: #353535; }
+          .blog .blog-content .blog-header .blog-title a:hover {
+            color: #80b636;
+            text-decoration: underline; }
+    .blog .blog-content .blog-summary {
+      margin: 10px 30px;
+      font-size: 18px;
+      line-height: 28px;
+      color: #757575; }
+      .blog .blog-content .blog-summary p {
+        font-family: 'anisette-std-petite-2','museo-slab';
+        font-size: 1.1em;
+        color: #000;
+        font-weight: 100; }
+  .blog .wrapper {
+    width: 74%; }
+  .blog .blog-top {
+    padding: 2em 0;
+    text-align: center; }
+    .blog .blog-top h1.blog-title {
+      font-size: 5em;
+      font-family: 'GTHaptik';
+      font-style: normal;
+      font-weight: 900;
+      color: #7B8372; }
+
 /*===========================================
 Footer
 ===========================================*/

@@ -682,6 +682,84 @@ Overlay Navigation Bar
     }
   }
 }
+/**
+ *---------------------------------------------------------
+ * Blog
+ *---------------------------------------------------------*/
+.blog{
+  padding: 4em 0;
+  .blog-content{
+    position: relative;
+    background: #fff;
+    border-radius: 2px;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+    color: #333;
+    cursor: pointer;
+    border: 1px solid #E9E9E9;
+    padding: 0;
+    .blog-header{
+      padding: 10px 30px;
+      .blog-info{
+        width: 100%;
+        color: #8B8B8B;
+        .blog-author{
+          color: #D8262C;
+          text-decoration: none;
+          color: #000;
+          font-weight: 300;
+        }
+        .blog-length{
+          text-align: right;
+        }
+      }
+      .blog-title{
+        font-size: 30px;
+        line-height: 37px;
+        font-family: 'GTHaptik';
+        font-style: normal;
+        font-weight: 600;
+        a{
+          color: #353535;
+          &:hover{
+            color: $green-button-hover;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .blog-summary{
+      margin: 10px 30px;
+      font-size: 18px;
+      line-height: 28px;
+      color: #757575;
+      p{
+        font-family: 'anisette-std-petite-2','museo-slab';
+        font-size: 1.1em;
+        color: #000;
+        font-weight: 100;
+      }
+    }
+  }
+  .wrapper{
+    width: 74%;
+  }
+  .blog-top{
+    padding: 2em 0;
+    text-align: center;
+    h1.blog-title{
+      font-size: 5em;
+      font-family: 'GTHaptik';
+      font-style: normal;
+      font-weight: 900;
+      color: $antolian-khaki;
+    }
+    h3.blog-leading{
+    }
+  }
+}
+
 /*===========================================
 Footer
 ===========================================*/

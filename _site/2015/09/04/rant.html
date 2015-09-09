@@ -33,12 +33,18 @@ Bike lanes here are terribly thin.
 <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation.min.js"></script>
 <script src="js/app.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.0/jquery.nicescroll.min.js"></script>
+<script src="js/foundation.equalizer.js"></script>
 <script>
 $(document).ready(
   function() { 
     $("html").niceScroll();
   }
 );
+$(document).foundation({
+  equalizer : {
+    equalize_on_stack: true
+  }
+});
 </script>
 
   <!--<footer>

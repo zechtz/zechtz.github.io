@@ -270,7 +270,8 @@ Header
     height: 60px;
     position: absolute;
     top: 20px;
-    float: left; }
+    float: left;
+    left: -3%; }
     @media only screen and (min-width: 768px) and (max-width: 1024px) {
       .header .logo {
         top: 13px;
@@ -437,7 +438,7 @@ Overlay Navigation Bar
   .main-navigation .button-container {
     position: fixed;
     top: 5%;
-    right: 10%;
+    right: 5%;
     height: 27px;
     width: 35px;
     cursor: pointer;
@@ -546,7 +547,7 @@ Overlay Navigation Bar
   .main-navigation .phone-container {
     position: fixed;
     top: 5%;
-    right: 10%;
+    right: 5%;
     height: 27px;
     width: 35px;
     cursor: pointer;
@@ -618,10 +619,11 @@ Overlay Navigation Bar
       line-height: 28px;
       color: #757575; }
       .blog .blog-content .blog-summary p {
-        font-family: 'anisette-std-petite-2','museo-slab';
+        font-family: 'GTHaptic', 'anisette-std-petite-2','museo-slab';
         font-size: 1.1em;
         color: #000;
-        font-weight: 100; }
+        font-weight: 100;
+        font-style: normal; }
   .blog .wrapper {
     width: 74%; }
   .blog .blog-top {

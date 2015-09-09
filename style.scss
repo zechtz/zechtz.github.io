@@ -323,6 +323,7 @@ Header
     position: absolute;
     top: 20px;
     float: left;
+    left: -3%;
     @media only screen and (min-width:768px) and (max-width:1024px) {
       top: 13px;
       width: 22%;
@@ -516,7 +517,7 @@ Overlay Navigation Bar
   .button-container {
     position: fixed;
     top: 5%;
-    right: 10%;
+    right: 5%;
     height: $button-height;
     width: $button-width;
     cursor: pointer;
@@ -652,7 +653,7 @@ Overlay Navigation Bar
   .phone-container {
     position: fixed;
     top: 5%;
-    right: 10%;
+    right: 5%;
     height: $button-height;
     width: $button-width;
     cursor: pointer;
@@ -735,10 +736,11 @@ Overlay Navigation Bar
       line-height: 28px;
       color: #757575;
       p{
-        font-family: 'anisette-std-petite-2','museo-slab';
+        font-family: 'GTHaptic', 'anisette-std-petite-2','museo-slab';
         font-size: 1.1em;
         color: #000;
         font-weight: 100;
+        font-style: normal;
       }
     }
   }

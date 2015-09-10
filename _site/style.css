@@ -650,7 +650,8 @@ footer {
     padding: 1em 0;
     display: flex;
     flex-direction: column;
-    justify-content: center; }
+    justify-content: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
     footer .cta h1 {
       color: #fff;
       font-size: 2em;
@@ -671,7 +672,8 @@ footer {
     footer .cta .wrapper {
       width: 80%; }
   footer .nav {
-    padding: 1em 0; }
+    padding: 1em 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.2); }
     footer .nav .name h1 {
       text-align: center;
       color: #7B8372;

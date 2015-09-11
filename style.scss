@@ -716,7 +716,7 @@ Overlay Navigation Bar
         }
       }
       .blog-title{
-        font-size: 30px;
+        font-size: 2em;
         line-height: 37px;
         font-family: 'GTHaptik';
         font-style: normal;
@@ -724,7 +724,7 @@ Overlay Navigation Bar
         a{
           color: #353535;
           &:hover{
-            color: $green-button-hover;
+            color: $antolian-khaki;
             text-decoration: underline;
           }
         }

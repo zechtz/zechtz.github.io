@@ -471,7 +471,7 @@ Overlay Navigation Bar
         top: 22px; }
   .main-navigation .overlay {
     position: fixed;
-    background: #80b636;
+    background: #0B8393;
     top: 0;
     left: 0;
     width: 100%;
@@ -603,7 +603,7 @@ Overlay Navigation Bar
         .blog .blog-content .blog-header .blog-info .blog-length {
           text-align: right; }
       .blog .blog-content .blog-header .blog-title {
-        font-size: 30px;
+        font-size: 2em;
         line-height: 37px;
         font-family: 'GTHaptik';
         font-style: normal;
@@ -611,7 +611,7 @@ Overlay Navigation Bar
         .blog .blog-content .blog-header .blog-title a {
           color: #353535; }
           .blog .blog-content .blog-header .blog-title a:hover {
-            color: #80b636;
+            color: #7B8372;
             text-decoration: underline; }
     .blog .blog-content .blog-summary {
       margin: 10px 30px;

@@ -133,8 +133,6 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
-  nokogiri (~> 1.6.6.2)
-  redcarpet (~> 3.3.2)
 
 BUNDLED WITH
    1.10.6

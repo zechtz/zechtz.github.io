@@ -1,14 +1,24 @@
 /*========================================
 Header
 ========================================*/
+body{
+  &.home{
+    .header{
+      min-height: 100vh;
+      height: 100vh;
+    }
+  }
+  &.post{
+    header{
+      height: 200px;
+    }
+  }
+}
 .header{
   background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgb(72, 155, 206)), to(rgb(45, 39, 78)));
-  height: 100%;
   position: relative;
   top: 0;
   width: 100%;
-  min-height: 100vh;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -615,15 +615,16 @@ Overlay Navigation Bar
             text-decoration: underline; }
     .blog .blog-content .blog-summary {
       margin: 10px 30px;
-      font-size: 18px;
+      font-size: 1.2em;
       line-height: 28px;
-      color: #757575; }
+      color: #000;
+      font-family: 'GTWalsheim','GTHaptic', 'anisette-std-petite-2','museo-slab'; }
       .blog .blog-content .blog-summary p {
         font-family: 'GTWalsheim','GTHaptic', 'anisette-std-petite-2','museo-slab';
-        font-size: 1.2em;
         color: #000;
-        font-weight: 100;
-        font-style: normal; }
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1em; }
   .blog .wrapper {
     width: 74%; }
   .blog .blog-top {

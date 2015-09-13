@@ -614,15 +614,16 @@ Overlay Navigation Bar
     }
     .blog-summary{
       margin: 10px 30px;
-      font-size: 18px;
+      font-size: 1.2em;
       line-height: 28px;
-      color: #757575;
+      color: #000;
+      font-family: 'GTWalsheim','GTHaptic', 'anisette-std-petite-2','museo-slab';
       p{
-        font-family: 'GTHaptic', 'anisette-std-petite-2','museo-slab';
-        font-size: 1.1em;
+        font-family: 'GTWalsheim','GTHaptic', 'anisette-std-petite-2','museo-slab';
         color: #000;
-        font-weight: 100;
+        font-weight: 300;
         font-style: normal;
+        font-size: 1em;
       }
     }
   }

@@ -7946,7 +7946,7 @@ Overlay Navigation Bar
 Footer
 ===========================================*/
 footer {
-  background: #26262a; }
+  background: #356381; }
   footer .cta {
     padding: 1em 0;
     display: flex;
@@ -7977,7 +7977,7 @@ footer {
     border-top: 1px solid rgba(0, 0, 0, 0.2); }
     footer .nav .name h1 {
       text-align: center;
-      color: #7B8372;
+      color: #fff;
       font-size: 1em;
       text-transform: uppercase;
       margin-bottom: 0; }
@@ -7989,7 +7989,7 @@ footer {
         footer .nav .navigation ul li a {
           text-transform: uppercase;
           padding: 0 1em;
-          color: #7B8372; }
+          color: #fff; }
 
 /* Solarized Dark 
 

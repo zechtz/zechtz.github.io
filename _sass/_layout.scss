@@ -652,7 +652,7 @@ Overlay Navigation Bar
 Footer
 ===========================================*/
 footer{
-  background: #26262a;
+  background: #356381;
   .cta{
     padding: 1em 0;
     display: flex;
@@ -689,7 +689,7 @@ footer{
     .name{
       h1{
         text-align: center;
-        color: $antolian-khaki;
+        color: #fff;
         font-size: 1em;
         text-transform: uppercase;
         margin-bottom: 0;
@@ -704,7 +704,7 @@ footer{
           a{
             text-transform: uppercase;
             padding: 0 1em;
-            color: $antolian-khaki;
+            color: #fff;
           }
         }
       }

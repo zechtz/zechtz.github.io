@@ -8,4 +8,20 @@
 @import "../_sass/color_pallete",
         "../_sass/base",
         "../_sass/layout",
-        "../_sass/solarized"
+        "../_sass/solarized";
+
+.post-container{
+  padding: 3em 0;
+  .dynamic{
+    width: 70%;
+    margin: 0 auto;
+    .container{
+      p{    
+        font: 16px/2 'museo-slab','anisette-std-petite-2';
+        font-size: 1.2em;
+        word-wrap: break-word;
+        margin-bottom: 2em;
+      }
+    }
+  }
+}

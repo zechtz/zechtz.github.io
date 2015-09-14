@@ -9,13 +9,34 @@ body{
     }
   }
   &.post{
-    header{
-      height: 200px;
+    .header{
+      text-align: center;
+      padding: 92px 0 72px;
+      border-bottom: 10px solid #efefef;
+      height: auto;
+      min-height: initial;
+      background-color: #fff;
+      &:after{
+        background: none;
+      }
+      .container{
+        padding: 40px 240px;
+        h1.post-header-title{
+          color: #000;    
+          font-size: 78px;
+          font-weight: normal;
+          line-height: 1.1;
+          letter-spacing: -0.06em;
+          margin-bottom: 0.2em;
+          text-transform: none;
+          font-family: 'MtabeAdventorBold';
+        }
+      }
     }
   }
 }
 .header{
-  background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgb(72, 155, 206)), to(rgb(45, 39, 78)));
+  background-color: -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgb(72, 155, 206)), to(rgb(45, 39, 78)));
   position: relative;
   top: 0;
   width: 100%;
@@ -661,7 +682,7 @@ Overlay Navigation Bar
 Footer
 ===========================================*/
 footer{
-  background: #356381;
+  background: #000;
   .cta{
     padding: 1em 0;
     display: flex;

@@ -106,11 +106,29 @@ Header
 body.home .header {
   min-height: 100vh;
   height: 100vh; }
-body.post header {
-  height: 200px; }
+body.post .header {
+  text-align: center;
+  padding: 92px 0 72px;
+  border-bottom: 10px solid #efefef;
+  height: auto;
+  min-height: initial;
+  background-color: #fff; }
+  body.post .header:after {
+    background: none; }
+  body.post .header .container {
+    padding: 40px 240px; }
+    body.post .header .container h1.post-header-title {
+      color: #000;
+      font-size: 78px;
+      font-weight: normal;
+      line-height: 1.1;
+      letter-spacing: -0.06em;
+      margin-bottom: 0.2em;
+      text-transform: none;
+      font-family: 'MtabeAdventorBold'; }
 
 .header {
-  background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(#489bce), to(#2d274e));
+  background-color: -webkit-gradient(linear, 0% 0%, 100% 0%, from(#489bce), to(#2d274e));
   position: relative;
   top: 0;
   width: 100%;
@@ -653,7 +671,7 @@ Overlay Navigation Bar
 Footer
 ===========================================*/
 footer {
-  background: #356381; }
+  background: #000; }
   footer .cta {
     padding: 1em 0;
     display: flex;
@@ -949,3 +967,14 @@ green     #859900  operators, other keywords
   .highlight pre {
     padding: 12px 0;
     overflow-y: hidden; }
+
+.post-container {
+  padding: 3em 0; }
+  .post-container .dynamic {
+    width: 70%;
+    margin: 0 auto; }
+    .post-container .dynamic .container p {
+      font: 16px/2 'museo-slab','anisette-std-petite-2';
+      font-size: 1.2em;
+      word-wrap: break-word;
+      margin-bottom: 2em; }

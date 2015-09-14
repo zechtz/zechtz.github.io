@@ -496,8 +496,11 @@ Overlay Navigation Bar
         position: relative;
         opacity: 0;
         a {
-          font-family: 'anisette-std-petite-2';
+          font-family: 'MtabeAdventorRegular';
+          /*font-family: 'anisette-std-petite-2';*/
           text-transform: uppercase;
+          font-style: normal;
+          font-weight: normal;
           display: block;
           position: relative;
           color: $color-link;

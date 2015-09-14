@@ -137,6 +137,7 @@ body.post header {
       letter-spacing: 10px;
       font-weight: 700;
       color: #fff;
+      font-family: MtabeAdventorBold;
       text-transform: uppercase;
       margin-bottom: 1em; }
     .header .container p {
@@ -191,12 +192,12 @@ body.post header {
         .header .container ul li i {
           color: #cecece; }
     .header .container a.link-zack {
-      font-weight: 700;
+      font-weight: normal;
       text-transform: uppercase;
       font-size: 5em;
+      font-family: 'MtabeAdventorBold';
       color: #fff;
       padding: 0 0 0.125em;
-      font-family: 'Cabin';
       margin-bottom: 10px; }
       .header .container a.link-zack::before {
         right: 0;
@@ -631,16 +632,19 @@ Overlay Navigation Bar
     padding: 2em 0;
     text-align: center; }
     .blog .blog-top h1.blog-title {
-      font-size: 5em;
-      font-family: 'GTHaptik';
+      font-size: 4em;
       font-style: normal;
-      font-weight: 600;
-      color: #7B8372; }
+      font-weight: bold;
+      color: #7B8372;
+      font-family: 'MtabeAdventorBold';
+      font-style: normal; }
     .blog .blog-top h3.blog-leading {
       font-size: 1.5em;
       font-weight: 300;
       font-family: 'GTHaptik';
       font-style: normal; }
+    .blog .blog-top span.char {
+      font-family: 'GTHaptik'; }
 
 /*===========================================
 Footer

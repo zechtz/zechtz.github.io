@@ -27,12 +27,12 @@ body{
       border-bottom: 10px solid #efefef;
       height: auto;
       min-height: initial;
-      background: #fff !important;
+      background: $solarized-light !important;
       &:after{
         background: none;
       }
       .container{
-        padding: 40px 240px;
+        padding: 40px 160px;
         h1.post-header-title{
           color: #000;    
           font-size: 78px;

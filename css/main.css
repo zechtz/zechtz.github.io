@@ -364,11 +364,11 @@ body.post .header {
   border-bottom: 10px solid #efefef;
   height: auto;
   min-height: initial;
-  background: #fff !important; }
+  background: #ECE7D5 !important; }
   body.post .header:after {
     background: none; }
   body.post .header .container {
-    padding: 40px 240px; }
+    padding: 40px 160px; }
     body.post .header .container h1.post-header-title {
       color: #000;
       font-size: 78px;

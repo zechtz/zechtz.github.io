@@ -1,0 +1,16 @@
+---
+layout: posts
+title: Submit ExpressionEngine Contact Form With Ajax
+author: Zachariah Ngonyani
+abstract: Control ExpressionEngine Default form submit behaviour and use Ajax to provide a better user experience
+---
+
+Since around the time Amazon Prime began offering recurring orders on things like toothpaste and dish soap, people have been predicting the death of traditional retail.
+  
+The ease of e-commerce, coupled with the reliability and speed of shipping, made the future of local shops and already struggling suburban malls seem grim.
+
+Recently, though, technological advancements in near-field communication (NFC), interactive display and mobile payments have been bringing buzz back to the retail store. 
+
+With this technology, marketers are merging digital and physical worlds to create seamless, predictive, personalized, and delightful environments that increase sales and brand metrics.
+  
+Retail is on the verge of total reinvention. And that reinvention is rooted in the user-centric practices of today's most savvy digital agencies. 

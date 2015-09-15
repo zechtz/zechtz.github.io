@@ -978,10 +978,11 @@ footer {
     width: 70%;
     margin: 0 auto; }
     .post-container .dynamic .container p {
-      font: 16px/2 'museo-slab','anisette-std-petite-2';
-      font-size: 1.2em;
+      font-family: 'anisette-std-petite-2','museo-slab';
+      font-size: 1.3em;
       word-wrap: break-word;
-      margin-bottom: 2em; }
+      margin-bottom: 2em;
+      font-weight: 100; }
     .post-container .dynamic .container aside h5 {
       line-height: 1; }
     .post-container .dynamic .container aside em {

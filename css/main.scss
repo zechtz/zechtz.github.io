@@ -764,10 +764,11 @@ footer{
     margin: 0 auto;
     .container{
       p{    
-        font: 16px/2 'museo-slab','anisette-std-petite-2';
-        font-size: 1.2em;
+        font-family: 'anisette-std-petite-2','museo-slab';
+        font-size: 1.3em;
         word-wrap: break-word;
         margin-bottom: 2em;
+        font-weight: 100;
       }
       aside{
         h5{

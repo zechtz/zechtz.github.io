@@ -436,7 +436,8 @@ body.post .header {
       -moz-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out;
       margin-top: 20px;
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      font-family: 'GTHaptik'; }
       .header .container .button:hover {
         background-color: #fff;
         padding: 15px 35px;
@@ -557,9 +558,9 @@ body.post .header {
         top: 22px;
         width: 50%; } }
 
-/*=======================================
-About Me
-=======================================*/
+/*--------------------------------------------------------
+ * About Me
+ *--------------------------------------------------------*/
 .about {
   overflow: hidden;
   height: 100vh;
@@ -656,18 +657,18 @@ About Me
   .about em {
     font-family: 'Playfair Display', serif; }
 
-/*========================================
-Content
-========================================*/
+/*--------------------------------------------------------
+ * Content
+ *--------------------------------------------------------*/
 .content {
   width: 60%; }
   .content .wcorapper {
     padding: 3em 0;
     text-align: center; }
 
-/*========================================
-Overlay Navigation Bar
-========================================*/
+/*--------------------------------------------------------
+ * Overlay Navigation Bar
+ *--------------------------------------------------------*/
 .main-navigation {
   width: 100%; }
   .main-navigation .container {
@@ -919,9 +920,9 @@ Overlay Navigation Bar
     .blog .blog-top span.char {
       font-family: 'GTHaptik'; }
 
-/*===========================================
-Footer
-===========================================*/
+/*---------------------------------------------------------
+ * Footer
+ *--------------------------------------------------------*/
 footer {
   background: #000; }
   footer .cta {
@@ -929,21 +930,24 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center; }
     footer .cta h1 {
       color: #fff;
       font-size: 2em;
       margin-bottom: 0; }
     footer .cta .button {
-      background-color: #1a1a1a;
-      border: 1px solid #fff;
+      background-color: transparent;
       padding: 15px 20px;
       display: inline-block;
       text-transform: uppercase;
       -webkit-transition: all 0.3s ease-in-out;
       -moz-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out;
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      font-size: 3em;
+      font-weight: 900;
+      font-style: normal; }
       footer .cta .button:hover {
         background-color: #26262a;
         color: #fff; }

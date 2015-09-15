@@ -110,6 +110,7 @@ body{
       transition: all 0.3s ease-in-out;
       margin-top:20px;
       margin-bottom: 10px;
+      font-family: 'GTHaptik';
       &:hover{
         background-color: #fff;
         padding: 15px 35px;
@@ -255,9 +256,9 @@ body{
     }
   }
 }
-/*=======================================
-About Me
-=======================================*/
+/*--------------------------------------------------------
+ * About Me
+ *--------------------------------------------------------*/
 .about{
   overflow: hidden;
   height: 100vh;
@@ -371,9 +372,10 @@ About Me
     font-family: 'Playfair Display', serif;
   }
 }
-/*========================================
-Content
-========================================*/
+
+/*--------------------------------------------------------
+ * Content
+ *--------------------------------------------------------*/
 .content{
   width: 60%;
   .wcorapper{
@@ -381,9 +383,9 @@ Content
     text-align: center;
   }
 }
-/*========================================
-Overlay Navigation Bar
-========================================*/
+/*--------------------------------------------------------
+ * Overlay Navigation Bar
+ *--------------------------------------------------------*/
 .main-navigation{
   width: 100%;
   .container {
@@ -690,9 +692,9 @@ Overlay Navigation Bar
   }
 }
 
-/*===========================================
-Footer
-===========================================*/
+/*---------------------------------------------------------
+ * Footer
+ *--------------------------------------------------------*/
 footer{
   background: #000;
   .cta{
@@ -701,14 +703,14 @@ footer{
     flex-direction: column;
     justify-content: center;
     border-bottom: 1px solid rgba(255,255,255, .1);
+    text-align: center;
     h1{
       color: #fff;
       font-size: 2em;
       margin-bottom: 0;
     }
     .button{
-      background-color: #1a1a1a;
-      border: 1px solid #fff;
+      background-color: transparent;
       padding: 15px 20px;
       display: inline-block;
       text-transform: uppercase;
@@ -716,6 +718,9 @@ footer{
       -moz-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out;
       margin-bottom: 0;
+      font-size: 3em;
+      font-weight: 900;
+      font-style: normal; 
       &:hover{
         background-color: #26262a;
         color: #fff;

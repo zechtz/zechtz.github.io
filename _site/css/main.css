@@ -82,15 +82,15 @@ a:hover {
   text-decoration: none; }
 
 h1, .h1 {
-  font: 52px/62px 'Cabin',OpenSansRegular, Helvetica, Arial, sans-serif;
+  font: 52px/62px 'GTHaptik',OpenSansRegular, Helvetica, Arial, sans-serif;
   margin-bottom: 15px; }
 
 h2, .h2 {
-  font: 20px/1.125 'Cabin', OpenSansRegular, Helvetica, Arial, sans-serif;
+  font: 20px/1.125 'GTHaptik',OpenSansRegular, Helvetica, Arial, sans-serif;
   margin-bottom: 5px; }
 
 h3, .h3 {
-  font: bold 15px/1.33333333 'Cabin', OpenSansRegular, Helvetica, Arial, sans-serif;
+  font: 15px/1 'GTHaptik',OpenSansRegular, Helvetica, Arial, sans-serif;
   margin-bottom: 2px; }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -1004,3 +1004,8 @@ footer {
         letter-spacing: -0.06em;
         font-weight: normal;
         margin-bottom: 0.5em; }
+
+/**
+ *------------------------------------------------------------
+ * Contact Page
+ *-----------------------------------------------------------*/

@@ -19,7 +19,10 @@ green     #859900  operators, other keywords
 .highlight { 
   background: #002b36 !important; 
   color: #93a1a1; 
+  font-family: 'MenloRegular','DejavuSansMonobook';
   font-weight: bold;
+  font-style: normal;
+  font-size: 14px;
   .c { color: #586e75; } /* Comment */
   .err { color: #93a1a1; } /* Error */
   .g { color: #93a1a1; } /* Generic */

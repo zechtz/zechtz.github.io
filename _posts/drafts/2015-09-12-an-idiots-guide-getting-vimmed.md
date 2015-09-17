@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: An Idiot's guide to getting comfortable with vim
+title: An Idiot's Guide to Getting Comfortable with Vim
 author: Zachariah Ngonyani
 abstract: Learn how to code faster using Emmet and Sublime Text
 ---

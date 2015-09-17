@@ -120,7 +120,10 @@ green     #859900  operators, other keywords
 .highlight {
   background: #002b36 !important;
   color: #93a1a1;
+  font-family: 'MenloRegular','DejavuSansMonobook';
   font-weight: bold;
+  font-style: normal;
+  font-size: 14px;
   /* Comment */
   /* Error */
   /* Generic */
@@ -591,7 +594,7 @@ body.post .header {
       text-transform: none; }
   .about .feature-image {
     position: absolute;
-    bottom: -200px;
+    bottom: -230px;
     left: 61%; }
   .about .text {
     padding: 1em 0 0 0; }
@@ -607,7 +610,11 @@ body.post .header {
       color: #000; }
     .about .text .code-block .highlight {
       border: 1px solid #ccc;
-      border-radius: 3px; }
+      border-radius: 3px;
+      font-family: 'MenloRegular','DejavuSansMonobook';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 13px; }
       .about .text .code-block .highlight pre {
         overflow-y: hidden;
         overflow-x: scroll; }
@@ -790,8 +797,7 @@ body.post .header {
         position: relative;
         opacity: 0; }
         .main-navigation .overlay ul li a {
-          font-family: 'MtabeAdventorRegular';
-          /*font-family: 'anisette-std-petite-2';*/
+          font-family: 'MtabeAdventorBold';
           text-transform: uppercase;
           font-style: normal;
           font-weight: normal;

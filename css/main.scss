@@ -294,7 +294,7 @@ body{
   }
   .feature-image{
     position: absolute;
-    bottom: -200px;
+    bottom: -230px;
     left: 61%;
   }
   .text{
@@ -315,6 +315,10 @@ body{
       .highlight{
         border: 1px solid #ccc;
         border-radius: 3px; 
+        font-family: 'MenloRegular','DejavuSansMonobook';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 13px;
         pre{
           overflow-y: hidden;
           overflow-x: scroll;
@@ -531,8 +535,7 @@ body{
         position: relative;
         opacity: 0;
         a {
-          font-family: 'MtabeAdventorRegular';
-          /*font-family: 'anisette-std-petite-2';*/
+          font-family: 'MtabeAdventorBold';
           text-transform: uppercase;
           font-style: normal;
           font-weight: normal;

@@ -234,13 +234,24 @@ body{
     }
   }
   .logo {
-    background: url('../images/logo.svg') no-repeat;
-    width: 273px;
+    position: relative;
+    display: inline-block;
+    left: 14px;
+    border-radius: 50%;
+    padding: 2px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    width: 60px;
     height: 60px;
-    position: absolute;
-    top: 20px;
-    float: left;
-    left: -3%;
+    top: 0.7em;
+    background: url('../images/avatar_1.png') no-repeat;
+    img{
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
     @media only screen and (min-width:768px) and (max-width:1024px) {
       top: 13px;
       width: 22%;
@@ -778,9 +789,30 @@ footer{
         margin-bottom: 2em;
         font-weight: 100;
       }
-      aside{
-        h5{
-          line-height: 1;
+      .author-image{
+        text-align: center;
+        span.avatar{
+          position: relative;
+          display: inline-block;
+          left: 14px;
+          border-radius: 100%;
+          padding: 2px;
+          width: 120px;
+          height: 120px;
+          border: 4px solid #fff;
+          -webkit-box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+          -moz-box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+          box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+          top: 0.7em;
+          margin-bottom: 2em;
+          img{
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+          }
         }
         em{
           font: 12px/18px "GalaxieItalic";
@@ -789,16 +821,15 @@ footer{
           display: block;
           margin: 5px 0;
         }
-        .who{
-          margin: 0 0 12px 0;
-          border-radius: 50%;
-          h5 {
-            font-family: "MtabeAdventorBold",sans-serif;
-            font-size: 20px;
-            letter-spacing: -0.06em;
-            font-weight: normal;
-            margin-bottom: 0.5em;
-          }
+        h5 {
+          font-family: "MtabeAdventorBold",sans-serif;
+          font-size: 20px;
+          letter-spacing: -0.06em;
+          font-weight: normal;
+          margin-bottom: 0.5em;
+          text-align: center;
+          line-height: 1;
+          margin-left: 30px;
         }
       }
     }

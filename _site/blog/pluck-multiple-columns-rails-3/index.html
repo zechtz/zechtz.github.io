@@ -77,23 +77,24 @@ How to Pluck Multiple Columns in Rails 3
 <span class="lineno"> 2</span>     <span class="k">class</span> <span class="nc">Relation</span>
 <span class="lineno"> 3</span>       <span class="k">def</span> <span class="nf">pluck_multiple</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
 <span class="lineno"> 4</span>         <span class="n">args</span><span class="o">.</span><span class="n">map!</span> <span class="k">do</span> <span class="o">|</span><span class="n">column_name</span><span class="o">|</span>
-<span class="lineno"> 5</span>           <span class="k">if</span> <span class="n">column_name</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="no">Symbol</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">column_names</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="n">column_name</span><span class="o">.</span><span class="n">to_s</span><span class="p">)</span>
-<span class="lineno"> 6</span>             <span class="s2">&quot;</span><span class="si">#{</span><span class="n">connection</span><span class="o">.</span><span class="n">quote_table_name</span><span class="p">(</span><span class="n">table_name</span><span class="p">)</span><span class="si">}</span><span class="s2">.</span><span class="si">#{</span><span class="n">connection</span><span class="o">.</span><span class="n">quote_column_name</span><span class="p">(</span><span class="n">column_name</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
-<span class="lineno"> 7</span>           <span class="k">else</span>
-<span class="lineno"> 8</span>             <span class="n">column_name</span><span class="o">.</span><span class="n">to_s</span>
-<span class="lineno"> 9</span>           <span class="k">end</span>
-<span class="lineno">10</span>         <span class="k">end</span>
-<span class="lineno">11</span>         <span class="n">relation</span> <span class="o">=</span> <span class="nb">clone</span>
-<span class="lineno">12</span>         <span class="n">relation</span><span class="o">.</span><span class="n">select_values</span> <span class="o">=</span> <span class="n">args</span>
-<span class="lineno">13</span>         <span class="n">klass</span><span class="o">.</span><span class="n">connection</span><span class="o">.</span><span class="n">select_all</span><span class="p">(</span><span class="n">relation</span><span class="o">.</span><span class="n">arel</span><span class="p">)</span><span class="o">.</span><span class="n">map!</span> <span class="k">do</span> <span class="o">|</span><span class="n">attributes</span><span class="o">|</span>
-<span class="lineno">14</span>           <span class="n">initialized_attributes</span> <span class="o">=</span> <span class="n">klass</span><span class="o">.</span><span class="n">initialize_attributes</span><span class="p">(</span><span class="n">attributes</span><span class="p">)</span>
-<span class="lineno">15</span>           <span class="n">attributes</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">key</span><span class="p">,</span> <span class="n">attribute</span><span class="o">|</span>
-<span class="lineno">16</span>             <span class="n">attributes</span><span class="o">[</span><span class="n">key</span><span class="o">]</span> <span class="o">=</span> <span class="n">klass</span><span class="o">.</span><span class="n">type_cast_attribute</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">initialized_attributes</span><span class="p">)</span>
-<span class="lineno">17</span>           <span class="k">end</span>
-<span class="lineno">18</span>         <span class="k">end</span>
-<span class="lineno">19</span>       <span class="k">end</span>
-<span class="lineno">20</span>     <span class="k">end</span>
-<span class="lineno">21</span>   <span class="k">end</span></code></pre></div>
+<span class="lineno"> 5</span>           <span class="k">if</span> <span class="n">column_name</span><span class="o">.</span><span class="n">is_a?</span><span class="p">(</span><span class="no">Symbol</span><span class="p">)</span> <span class="o">&amp;&amp;</span> 
+<span class="lineno"> 6</span>             <span class="n">column_names</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="n">column_name</span><span class="o">.</span><span class="n">to_s</span><span class="p">)</span>
+<span class="lineno"> 7</span>             <span class="s2">&quot;</span><span class="si">#{</span><span class="n">connection</span><span class="o">.</span><span class="n">quote_table_name</span><span class="p">(</span><span class="n">table_name</span><span class="p">)</span><span class="si">}</span><span class="s2">.</span><span class="si">#{</span><span class="n">connection</span><span class="o">.</span><span class="n">quote_column_name</span><span class="p">(</span><span class="n">column_name</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="lineno"> 8</span>           <span class="k">else</span>
+<span class="lineno"> 9</span>             <span class="n">column_name</span><span class="o">.</span><span class="n">to_s</span>
+<span class="lineno">10</span>           <span class="k">end</span>
+<span class="lineno">11</span>         <span class="k">end</span>
+<span class="lineno">12</span>         <span class="n">relation</span> <span class="o">=</span> <span class="nb">clone</span>
+<span class="lineno">13</span>         <span class="n">relation</span><span class="o">.</span><span class="n">select_values</span> <span class="o">=</span> <span class="n">args</span>
+<span class="lineno">14</span>         <span class="n">klass</span><span class="o">.</span><span class="n">connection</span><span class="o">.</span><span class="n">select_all</span><span class="p">(</span><span class="n">relation</span><span class="o">.</span><span class="n">arel</span><span class="p">)</span><span class="o">.</span><span class="n">map!</span> <span class="k">do</span> <span class="o">|</span><span class="n">attributes</span><span class="o">|</span>
+<span class="lineno">15</span>           <span class="n">initialized_attributes</span> <span class="o">=</span> <span class="n">klass</span><span class="o">.</span><span class="n">initialize_attributes</span><span class="p">(</span><span class="n">attributes</span><span class="p">)</span>
+<span class="lineno">16</span>           <span class="n">attributes</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">key</span><span class="p">,</span> <span class="n">attribute</span><span class="o">|</span>
+<span class="lineno">17</span>             <span class="n">attributes</span><span class="o">[</span><span class="n">key</span><span class="o">]</span> <span class="o">=</span> <span class="n">klass</span><span class="o">.</span><span class="n">type_cast_attribute</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">initialized_attributes</span><span class="p">)</span>
+<span class="lineno">18</span>           <span class="k">end</span>
+<span class="lineno">19</span>         <span class="k">end</span>
+<span class="lineno">20</span>       <span class="k">end</span>
+<span class="lineno">21</span>     <span class="k">end</span>
+<span class="lineno">22</span>   <span class="k">end</span></code></pre></div>
 
 </div>
 

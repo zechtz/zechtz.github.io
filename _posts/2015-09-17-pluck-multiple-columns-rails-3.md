@@ -11,7 +11,8 @@ abstract: Open Active record relation class and adding a method to Pluck Multipl
     class Relation
       def pluck_multiple(*args)
         args.map! do |column_name|
-          if column_name.is_a?(Symbol) && column_names.include?(column_name.to_s)
+          if column_name.is_a?(Symbol) && 
+            column_names.include?(column_name.to_s)
             "#{connection.quote_table_name(table_name)}.#{connection.quote_column_name(column_name)}"
           else
             column_name.to_s

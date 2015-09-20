@@ -5,7 +5,6 @@ author: Zachariah Ngonyani
 abstract: Open Active record relation class and adding a method to Pluck Multiple Columns
 ---
 
-<div class="code-block">
   {% highlight ruby  linenos%}
   module ActiveRecord
     class Relation
@@ -30,4 +29,3 @@ abstract: Open Active record relation class and adding a method to Pluck Multipl
     end
   end
   {% endhighlight %}
-</div>

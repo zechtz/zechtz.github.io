@@ -539,24 +539,19 @@ body.post .header {
           color: #fff;
           text-transform: uppercase; }
   .header .logo-container {
-    float: left;
-    position: relative;
+    position: absolute;
     display: inline-block;
-    left: 14px;
-    border-radius: 50%;
-    border: 3px solid rgba(255, 255, 255, 0.5);
-    width: 60px;
-    height: 60px;
+    left: 15px;
+    width: 80px;
+    height: 80px;
     overflow: hidden;
     text-align: center;
-    top: -70px; }
+    top: 10px; }
     .header .logo-container img {
       border-radius: 50%;
       width: 80%;
       height: 80%;
-      position: absolute;
-      left: 5px;
-      top: 5px; }
+      position: absolute; }
     @media only screen and (min-width: 768px) and (max-width: 1024px) {
       .header .logo-container {
         top: 13px;

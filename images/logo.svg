@@ -1,5 +1,14 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="66.844px" height="35.133px" viewBox="0 0 66.844 35.133" enable-background="new 0 0 66.844 35.133" xml:space="preserve">
+	<defs>
+		<style type="text/css">
+			path {
+				stroke: none;
+				stroke-width: 0;
+				fill: #fff;
+			}
+		</style>
+	</defs>
 <g>
 	<path fill="#F17022" d="M9.211,25.828c0,1.188,0.035,2.121,0.105,2.801s0.219,1.191,0.445,1.535s0.547,0.563,0.961,0.656
 		s0.965,0.141,1.652,0.141h0.445v4.172h-1.266c-0.891,0-1.746-0.047-2.566-0.141s-1.563-0.289-2.227-0.586s-1.242-0.723-1.734-1.277

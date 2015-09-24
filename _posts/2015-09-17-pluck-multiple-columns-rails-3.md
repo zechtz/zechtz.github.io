@@ -4,16 +4,17 @@ title: How to Pluck Multiple Columns in Rails 3
 author: Zachariah Ngonyani
 abstract: Open Active record relation class and adding a method to Pluck Multiple Columns
 ---
-We all know that plucking multiple columns from a rails 3 app could be a pain. Fortunately rails 4 addressed this but still for those still running on the previous versions of rails this is still an issue. 
+Plucking multiple columns from a rails 3 app could be a pain in the ass. Fortunately rails 4 addressed this but still for those still running on the previous versions of rails this is still an issue. 
 
 A few days ago, i was trying to see how many people have logged in into my application and wanted to display their sign_in_count next to their email addresses. Usually this is simple in rails 4 as you can just do 
-  {% highlight ruby linenos %}
+
+  {% highlight ruby %}
     User.where('sign_in_count > 0').pluck(:email, :sign_in_count)
   {% endhighlight %}
 
-  The app is running rails 3 and the pluck method in Rails 3 only allows plucking a single column, so we had to find a way to make our owm method to overcome this.
+The app is runs on rails 3 and the pluck method in Rails 3 only allows plucking a single column, so we had to find a way to make our owm method to overcome this.
 
-Thanks to monkey-patching, we just had to re-open the **Active Record** Module and add the mothod, check the code below. 
+Thanks to monkey-patching, we just had to re-open the **Active Record** Module and add the mothod, check the code below, put that code in the config/initializers directory, restart your application and you're good to go
 
   {% highlight ruby  linenos%}
   module ActiveRecord
@@ -39,3 +40,10 @@ Thanks to monkey-patching, we just had to re-open the **Active Record** Module a
     end
   end
   {% endhighlight %}
+
+  Now you can just do 
+  {% highlight ruby %}
+  User.where('sign_iin_count > 0').pluck_multiple(:email, :sign_in_count)
+  {% endhighlight %}
+
+  Remember, my **User Model** is a devise model

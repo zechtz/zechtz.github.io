@@ -71,7 +71,16 @@ How to Pluck Multiple Columns in Rails 3
     <div class="container">
       <div class="row">
         <div class="large-8 medium-6 small-12 columns">
-          
+          <p>We all know that plucking multiple columns from a rails 3 app could be a pain. Fortunately rails 4 addressed this but still for those still running on the previous versions of rails this is still an issue. </p>
+
+<p>A few days ago, i was trying to see how many people have logged in into my application and wanted to display their sign_in_count next to their email addresses. Usually this is simple in rails 4 as you can just do </p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="lineno">1</span> <span class="no">User</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="s1">&#39;sign_in_count &gt; 0&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">pluck</span><span class="p">(</span><span class="ss">:email</span><span class="p">,</span> <span class="ss">:sign_in_count</span><span class="p">)</span></code></pre></div>
+
+<p>The app is running rails 3 and the pluck method in Rails 3 only allows plucking a single column, so we had to find a way to make our owm method to overcome this.</p>
+
+<p>Thanks to monkey-patching, we just had to re-open the <strong>Active Record</strong> Module and add the mothod, check the code below. </p>
+
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="lineno"> 1</span> <span class="k">module</span> <span class="nn">ActiveRecord</span>
 <span class="lineno"> 2</span>     <span class="k">class</span> <span class="nc">Relation</span>
 <span class="lineno"> 3</span>       <span class="k">def</span> <span class="nf">pluck_multiple</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>

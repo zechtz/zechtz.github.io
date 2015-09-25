@@ -14,7 +14,7 @@ A few days ago, i was trying to see how many people have logged in into my appli
 
 The app is runs on rails 3 and the pluck method in Rails 3 only allows plucking a single column, so we had to find a way to make our owm method to overcome this.
 
-Thanks to monkey-patching, we just had to re-open the **Active Record** Module and add the mothod, check the code below, put that code in the config/initializers directory, restart your application and you're good to go
+Thanks to monkey-patching, we just had to re-open the **Active Record** *Module* and add the mothod, check the code below, put that code in the config/initializers directory, restart your application and you're good to go
 
   {% highlight ruby  linenos%}
   module ActiveRecord

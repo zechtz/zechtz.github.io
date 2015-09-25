@@ -48,7 +48,7 @@ body {
   font: 15px/1.6 'anisette-std-petite-2','museo-slab'; }
 
 p {
-  font: 15px/1.6 'anisette-std-petite-2','museo-slab'; }
+  font: 15px/1.6 'anisette-std-petite-2','museo-slab','GTWalsheimPro', 'sans-serif'; }
 
 strong {
   font-weight: bold; }
@@ -580,7 +580,7 @@ body.post .header {
     margin: 0 auto; }
     .about .container p {
       margin-bottom: 1em;
-      font-family: 'anisette-std-petite-2','museo-slab';
+      font-family: 'anisette-std-petite-2','museo-slab','GTWalsheimPro', 'sans-serif';
       font-size: 1.3em;
       font-weight: 100;
       color: #000; }
@@ -953,10 +953,10 @@ footer {
 .post-container {
   padding: 3em 0; }
   .post-container .dynamic {
-    width: 70%;
+    width: 80%;
     margin: 0 auto; }
     .post-container .dynamic .container p {
-      font-family: 'anisette-std-petite-2','museo-slab';
+      font-family: 'anisette-std-petite-2','museo-slab','GTWalsheimPro','sans-serif';
       font-size: 1.3em;
       word-wrap: break-word;
       margin-bottom: 2em;

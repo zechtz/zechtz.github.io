@@ -867,9 +867,9 @@ body.post .header {
       font-size: 1.2em;
       line-height: 28px;
       color: #000;
-      font-family: 'GTWalsheim','GTHaptic', 'anisette-std-petite-2','museo-slab'; }
+      font-family: 'anisette-std-petite-2','museo-slab','GTWalsheimPro','GTHaptic', 'sans-serif'; }
       .blog .blog-content .blog-summary p {
-        font-family: 'GTWalsheim','GTHaptic', 'anisette-std-petite-2','museo-slab';
+        font-family: 'anisette-std-petite-2','museo-slab','GTWalsheimPro','GTHaptic', 'sans-serif';
         color: #000;
         font-weight: 300;
         font-style: normal;

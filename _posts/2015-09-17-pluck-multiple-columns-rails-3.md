@@ -43,7 +43,7 @@ Thanks to monkey-patching, we just had to re-open the **Active Record** Module a
 
   Now you can just do 
   {% highlight ruby %}
-  User.where('sign_iin_count > 0').pluck_multiple(:email, :sign_in_count)
+  User.where('sign_in_count > 0').pluck_multiple(:email, :sign_in_count)
   {% endhighlight %}
 
   Remember, my **User Model** is a devise model

@@ -5,7 +5,7 @@
 			path {
 				stroke: none;
 				stroke-width: 0;
-				fill: #489bce;
+				fill: #fff;
 			}
 		</style>
 	</defs>

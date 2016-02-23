@@ -1,28 +1,28 @@
 {% include head.html %}
 <body class="post" id="home">
-{% include blog_header.html %}
-<!--post container starts-->
-<div class="post-container">
-  <section class="dynamic">
-    <div class="container">
-      <div class="row">
-        <div class="large-8 medium-6 small-12 columns">
-          {{ content }}
+  {% include blog_header.html %}
+  <!--post container starts-->
+  <div class="post-container">
+    <section class="dynamic">
+      <div class="container">
+        <div class="row">
+          <div class="large-8 medium-6 small-12 columns">
+            {{ content }}
+          </div>
+          <div class="author-image large-4 medium-6 small-12 columns">
+            <aside>
+              <span class="avatar">
+                <img src="/images/zech_profile.svg" width="90" height="90">
+                </span>
+                <h5>Zachariah Ngonyani <br><em>Executive Creative Director</em></h5>
+              </aside>
+            </div>
+          </div>
         </div>
-        <div class="author-image large-4 medium-6 small-12 columns">
-          <aside>
-            <span class="avatar">
-              <img src="/images/zech_profile.svg" width="90" height="90">
-            </span>
-              <h5>Zachariah Ngonyani <br><em>Executive Creative Director</em></h5>
-          </aside>
-        </div>
-      </div>
+      </section>
     </div>
-  </section>
-</div>
-<!--post container section ends-->
-{% include footer.html %}
-{% include scripts.html %}
-</body>
+    <!--post container section ends-->
+    {% include footer.html %}
+    {% include scripts.html %}
+  </body>
 </html>

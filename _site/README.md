@@ -1,6 +1,4 @@
 ## My Persoanal Github Homepage
-====================
-
 I finally decided to design my own personal github
 page and this is it. If you want to you can fork it and
 use it for your own purpose.

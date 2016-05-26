@@ -112,8 +112,15 @@ green     #859900  operators, other keywords
     }
   }
   pre{
-    padding: 12px 0;
     overflow-y: hidden;
     background-color: #FDF6E3;
+  }
+  table{
+    background-color: #FDF6E3;
+    tr{
+      td{
+        padding: 0;
+      }
+    }
   }
 }

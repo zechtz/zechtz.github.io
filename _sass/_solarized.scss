@@ -17,7 +17,7 @@ green     #859900  operators, other keywords
  */
 
 .highlight { 
-  background: #002b36 !important; 
+  background: transparent !important; 
   color: #93a1a1; 
   font-family: 'MenloRegular','DejavuSansMonobook';
   font-weight: bold;
@@ -98,9 +98,9 @@ green     #859900  operators, other keywords
       text-align: right;
       font-size: 13px;
       line-height: 1.45em;
-      width: 20px;
-      background: #073642 !important;
-      border-right: 1px solid #00232c !important;
+      width: 40px;
+      background: #eee8d5 !important;
+      border-right: none !important;
       -webkit-box-shadow: #083e4b -1px 0 inset;
       -moz-box-shadow: #083e4b -1px 0 inset;
       box-shadow: #083e4b -1px 0 inset;

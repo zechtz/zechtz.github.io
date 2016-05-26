@@ -101,9 +101,6 @@ green     #859900  operators, other keywords
       width: 40px;
       background: #eee8d5 !important;
       border-right: 1px solid #eee8d5 !important;
-      -webkit-box-shadow: #083e4b -1px 0 inset;
-      -moz-box-shadow: #083e4b -1px 0 inset;
-      box-shadow: #083e4b -1px 0 inset;
       text-shadow: #021014 0 -1px;
       padding: .8em !important;
       -webkit-border-radius: 0;
@@ -117,5 +114,6 @@ green     #859900  operators, other keywords
   pre{
     padding: 12px 0;
     overflow-y: hidden;
+    background-color: #FDF6E3;
   }
 }

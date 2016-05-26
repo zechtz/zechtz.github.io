@@ -25,7 +25,7 @@
 </head>
 
 <body class="post" id="home">
-<div class="header">
+  <div class="header">
   <div class="main-navigation">
   <div class="logo-container">
     <a href="/">
@@ -65,13 +65,13 @@ How to Pluck Multiple Columns in Rails 3
   </div>
 </div>
 
-<!--post container starts-->
-<div class="post-container">
-  <section class="dynamic">
-    <div class="container">
-      <div class="row">
-        <div class="large-8 medium-6 small-12 columns">
-          <p>Plucking multiple columns from a rails 3 app could be a pain in the ass. Fortunately rails 4 addressed this but still for those still running on the previous versions of rails this is still an issue. </p>
+  <!--post container starts-->
+  <div class="post-container">
+    <section class="dynamic">
+      <div class="container">
+        <div class="row">
+          <div class="large-8 medium-6 small-12 columns">
+            <p>Plucking multiple columns from a rails 3 app could be a pain in the ass. Fortunately rails 4 addressed this but still for those still running on the previous versions of rails this is still an issue. </p>
 
 <p>A few days ago, i was trying to see how many people have logged in into my application and wanted to display their sign_in_count next to their email addresses. Usually this is simple in rails 4 as you can just do </p>
 
@@ -110,21 +110,21 @@ How to Pluck Multiple Columns in Rails 3
 
 <p>Remember, my <strong>User Model</strong> is a devise model</p>
 
+          </div>
+          <div class="author-image large-4 medium-6 small-12 columns">
+            <aside>
+              <span class="avatar">
+                <img src="/images/zech_profile.svg" width="90" height="90">
+                </span>
+                <h5>Zachariah Ngonyani <br><em>Executive Creative Director</em></h5>
+              </aside>
+            </div>
+          </div>
         </div>
-        <div class="author-image large-4 medium-6 small-12 columns">
-          <aside>
-            <span class="avatar">
-              <img src="/images/zech_profile.svg" width="90" height="90">
-            </span>
-              <h5>Zachariah Ngonyani <br><em>Executive Creative Director</em></h5>
-          </aside>
-        </div>
-      </div>
+      </section>
     </div>
-  </section>
-</div>
-<!--post container section ends-->
-<footer>
+    <!--post container section ends-->
+    <footer>
   <div class="cta">
     <div class="wrapper">
       <a href="#" class="button call-to-action">
@@ -152,7 +152,7 @@ How to Pluck Multiple Columns in Rails 3
   </div>
 </footer>
 
-<script src="/js/vendor/jquery.js"> </script>
+    <script src="/js/vendor/jquery.js"> </script>
 <scrpit src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/vendor/fastclick.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/vendor/jquery.cookie.js"></script>
 <script src="/js/vendor/modernizr.js"> </script>
@@ -173,5 +173,5 @@ $(document).foundation({
 });
 </script>
 
-</body>
+  </body>
 </html>

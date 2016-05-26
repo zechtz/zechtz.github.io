@@ -1,4 +1,4 @@
-## My Persoanal Github Homepage
+## My Github Page
 I finally decided to design my own personal github
 page and this is it. If you want to you can fork it and
 use it for your own purpose.
@@ -9,7 +9,7 @@ neccesary though.
 ### Getting Started
 Clone the project then  
 ` cd zechtz.github.io && bundle install`
-#### Next just run the project
+#### Next just compile and start the serving the project
 ` bundle exec jeklyll server `
 #### Next just view it on your browser 
 `http://localhost:4000`
@@ -19,6 +19,7 @@ The site is powered by Jekyll and styling done using
 SASS so be sure to have sass installed if you want to make additional
 
 ### Contributions
+Just pull request 
 
 ### Stack 
 - Javascript

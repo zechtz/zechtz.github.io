@@ -115,8 +115,6 @@ one below the other.</p>
 
 <p>Note that, the SlidingTabLayout has an id ‘tabs’.</p>
 
-<p>```xml</p>
-
 <div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="lineno"> 1</span> <span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
 <span class="lineno"> 2</span> <span class="nt">&lt;LinearLayout</span>
 <span class="lineno"> 3</span>     <span class="na">xmlns:android=</span><span class="s">&quot;http://schemas.android.com/apk/res/android&quot;</span>
@@ -134,10 +132,8 @@ one below the other.</p>
 <span class="lineno">15</span>         <span class="na">android:background=</span><span class="s">&quot;@color/colorPrimary&quot;</span><span class="nt">/&gt;</span>
 <span class="lineno">16</span> <span class="nt">&lt;/LinearLayout&gt;</span></code></pre></div>
 
-<p><code>
-Finally, we'll add a ViewPager to our main.xml file,  we'll give it an id the id 'pager',
-our main.xml file should now look like this:
-</code>xml</p>
+<p>Finally, we’ll add a ViewPager to our main.xml file,  we’ll give it an id the id ‘pager’,
+our main.xml file should now look like this:</p>
 
 <div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="lineno"> 1</span> <span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
 <span class="lineno"> 2</span> <span class="nt">&lt;LinearLayout</span>
@@ -194,8 +190,6 @@ our main.xml file should now look like this:
 <span class="lineno">11</span>         <span class="na">android:layout_centerHorizontal=</span><span class="s">&quot;true&quot;</span> <span class="nt">/&gt;</span>
 <span class="lineno">12</span> <span class="nt">&lt;/RelativeLayout&gt;</span></code></pre></div>
 
-<p>```</p>
-
 <p>With the layouts done, now lets write our app logic.
 We are going to have two fragments. A fragment for each tab. So in the same package where your MainActivity.java file is, create two java files: OurWork.java and Blog.java.</p>
 
@@ -229,7 +223,7 @@ We are going to have two fragments. A fragment for each tab. So in the same pack
 <span class="lineno"> 8</span> <span class="kn">import</span> <span class="nn">com.watabelabs.tabdemo.R</span><span class="o">;</span>
 <span class="lineno"> 9</span> <span class="cm">/**</span>
 <span class="lineno">10</span> <span class="cm">* Created by japheth on 2/20/16.</span>
-<span class="lineno">11</span> <span class="cm">*/</span>
+<span class="lineno">11</span> <span class="cm">**/</span>
 <span class="lineno">12</span> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">OurWork</span>  <span class="kd">extends</span> <span class="n">Fragment</span><span class="o">{</span>
 <span class="lineno">13</span>     <span class="nd">@Nullable</span>
 <span class="lineno">14</span>     <span class="nd">@Override</span>

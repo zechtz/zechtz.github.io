@@ -348,9 +348,12 @@ green     #859900  operators, other keywords
       border-radius: 0;
       color: #93a1a1; }
   .highlight pre {
-    padding: 12px 0;
     overflow-y: hidden;
     background-color: #FDF6E3; }
+  .highlight table {
+    background-color: #FDF6E3; }
+    .highlight table tr td {
+      padding: 0; }
 
 /*---------------------------------------------
  * Header

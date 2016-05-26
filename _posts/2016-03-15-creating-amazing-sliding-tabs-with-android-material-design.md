@@ -2,8 +2,10 @@
 layout: posts
 title: Creating Amazing Sliding Tabs with Android Material Design
 author: Zachariah Ngonyani
-abstract: Android Material Design enable developers to create amazing UI/UX. This helps developers dedicate 
---- 
+abstract: Android Material Design enable developers to create amazing UI/UX. This helps developers dedicate
+published: true
+---
+ 
 
 Android Material Design enable developers to create amazing UI/UX. This helps developers dedicate the majority of their time working on the actual Application business logic. Being an Android developer myself, i have found this very useful, saving me lots of time. 
 
@@ -53,7 +55,6 @@ Now lets add the SlidingTabLayout to our main.xml file, this file should be acti
 
 Note that, the SlidingTabLayout has an id 'tabs'.
 
- ```xml
 {% highlight xml linenos%}
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
@@ -72,10 +73,10 @@ Note that, the SlidingTabLayout has an id 'tabs'.
         android:background="@color/colorPrimary"/>
 </LinearLayout>
 {% endhighlight %}
-```
+
 Finally, we'll add a ViewPager to our main.xml file,  we'll give it an id the id 'pager',
 our main.xml file should now look like this:
-```xml
+
 {% highlight xml linenos%}
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
@@ -136,7 +137,6 @@ With that done, now lets create the layout files for our tabs. For demonstration
         android:layout_centerHorizontal="true" />
 </RelativeLayout>
 {% endhighlight %}
-```
 
 With the layouts done, now lets write our app logic.
 We are going to have two fragments. A fragment for each tab. So in the same package where your MainActivity.java file is, create two java files: OurWork.java and Blog.java.
@@ -174,7 +174,7 @@ import android.view.ViewGroup;
 import com.watabelabs.tabdemo.R;
 /**
 * Created by japheth on 2/20/16.
-*/
+**/
 public class OurWork  extends Fragment{
     @Nullable
     @Override

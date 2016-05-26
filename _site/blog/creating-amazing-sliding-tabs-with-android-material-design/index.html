@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>  Creating Amazing Sliding Tabs with Android Material Design |  Personal Page of Zachariah Ngonyani - Software Engineer </title>
+<link href='https://fonts.googleapis.com/css?family=Cabin:400,500,400italic,500italic,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400italic' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="fonts.css" media="all">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css" media="all">
+<script src="https://use.typekit.net/moj1mvi.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+<link rel="stylesheet" href="/css/fonts/stylesheet.css">
+<link rel="stylesheet" href="/css/normalize.css">
+<link rel="stylesheet" href="/css/foundation.css">
+<link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="http://yourdomain.com/blog/creating-amazing-sliding-tabs-with-android-material-design">
+<meta name="copyright" content="Web Developer from Arusha, Tanzania<"/>
+<meta name="content-language" content="en, "/>
+<meta name="author" content="Zachariah Ngonyani"/>
+<meta name="title" content="Personal Profile page for Zachariah Ngonyani"/>
+<meta name="keywords" content="Software,Developer, Arusha, Tanzania, Web, Programming, Data, Visualization, Dashboard, Designer, Angularjs, Nodejs, Ruby on Rails"/>
+<meta name="description" content="i am a web developer and software engineer based in arusha, tanzania. i work at watabelabs, a web development shop which i co-founded<"/>
+</head>
+
+<body class="post" id="home">
+  <div class="header">
+  <div class="main-navigation">
+  <div class="logo-container">
+    <a href="/">
+      <div class="logo">
+        <img src="/images/logo-2.svg" alt="logo">
+      </div>
+    </a>
+  </div>
+  <div class="phone-container">
+    <i class="fa fa-phone"></i>
+  </div>
+  <div class="button-container" id="toggle">
+    <span class="top"></span>
+    <span class="middle"></span>
+    <span class="bottom"></span>
+  </div>
+  <div class="overlay" id="overlay">
+    <nav class="overlay-menu">
+      <ul>
+        <li ><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#">Projects</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="clearfix"></div>
+</div>
+
+  <div class="wrapper">
+    <div class="container">
+      <h1 class="post-header-title">
+Creating Amazing Sliding Tabs with Android Material Design
+</h1>
+
+    </div>
+  </div>
+</div>
+
+  <!--post container starts-->
+  <div class="post-container">
+    <section class="dynamic">
+      <div class="container">
+        <div class="row">
+          <div class="large-8 medium-6 small-12 columns">
+            <p>Android Material Design enable developers to create amazing UI/UX. This helps developers dedicate the majority of their time working on the actual Application business logic. Being an Android developer myself, i have found this very useful, saving me lots of time. </p>
+
+<p>In this tutorial we will be building material design sliding tabs layout.</p>
+
+<p>We will be using IOsched google app SlidingTabLayout, also provided in the google developers
+page but its outdated, also we will use StripTabLayout from the iosched app.</p>
+
+<p>Lets get started.</p>
+
+<h3 id="prerequisites">Prerequisites</h3>
+
+<h4 id="android-studio-15">Android Studio 1.5</h4>
+
+<p>https://github.com/google/iosched/blob/master/android/src/main/java/com/google/samples/apps/iosched/ui/widget/SlidingTabLayout.java &amp; https://github.com/google/iosched/blob/master/android/src/main/java/com/google/samples/apps/iosched/ui/widget/SlidingTabLayout.java from IOsched google app.</p>
+
+<h3 id="slidingtablayout-implementation-overview">SlidingTabLayout Implementation Overview</h3>
+
+<p>We are going to have a LinearLayout with vertical orientation so that view children are placed in a hierachy
+one below the other.</p>
+
+<p>In our case, since we wont be having a toolbar, we are not going to define it. Next up, after the LinearLayout definition we will define  SlidingTabLayout, which will act as a Tab Strip, we could define it anywhere in the layout, but we want it above the pages being swiped, since putting it as the first child of the LinearLayout will make it appear at the top.</p>
+
+<p>The second child of our layout is the ViewPager, which is required  for swiping pages.</p>
+
+<h4 id="implementing-sliding-tablayout">Implementing Sliding TabLayout</h4>
+
+<p>First thing we need is to define how our app will look like and we’ll use this site’s color scheme for the puporse of uniformity.</p>
+
+<p>We’ll define our color scheme in the resources/values/color.xml file </p>
+
+<p>``` xml
+<?xml version="1.0" encoding="utf-8"?></p>
+<resources>
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#1976D2</color>
+    <color name="colorAccent">#FF9800</color>
+    <color name="white">#FFF</color>
+</resources>
+<p>```
+Next up, let’s get  SlidingTabLayout.java and StripTabLayout.java from the links provided in the prerequisite section and add them to our project.</p>
+
+<p>Now lets add the SlidingTabLayout to our main.xml file, this file should be activity_main.xml in our project.</p>
+
+<p>Note that, the SlidingTabLayout has an id ‘tabs’.</p>
+
+<p><code>xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.watabelabs.tabdemo.Main"&gt;
+ 
+    &lt;com.watabelabs.tabdemo.SlidingTabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:background="@color/colorPrimary"/&gt;
+&lt;/LinearLayout&gt;
+</code>
+Finally, we’ll add a ViewPager to our main.xml file,  we’ll give it an id the id ‘pager’,
+our main.xml file should now look like this:</p>
+
+<p><code>xml
+</code> xml
+<?xml version="1.0" encoding="utf-8"?>
+&lt;LinearLayout
+    xmlns:android=”http://schemas.android.com/apk/res/android”
+    xmlns:tools=”http://schemas.android.com/tools”
+    android:layout_width=”match_parent”
+    android:layout_height=”match_parent”
+    android:orientation=”vertical”
+    tools:context=”com.watabelabs.tabdemo.Main”&gt;</p>
+
+<p>    &lt;com.watabelabs.tabdemo.SlidingTabLayout
+        android:id=”@+id/tabs”
+        android:layout_width=”match_parent”
+        android:layout_height=”wrap_content”
+        android:elevation=”2dp”
+        android:background=”@color/colorPrimary”/&gt;
+    &lt;android.support.v4.view.ViewPager
+        android:id=”@+id/pager”
+        android:layout_height=”match_parent”
+        android:layout_width=”match_parent”
+        android:layout_weight=”1”&gt;
+    &lt;/android.support.v4.view.ViewPager&gt;
+&lt;/LinearLayout&gt;
+``` </p>
+
+<p>With that done, now lets create the layout files for our tabs. For demonstration purposes we will have two tabs, which means, we’ll make two tab_layouts, you can make as many as the tab design spec allows but for our app we’ll just have ourwork and blog tab layouts.</p>
+
+<h4 id="ourworkxml">ourwork.xml</h4>
+
+<p><code>xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"&gt;
+    &lt;TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="You Are Viewing Our Work"
+        android:id="@+id/textView"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" /&gt;
+&lt;/RelativeLayout&gt;
+</code>`  </p>
+
+<h4 id="blogxml">blog.xml</h4>
+
+<p><code>xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"&gt;
+    &lt;TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="You Are Viewing Our Blog"
+        android:id="@+id/textView"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" /&gt;
+&lt;/RelativeLayout&gt;
+</code></p>
+
+<p>With the layouts done, now lets write our app logic.
+We are going to have two fragments. A fragment for each tab. So in the same package where your MainActivity.java file is, create two java files: OurWork.java and Blog.java.</p>
+
+<h4 id="blogjava">Blog.java</h4>
+
+<p><code>java
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import com.watabelabs.tabdemo.R;
+public class Blog extends Fragment {
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.blog, container, false);
+        return view;
+    }
+}
+</code></p>
+
+<h4 id="ourworkjava">OurWork.java</h4>
+
+<p><code>java
+package com.watabelabs.tabdemo.tab_fragments;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import com.watabelabs.tabdemo.R;
+/**
+* Created by japheth on 2/20/16.
+*/
+public class OurWork  extends Fragment{
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.our_work, container, false);
+        return view;
+    }
+}
+</code></p>
+
+<p>Next up, we need an adapter to serve the view for each page. we’ll Create a new java file ViewPagerAdapter.java
+and add the following code. I will comment for more clarity on what’s happening, no magic!</p>
+
+<h4 id="viewpageradapterjava">ViewPagerAdapter.java</h4>
+
+<p>``` java
+package com.watabelabs.tabdemo.adapters;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentStatePagerAdapter;
+import com.watabelabs.tabdemo.tab_fragments.Blog;
+import com.watabelabs.tabdemo.tab_fragments.OurWork;</p>
+
+<p>public class ViewPagerAdapter extends FragmentStatePagerAdapter {
+    // An array of tab titles(labels)
+    String titles[];
+    // Should be initialized with number of tabs
+    int numOfTabs;
+    // Use support fragment for your app to work on earlier devices
+    // fragments were introduced in android 3.0, api 11
+    Fragment fragment;
+    // Constructor, initializes passed arguments with class values
+    public ViewPagerAdapter(FragmentManager fm, String titles[], int numOfTabs){
+        super(fm);
+        this.titles = titles;
+        this.numOfTabs = numOfTabs;
+    }
+    // This method returns a fragment object, of the selected tab
+    @Override
+    public Fragment getItem(int position) {
+        switch (position){
+            case 0:
+                fragment = new OurWork();
+                return fragment;
+            case 1:
+                fragment = new Blog();
+                return fragment;
+            default:
+                return null;
+        }
+    }
+    // Returns the tab’s title
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return titles[position];
+    }
+    // Returns the number of tabs
+    @Override
+    public int getCount() {
+        return numOfTabs;
+    }
+}
+```</p>
+
+<p>Now lets put everything together in our MainActivity.java file, comments should make everything clear.</p>
+
+<h4 id="mainjava">Main.java</h4>
+
+<p><code>java
+package com.watabelabs.tabdemo;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import com.watabelabs.tabdemo.adapters.ViewPagerAdapter;
+public class Main extends AppCompatActivity {
+    SlidingTabLayout tabLayout;
+    ViewPager viewPager;
+    ViewPagerAdapter viewPagerAdapter;
+    String titles[] = {"OurWork", "Blog"};
+    int numOfTabs = 2;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        // Construct a viewPagerAdapter object and pass appropriate values
+        // Note that we are passing getSupportFragmentManager as the first argument
+        viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(), titles, numOfTabs);
+        // Get reference to the viewPager and set the adapter
+        viewPager = (ViewPager) findViewById(R.id.pager);
+        viewPager.setAdapter(viewPagerAdapter);
+        // Get reference to the tabLayout, setDistributedEvenly(true)
+        // will make all tabs have the same width
+        tabLayout = (SlidingTabLayout) findViewById(R.id.tabs);
+        tabLayout.setDistributeEvenly(true);
+        // setCustomColorizer(), sets the color of the tab's indicator
+        tabLayout.setCustomTabColorizer(new SlidingTabLayout.TabColorizer(){
+            @Override
+            public int getIndicatorColor(int position) {
+                return getResources().getColor(R.color.colorAccent);
+            }
+        });
+        // initialize the tablayout's viewPager
+        tabLayout.setViewPager(viewPager);
+    }
+}
+</code></p>
+
+<p>Now lets try running our app,it should look perfect! our tabs are working nicely. But what if we want to customize the text color of our tabs Title for a specific event?
+i.e how do we show our users the active tab he/she is on?</p>
+
+<p>We need to create a selector.xml file inside  our res/drawable/ folder, it should look like this, but you can use any color you like</p>
+
+<h4 id="selectorxml">selector.xml</h4>
+
+<p><code>xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;selector xmlns:android="http://schemas.android.com/apk/res/android"&gt;
+    &lt;item android:state_selected="true" android:color="#FFF" /&gt;
+    &lt;item android:state_focused="true" android:color="#FFF" /&gt;
+    &lt;item android:state_pressed="true" android:color="#FFF" /&gt;
+    &lt;item android:color="#bdbdbd" /&gt;
+&lt;/selector&gt;
+</code></p>
+
+<p>We should the add it to our SlidingTabLayout.java</p>
+
+<p>In SlidingTabLayout.java we’ll look for a method private void populateTabStrip(), 
+and add the following lines of code</p>
+
+<p><code>java 
+tabTitleView.setTextColor(getResources().getColorStateList(R.drawable.selector));
+tabTitleView.setTextSize(16);
+</code>
+Now let’s take our app for a spin again, cool huh? </p>
+
+<p>If you liked the tutorial please share it, buy me a cup of coffee, or just drop in a comment in the comment section below.</p>
+
+          </div>
+          <div class="author-image large-4 medium-6 small-12 columns">
+            <aside>
+              <span class="avatar">
+                <img src="/images/zech_profile.svg" width="90" height="90">
+                </span>
+                <h5>Zachariah Ngonyani <br><em>Executive Creative Director</em></h5>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!--post container section ends-->
+    <footer>
+  <div class="cta">
+    <div class="wrapper">
+      <a href="#" class="button call-to-action">
+        <img src="/images/logo.svg" alt="logo" />
+      </a>
+    <div class="clearfix"></div>
+    </div>
+  </div>
+  <div class="nav">
+    <div class="wrapper">
+      <div class="name">
+        <h1>zachariah ngonyani</h1>
+      </div>
+      <div class="navigation">
+        <ul>
+          <li><a href="#">home</a></li>
+          <li><a href="#">about</a></li>
+          <li><a href="#">projects</a></li>
+          <li><a href="#">blog</a></li>
+          <li><a href="#">contact</a></li>
+        </ul>
+      </div>
+      <div class="copyright"></div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/js/vendor/jquery.js"> </script>
+<scrpit src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/vendor/fastclick.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/vendor/jquery.cookie.js"></script>
+<script src="/js/vendor/modernizr.js"> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation.min.js"></script>
+<script src="/js/app.js"> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.0/jquery.nicescroll.min.js"></script>
+<script src="/js/foundation.equalizer.js"> </script>
+<script>
+$(document).ready(
+  function() { 
+    $("html").niceScroll();
+  }
+);
+$(document).foundation({
+  equalizer : {
+    equalize_on_stack: true
+  }
+});
+</script>
+
+  </body>
+</html>

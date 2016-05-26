@@ -1,4 +1,9 @@
-## Creating Amazing Sliding Tabs with Android Material Design
+---
+layout: posts
+title: Creating Amazing Sliding Tabs with Android Material Design
+author: Zachariah Ngonyani
+abstract: Android Material Design enable developers to create amazing UI/UX. This helps developers dedicate 
+--- 
 
 Android Material Design enable developers to create amazing UI/UX. This helps developers dedicate the majority of their time working on the actual Application business logic. Being an Android developer myself, i have found this very useful, saving me lots of time. 
 

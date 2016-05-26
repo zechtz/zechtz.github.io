@@ -123,6 +123,7 @@ green     #859900  operators, other keywords
   font-weight: bold;
   font-style: normal;
   font-size: 14px;
+  margin: 1em 0;
   /* Comment */
   /* Error */
   /* Generic */
@@ -330,15 +331,14 @@ green     #859900  operators, other keywords
   .highlight .il {
     color: #2aa198; }
   .highlight code {
-    background-color: transparent;
-    padding: 10px; }
+    background-color: transparent; }
     .highlight code .lineno {
       text-align: right;
       font-size: 13px;
       line-height: 1.45em;
       width: 40px;
       background: #eee8d5 !important;
-      border-right: none !important;
+      border-right: 1px solid #eee8d5 !important;
       -webkit-box-shadow: #083e4b -1px 0 inset;
       -moz-box-shadow: #083e4b -1px 0 inset;
       box-shadow: #083e4b -1px 0 inset;

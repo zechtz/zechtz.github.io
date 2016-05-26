@@ -8,6 +8,13 @@ use it for your own purpose.
 If you decide to use my code, just fork & give me some props, not 
 neccesary though.
 
+### Getting Started
+Clone the project then  
+` cd zechtz.github.io && bundle install`
+#### Next just run the project
+` bundle exec jeklyll server `
+#### Next just view it on your browser 
+`http://localhost:4000`
 ### About the page
 
 The site is powered by Jekyll and styling done using 

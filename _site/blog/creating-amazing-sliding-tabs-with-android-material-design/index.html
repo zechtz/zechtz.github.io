@@ -84,7 +84,7 @@ page but its outdated, also we will use StripTabLayout from the iosched app.</p>
 
 <h4 id="android-studio-15">Android Studio 1.5</h4>
 
-<p>https://github.com/google/iosched/blob/master/android/src/main/java/com/google/samples/apps/iosched/ui/widget/SlidingTabLayout.java &amp; https://github.com/google/iosched/blob/master/android/src/main/java/com/google/samples/apps/iosched/ui/widget/SlidingTabLayout.java from IOsched google app.</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="lineno">1</span> https://github.com/google/iosched/blob/master/android/src/main/java/com/google/samples/apps/iosched/ui/widget/SlidingTabLayout.java <span class="err">&amp;</span> https://github.com/google/iosched/blob/master/android/src/main/java/com/google/samples/apps/iosched/ui/widget/SlidingTabLayout.java from IOsched google app.</code></pre></div>
 
 <h3 id="slidingtablayout-implementation-overview">SlidingTabLayout Implementation Overview</h3>
 
@@ -101,248 +101,237 @@ one below the other.</p>
 
 <p>We’ll define our color scheme in the resources/values/color.xml file </p>
 
-<p>``` xml
-<?xml version="1.0" encoding="utf-8"?></p>
-<resources>
-    <color name="colorPrimary">#2196F3</color>
-    <color name="colorPrimaryDark">#1976D2</color>
-    <color name="colorAccent">#FF9800</color>
-    <color name="white">#FFF</color>
-</resources>
-<p>```
-Next up, let’s get  SlidingTabLayout.java and StripTabLayout.java from the links provided in the prerequisite section and add them to our project.</p>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="lineno">1</span> <span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="lineno">2</span> <span class="nt">&lt;resources&gt;</span>
+<span class="lineno">3</span>     <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">&quot;colorPrimary&quot;</span><span class="nt">&gt;</span>#2196F3<span class="nt">&lt;/color&gt;</span>
+<span class="lineno">4</span>     <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">&quot;colorPrimaryDark&quot;</span><span class="nt">&gt;</span>#1976D2<span class="nt">&lt;/color&gt;</span>
+<span class="lineno">5</span>     <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">&quot;colorAccent&quot;</span><span class="nt">&gt;</span>#FF9800<span class="nt">&lt;/color&gt;</span>
+<span class="lineno">6</span>     <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">&quot;white&quot;</span><span class="nt">&gt;</span>#FFF<span class="nt">&lt;/color&gt;</span>
+<span class="lineno">7</span> <span class="nt">&lt;/resources&gt;</span></code></pre></div>
+
+<p>Next up, let’s get  SlidingTabLayout.java and StripTabLayout.java from the links provided in the prerequisite section and add them to our project.</p>
 
 <p>Now lets add the SlidingTabLayout to our main.xml file, this file should be activity_main.xml in our project.</p>
 
 <p>Note that, the SlidingTabLayout has an id ‘tabs’.</p>
 
-<p><code>xml
-&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.watabelabs.tabdemo.Main"&gt;
- 
-    &lt;com.watabelabs.tabdemo.SlidingTabLayout
-        android:id="@+id/tabs"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:elevation="2dp"
-        android:background="@color/colorPrimary"/&gt;
-&lt;/LinearLayout&gt;
-</code>
-Finally, we’ll add a ViewPager to our main.xml file,  we’ll give it an id the id ‘pager’,
-our main.xml file should now look like this:</p>
+<p>```xml</p>
 
-<p><code>xml
-</code> xml
-<?xml version="1.0" encoding="utf-8"?>
-&lt;LinearLayout
-    xmlns:android=”http://schemas.android.com/apk/res/android”
-    xmlns:tools=”http://schemas.android.com/tools”
-    android:layout_width=”match_parent”
-    android:layout_height=”match_parent”
-    android:orientation=”vertical”
-    tools:context=”com.watabelabs.tabdemo.Main”&gt;</p>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="lineno"> 1</span> <span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="lineno"> 2</span> <span class="nt">&lt;LinearLayout</span>
+<span class="lineno"> 3</span>     <span class="na">xmlns:android=</span><span class="s">&quot;http://schemas.android.com/apk/res/android&quot;</span>
+<span class="lineno"> 4</span>     <span class="na">xmlns:tools=</span><span class="s">&quot;http://schemas.android.com/tools&quot;</span>
+<span class="lineno"> 5</span>     <span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+<span class="lineno"> 6</span>     <span class="na">android:layout_height=</span><span class="s">&quot;match_parent&quot;</span>
+<span class="lineno"> 7</span>     <span class="na">android:orientation=</span><span class="s">&quot;vertical&quot;</span>
+<span class="lineno"> 8</span>     <span class="na">tools:context=</span><span class="s">&quot;com.watabelabs.tabdemo.Main&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 9</span>  
+<span class="lineno">10</span>     <span class="nt">&lt;com.watabelabs.tabdemo.SlidingTabLayout</span>
+<span class="lineno">11</span>         <span class="na">android:id=</span><span class="s">&quot;@+id/tabs&quot;</span>
+<span class="lineno">12</span>         <span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+<span class="lineno">13</span>         <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+<span class="lineno">14</span>         <span class="na">android:elevation=</span><span class="s">&quot;2dp&quot;</span>
+<span class="lineno">15</span>         <span class="na">android:background=</span><span class="s">&quot;@color/colorPrimary&quot;</span><span class="nt">/&gt;</span>
+<span class="lineno">16</span> <span class="nt">&lt;/LinearLayout&gt;</span></code></pre></div>
 
-<p>    &lt;com.watabelabs.tabdemo.SlidingTabLayout
-        android:id=”@+id/tabs”
-        android:layout_width=”match_parent”
-        android:layout_height=”wrap_content”
-        android:elevation=”2dp”
-        android:background=”@color/colorPrimary”/&gt;
-    &lt;android.support.v4.view.ViewPager
-        android:id=”@+id/pager”
-        android:layout_height=”match_parent”
-        android:layout_width=”match_parent”
-        android:layout_weight=”1”&gt;
-    &lt;/android.support.v4.view.ViewPager&gt;
-&lt;/LinearLayout&gt;
-``` </p>
+<p><code>
+Finally, we'll add a ViewPager to our main.xml file,  we'll give it an id the id 'pager',
+our main.xml file should now look like this:
+</code>xml</p>
+
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="lineno"> 1</span> <span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="lineno"> 2</span> <span class="nt">&lt;LinearLayout</span>
+<span class="lineno"> 3</span>     <span class="na">xmlns:android=</span><span class="s">&quot;http://schemas.android.com/apk/res/android&quot;</span>
+<span class="lineno"> 4</span>     <span class="na">xmlns:tools=</span><span class="s">&quot;http://schemas.android.com/tools&quot;</span>
+<span class="lineno"> 5</span>     <span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+<span class="lineno"> 6</span>     <span class="na">android:layout_height=</span><span class="s">&quot;match_parent&quot;</span>
+<span class="lineno"> 7</span>     <span class="na">android:orientation=</span><span class="s">&quot;vertical&quot;</span>
+<span class="lineno"> 8</span>     <span class="na">tools:context=</span><span class="s">&quot;com.watabelabs.tabdemo.Main&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 9</span> 
+<span class="lineno">10</span>     <span class="nt">&lt;com.watabelabs.tabdemo.SlidingTabLayout</span>
+<span class="lineno">11</span>         <span class="na">android:id=</span><span class="s">&quot;@+id/tabs&quot;</span>
+<span class="lineno">12</span>         <span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+<span class="lineno">13</span>         <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+<span class="lineno">14</span>         <span class="na">android:elevation=</span><span class="s">&quot;2dp&quot;</span>
+<span class="lineno">15</span>         <span class="na">android:background=</span><span class="s">&quot;@color/colorPrimary&quot;</span><span class="nt">/&gt;</span>
+<span class="lineno">16</span>     <span class="nt">&lt;android.support.v4.view.ViewPager</span>
+<span class="lineno">17</span>         <span class="na">android:id=</span><span class="s">&quot;@+id/pager&quot;</span>
+<span class="lineno">18</span>         <span class="na">android:layout_height=</span><span class="s">&quot;match_parent&quot;</span>
+<span class="lineno">19</span>         <span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+<span class="lineno">20</span>         <span class="na">android:layout_weight=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+<span class="lineno">21</span>     <span class="nt">&lt;/android.support.v4.view.ViewPager&gt;</span>
+<span class="lineno">22</span> <span class="nt">&lt;/LinearLayout&gt;</span></code></pre></div>
 
 <p>With that done, now lets create the layout files for our tabs. For demonstration purposes we will have two tabs, which means, we’ll make two tab_layouts, you can make as many as the tab design spec allows but for our app we’ll just have ourwork and blog tab layouts.</p>
 
 <h4 id="ourworkxml">ourwork.xml</h4>
 
-<p><code>xml
-&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"&gt;
-    &lt;TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="You Are Viewing Our Work"
-        android:id="@+id/textView"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" /&gt;
-&lt;/RelativeLayout&gt;
-</code>`  </p>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="lineno"> 1</span> <span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="lineno"> 2</span> <span class="nt">&lt;RelativeLayout</span> <span class="na">xmlns:android=</span><span class="s">&quot;http://schemas.android.com/apk/res/android&quot;</span>
+<span class="lineno"> 3</span>     <span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span> <span class="na">android:layout_height=</span><span class="s">&quot;match_parent&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 4</span>     <span class="nt">&lt;TextView</span>
+<span class="lineno"> 5</span>         <span class="na">android:layout_width=</span><span class="s">&quot;wrap_content&quot;</span>
+<span class="lineno"> 6</span>         <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+<span class="lineno"> 7</span>         <span class="na">android:textAppearance=</span><span class="s">&quot;?android:attr/textAppearanceMedium&quot;</span>
+<span class="lineno"> 8</span>         <span class="na">android:text=</span><span class="s">&quot;You Are Viewing Our Work&quot;</span>
+<span class="lineno"> 9</span>         <span class="na">android:id=</span><span class="s">&quot;@+id/textView&quot;</span>
+<span class="lineno">10</span>         <span class="na">android:layout_centerVertical=</span><span class="s">&quot;true&quot;</span>
+<span class="lineno">11</span>         <span class="na">android:layout_centerHorizontal=</span><span class="s">&quot;true&quot;</span> <span class="nt">/&gt;</span>
+<span class="lineno">12</span> <span class="nt">&lt;/RelativeLayout&gt;</span></code></pre></div>
 
 <h4 id="blogxml">blog.xml</h4>
 
-<p><code>xml
-&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"&gt;
-    &lt;TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="You Are Viewing Our Blog"
-        android:id="@+id/textView"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" /&gt;
-&lt;/RelativeLayout&gt;
-</code></p>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="lineno"> 1</span> <span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="lineno"> 2</span> <span class="nt">&lt;RelativeLayout</span> <span class="na">xmlns:android=</span><span class="s">&quot;http://schemas.android.com/apk/res/android&quot;</span>
+<span class="lineno"> 3</span>     <span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span> <span class="na">android:layout_height=</span><span class="s">&quot;match_parent&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 4</span>     <span class="nt">&lt;TextView</span>
+<span class="lineno"> 5</span>         <span class="na">android:layout_width=</span><span class="s">&quot;wrap_content&quot;</span>
+<span class="lineno"> 6</span>         <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+<span class="lineno"> 7</span>         <span class="na">android:textAppearance=</span><span class="s">&quot;?android:attr/textAppearanceMedium&quot;</span>
+<span class="lineno"> 8</span>         <span class="na">android:text=</span><span class="s">&quot;You Are Viewing Our Blog&quot;</span>
+<span class="lineno"> 9</span>         <span class="na">android:id=</span><span class="s">&quot;@+id/textView&quot;</span>
+<span class="lineno">10</span>         <span class="na">android:layout_centerVertical=</span><span class="s">&quot;true&quot;</span>
+<span class="lineno">11</span>         <span class="na">android:layout_centerHorizontal=</span><span class="s">&quot;true&quot;</span> <span class="nt">/&gt;</span>
+<span class="lineno">12</span> <span class="nt">&lt;/RelativeLayout&gt;</span></code></pre></div>
+
+<p>```</p>
 
 <p>With the layouts done, now lets write our app logic.
 We are going to have two fragments. A fragment for each tab. So in the same package where your MainActivity.java file is, create two java files: OurWork.java and Blog.java.</p>
 
 <h4 id="blogjava">Blog.java</h4>
 
-<p><code>java
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import com.watabelabs.tabdemo.R;
-public class Blog extends Fragment {
-    @Nullable
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.blog, container, false);
-        return view;
-    }
-}
-</code></p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="lineno"> 1</span> <span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
+<span class="lineno"> 2</span> <span class="kn">import</span> <span class="nn">android.support.annotation.Nullable</span><span class="o">;</span>
+<span class="lineno"> 3</span> <span class="kn">import</span> <span class="nn">android.support.v4.app.Fragment</span><span class="o">;</span>
+<span class="lineno"> 4</span> <span class="kn">import</span> <span class="nn">android.view.LayoutInflater</span><span class="o">;</span>
+<span class="lineno"> 5</span> <span class="kn">import</span> <span class="nn">android.view.View</span><span class="o">;</span>
+<span class="lineno"> 6</span> <span class="kn">import</span> <span class="nn">android.view.ViewGroup</span><span class="o">;</span>
+<span class="lineno"> 7</span> <span class="kn">import</span> <span class="nn">com.watabelabs.tabdemo.R</span><span class="o">;</span>
+<span class="lineno"> 8</span> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Blog</span> <span class="kd">extends</span> <span class="n">Fragment</span> <span class="o">{</span>
+<span class="lineno"> 9</span>     <span class="nd">@Nullable</span>
+<span class="lineno">10</span>     <span class="nd">@Override</span>
+<span class="lineno">11</span>     <span class="kd">public</span> <span class="n">View</span> <span class="nf">onCreateView</span><span class="o">(</span><span class="n">LayoutInflater</span> <span class="n">inflater</span><span class="o">,</span> <span class="n">ViewGroup</span> <span class="n">container</span><span class="o">,</span> <span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
+<span class="lineno">12</span>         <span class="n">View</span> <span class="n">view</span> <span class="o">=</span> <span class="n">inflater</span><span class="o">.</span><span class="na">inflate</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">blog</span><span class="o">,</span> <span class="n">container</span><span class="o">,</span> <span class="kc">false</span><span class="o">);</span>
+<span class="lineno">13</span>         <span class="k">return</span> <span class="n">view</span><span class="o">;</span>
+<span class="lineno">14</span>     <span class="o">}</span>
+<span class="lineno">15</span> <span class="o">}</span></code></pre></div>
 
 <h4 id="ourworkjava">OurWork.java</h4>
 
-<p><code>java
-package com.watabelabs.tabdemo.tab_fragments;
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import com.watabelabs.tabdemo.R;
-/**
-* Created by japheth on 2/20/16.
-*/
-public class OurWork  extends Fragment{
-    @Nullable
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.our_work, container, false);
-        return view;
-    }
-}
-</code></p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="lineno"> 1</span> <span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">watabelabs</span><span class="o">.</span><span class="na">tabdemo</span><span class="o">.</span><span class="na">tab_fragments</span><span class="o">;</span>
+<span class="lineno"> 2</span> <span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
+<span class="lineno"> 3</span> <span class="kn">import</span> <span class="nn">android.support.annotation.Nullable</span><span class="o">;</span>
+<span class="lineno"> 4</span> <span class="kn">import</span> <span class="nn">android.support.v4.app.Fragment</span><span class="o">;</span>
+<span class="lineno"> 5</span> <span class="kn">import</span> <span class="nn">android.view.LayoutInflater</span><span class="o">;</span>
+<span class="lineno"> 6</span> <span class="kn">import</span> <span class="nn">android.view.View</span><span class="o">;</span>
+<span class="lineno"> 7</span> <span class="kn">import</span> <span class="nn">android.view.ViewGroup</span><span class="o">;</span>
+<span class="lineno"> 8</span> <span class="kn">import</span> <span class="nn">com.watabelabs.tabdemo.R</span><span class="o">;</span>
+<span class="lineno"> 9</span> <span class="cm">/**</span>
+<span class="lineno">10</span> <span class="cm">* Created by japheth on 2/20/16.</span>
+<span class="lineno">11</span> <span class="cm">*/</span>
+<span class="lineno">12</span> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">OurWork</span>  <span class="kd">extends</span> <span class="n">Fragment</span><span class="o">{</span>
+<span class="lineno">13</span>     <span class="nd">@Nullable</span>
+<span class="lineno">14</span>     <span class="nd">@Override</span>
+<span class="lineno">15</span>     <span class="kd">public</span> <span class="n">View</span> <span class="nf">onCreateView</span><span class="o">(</span><span class="n">LayoutInflater</span> <span class="n">inflater</span><span class="o">,</span> <span class="n">ViewGroup</span> <span class="n">container</span><span class="o">,</span> <span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
+<span class="lineno">16</span>         <span class="n">View</span> <span class="n">view</span> <span class="o">=</span> <span class="n">inflater</span><span class="o">.</span><span class="na">inflate</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">our_work</span><span class="o">,</span> <span class="n">container</span><span class="o">,</span> <span class="kc">false</span><span class="o">);</span>
+<span class="lineno">17</span>         <span class="k">return</span> <span class="n">view</span><span class="o">;</span>
+<span class="lineno">18</span>     <span class="o">}</span>
+<span class="lineno">19</span> <span class="o">}</span></code></pre></div>
 
 <p>Next up, we need an adapter to serve the view for each page. we’ll Create a new java file ViewPagerAdapter.java
 and add the following code. I will comment for more clarity on what’s happening, no magic!</p>
 
 <h4 id="viewpageradapterjava">ViewPagerAdapter.java</h4>
 
-<p>``` java
-package com.watabelabs.tabdemo.adapters;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
-import com.watabelabs.tabdemo.tab_fragments.Blog;
-import com.watabelabs.tabdemo.tab_fragments.OurWork;</p>
-
-<p>public class ViewPagerAdapter extends FragmentStatePagerAdapter {
-    // An array of tab titles(labels)
-    String titles[];
-    // Should be initialized with number of tabs
-    int numOfTabs;
-    // Use support fragment for your app to work on earlier devices
-    // fragments were introduced in android 3.0, api 11
-    Fragment fragment;
-    // Constructor, initializes passed arguments with class values
-    public ViewPagerAdapter(FragmentManager fm, String titles[], int numOfTabs){
-        super(fm);
-        this.titles = titles;
-        this.numOfTabs = numOfTabs;
-    }
-    // This method returns a fragment object, of the selected tab
-    @Override
-    public Fragment getItem(int position) {
-        switch (position){
-            case 0:
-                fragment = new OurWork();
-                return fragment;
-            case 1:
-                fragment = new Blog();
-                return fragment;
-            default:
-                return null;
-        }
-    }
-    // Returns the tab’s title
-    @Override
-    public CharSequence getPageTitle(int position) {
-        return titles[position];
-    }
-    // Returns the number of tabs
-    @Override
-    public int getCount() {
-        return numOfTabs;
-    }
-}
-```</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="lineno"> 1</span> <span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">watabelabs</span><span class="o">.</span><span class="na">tabdemo</span><span class="o">.</span><span class="na">adapters</span><span class="o">;</span>
+<span class="lineno"> 2</span> <span class="kn">import</span> <span class="nn">android.support.v4.app.Fragment</span><span class="o">;</span>
+<span class="lineno"> 3</span> <span class="kn">import</span> <span class="nn">android.support.v4.app.FragmentManager</span><span class="o">;</span>
+<span class="lineno"> 4</span> <span class="kn">import</span> <span class="nn">android.support.v4.app.FragmentStatePagerAdapter</span><span class="o">;</span>
+<span class="lineno"> 5</span> <span class="kn">import</span> <span class="nn">com.watabelabs.tabdemo.tab_fragments.Blog</span><span class="o">;</span>
+<span class="lineno"> 6</span> <span class="kn">import</span> <span class="nn">com.watabelabs.tabdemo.tab_fragments.OurWork</span><span class="o">;</span>
+<span class="lineno"> 7</span> 
+<span class="lineno"> 8</span> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">ViewPagerAdapter</span> <span class="kd">extends</span> <span class="n">FragmentStatePagerAdapter</span> <span class="o">{</span>
+<span class="lineno"> 9</span>     <span class="c1">// An array of tab titles(labels)</span>
+<span class="lineno">10</span>     <span class="n">String</span> <span class="n">titles</span><span class="o">[];</span>
+<span class="lineno">11</span>     <span class="c1">// Should be initialized with number of tabs</span>
+<span class="lineno">12</span>     <span class="kt">int</span> <span class="n">numOfTabs</span><span class="o">;</span>
+<span class="lineno">13</span>     <span class="c1">// Use support fragment for your app to work on earlier devices</span>
+<span class="lineno">14</span>     <span class="c1">// fragments were introduced in android 3.0, api 11</span>
+<span class="lineno">15</span>     <span class="n">Fragment</span> <span class="n">fragment</span><span class="o">;</span>
+<span class="lineno">16</span>     <span class="c1">// Constructor, initializes passed arguments with class values</span>
+<span class="lineno">17</span>     <span class="kd">public</span> <span class="nf">ViewPagerAdapter</span><span class="o">(</span><span class="n">FragmentManager</span> <span class="n">fm</span><span class="o">,</span> <span class="n">String</span> <span class="n">titles</span><span class="o">[],</span> <span class="kt">int</span> <span class="n">numOfTabs</span><span class="o">){</span>
+<span class="lineno">18</span>         <span class="kd">super</span><span class="o">(</span><span class="n">fm</span><span class="o">);</span>
+<span class="lineno">19</span>         <span class="k">this</span><span class="o">.</span><span class="na">titles</span> <span class="o">=</span> <span class="n">titles</span><span class="o">;</span>
+<span class="lineno">20</span>         <span class="k">this</span><span class="o">.</span><span class="na">numOfTabs</span> <span class="o">=</span> <span class="n">numOfTabs</span><span class="o">;</span>
+<span class="lineno">21</span>     <span class="o">}</span>
+<span class="lineno">22</span>     <span class="c1">// This method returns a fragment object, of the selected tab</span>
+<span class="lineno">23</span>     <span class="nd">@Override</span>
+<span class="lineno">24</span>     <span class="kd">public</span> <span class="n">Fragment</span> <span class="nf">getItem</span><span class="o">(</span><span class="kt">int</span> <span class="n">position</span><span class="o">)</span> <span class="o">{</span>
+<span class="lineno">25</span>         <span class="k">switch</span> <span class="o">(</span><span class="n">position</span><span class="o">){</span>
+<span class="lineno">26</span>             <span class="k">case</span> <span class="mi">0</span><span class="o">:</span>
+<span class="lineno">27</span>                 <span class="n">fragment</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">OurWork</span><span class="o">();</span>
+<span class="lineno">28</span>                 <span class="k">return</span> <span class="n">fragment</span><span class="o">;</span>
+<span class="lineno">29</span>             <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
+<span class="lineno">30</span>                 <span class="n">fragment</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">Blog</span><span class="o">();</span>
+<span class="lineno">31</span>                 <span class="k">return</span> <span class="n">fragment</span><span class="o">;</span>
+<span class="lineno">32</span>             <span class="k">default</span><span class="o">:</span>
+<span class="lineno">33</span>                 <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+<span class="lineno">34</span>         <span class="o">}</span>
+<span class="lineno">35</span>     <span class="o">}</span>
+<span class="lineno">36</span>     <span class="c1">// Returns the tab&#39;s title</span>
+<span class="lineno">37</span>     <span class="nd">@Override</span>
+<span class="lineno">38</span>     <span class="kd">public</span> <span class="n">CharSequence</span> <span class="nf">getPageTitle</span><span class="o">(</span><span class="kt">int</span> <span class="n">position</span><span class="o">)</span> <span class="o">{</span>
+<span class="lineno">39</span>         <span class="k">return</span> <span class="n">titles</span><span class="o">[</span><span class="n">position</span><span class="o">];</span>
+<span class="lineno">40</span>     <span class="o">}</span>
+<span class="lineno">41</span>     <span class="c1">// Returns the number of tabs</span>
+<span class="lineno">42</span>     <span class="nd">@Override</span>
+<span class="lineno">43</span>     <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getCount</span><span class="o">()</span> <span class="o">{</span>
+<span class="lineno">44</span>         <span class="k">return</span> <span class="n">numOfTabs</span><span class="o">;</span>
+<span class="lineno">45</span>     <span class="o">}</span>
+<span class="lineno">46</span> <span class="o">}</span></code></pre></div>
 
 <p>Now lets put everything together in our MainActivity.java file, comments should make everything clear.</p>
 
 <h4 id="mainjava">Main.java</h4>
 
-<p><code>java
-package com.watabelabs.tabdemo;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
-import com.watabelabs.tabdemo.adapters.ViewPagerAdapter;
-public class Main extends AppCompatActivity {
-    SlidingTabLayout tabLayout;
-    ViewPager viewPager;
-    ViewPagerAdapter viewPagerAdapter;
-    String titles[] = {"OurWork", "Blog"};
-    int numOfTabs = 2;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        // Construct a viewPagerAdapter object and pass appropriate values
-        // Note that we are passing getSupportFragmentManager as the first argument
-        viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(), titles, numOfTabs);
-        // Get reference to the viewPager and set the adapter
-        viewPager = (ViewPager) findViewById(R.id.pager);
-        viewPager.setAdapter(viewPagerAdapter);
-        // Get reference to the tabLayout, setDistributedEvenly(true)
-        // will make all tabs have the same width
-        tabLayout = (SlidingTabLayout) findViewById(R.id.tabs);
-        tabLayout.setDistributeEvenly(true);
-        // setCustomColorizer(), sets the color of the tab's indicator
-        tabLayout.setCustomTabColorizer(new SlidingTabLayout.TabColorizer(){
-            @Override
-            public int getIndicatorColor(int position) {
-                return getResources().getColor(R.color.colorAccent);
-            }
-        });
-        // initialize the tablayout's viewPager
-        tabLayout.setViewPager(viewPager);
-    }
-}
-</code></p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="lineno"> 1</span> <span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">watabelabs</span><span class="o">.</span><span class="na">tabdemo</span><span class="o">;</span>
+<span class="lineno"> 2</span> <span class="kn">import</span> <span class="nn">android.support.v4.view.ViewPager</span><span class="o">;</span>
+<span class="lineno"> 3</span> <span class="kn">import</span> <span class="nn">android.support.v7.app.AppCompatActivity</span><span class="o">;</span>
+<span class="lineno"> 4</span> <span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
+<span class="lineno"> 5</span> <span class="kn">import</span> <span class="nn">android.support.v7.widget.Toolbar</span><span class="o">;</span>
+<span class="lineno"> 6</span> <span class="kn">import</span> <span class="nn">com.watabelabs.tabdemo.adapters.ViewPagerAdapter</span><span class="o">;</span>
+<span class="lineno"> 7</span> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="kd">extends</span> <span class="n">AppCompatActivity</span> <span class="o">{</span>
+<span class="lineno"> 8</span>     <span class="n">SlidingTabLayout</span> <span class="n">tabLayout</span><span class="o">;</span>
+<span class="lineno"> 9</span>     <span class="n">ViewPager</span> <span class="n">viewPager</span><span class="o">;</span>
+<span class="lineno">10</span>     <span class="n">ViewPagerAdapter</span> <span class="n">viewPagerAdapter</span><span class="o">;</span>
+<span class="lineno">11</span>     <span class="n">String</span> <span class="n">titles</span><span class="o">[]</span> <span class="o">=</span> <span class="o">{</span><span class="s">&quot;OurWork&quot;</span><span class="o">,</span> <span class="s">&quot;Blog&quot;</span><span class="o">};</span>
+<span class="lineno">12</span>     <span class="kt">int</span> <span class="n">numOfTabs</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span>
+<span class="lineno">13</span>     <span class="nd">@Override</span>
+<span class="lineno">14</span>     <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
+<span class="lineno">15</span>         <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
+<span class="lineno">16</span>         <span class="n">setContentView</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_main</span><span class="o">);</span>
+<span class="lineno">17</span>         <span class="c1">// Construct a viewPagerAdapter object and pass appropriate values</span>
+<span class="lineno">18</span>         <span class="c1">// Note that we are passing getSupportFragmentManager as the first argument</span>
+<span class="lineno">19</span>         <span class="n">viewPagerAdapter</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">ViewPagerAdapter</span><span class="o">(</span><span class="n">getSupportFragmentManager</span><span class="o">(),</span> <span class="n">titles</span><span class="o">,</span> <span class="n">numOfTabs</span><span class="o">);</span>
+<span class="lineno">20</span>         <span class="c1">// Get reference to the viewPager and set the adapter</span>
+<span class="lineno">21</span>         <span class="n">viewPager</span> <span class="o">=</span> <span class="o">(</span><span class="n">ViewPager</span><span class="o">)</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">pager</span><span class="o">);</span>
+<span class="lineno">22</span>         <span class="n">viewPager</span><span class="o">.</span><span class="na">setAdapter</span><span class="o">(</span><span class="n">viewPagerAdapter</span><span class="o">);</span>
+<span class="lineno">23</span>         <span class="c1">// Get reference to the tabLayout, setDistributedEvenly(true)</span>
+<span class="lineno">24</span>         <span class="c1">// will make all tabs have the same width</span>
+<span class="lineno">25</span>         <span class="n">tabLayout</span> <span class="o">=</span> <span class="o">(</span><span class="n">SlidingTabLayout</span><span class="o">)</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">tabs</span><span class="o">);</span>
+<span class="lineno">26</span>         <span class="n">tabLayout</span><span class="o">.</span><span class="na">setDistributeEvenly</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+<span class="lineno">27</span>         <span class="c1">// setCustomColorizer(), sets the color of the tab&#39;s indicator</span>
+<span class="lineno">28</span>         <span class="n">tabLayout</span><span class="o">.</span><span class="na">setCustomTabColorizer</span><span class="o">(</span><span class="k">new</span> <span class="n">SlidingTabLayout</span><span class="o">.</span><span class="na">TabColorizer</span><span class="o">(){</span>
+<span class="lineno">29</span>             <span class="nd">@Override</span>
+<span class="lineno">30</span>             <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getIndicatorColor</span><span class="o">(</span><span class="kt">int</span> <span class="n">position</span><span class="o">)</span> <span class="o">{</span>
+<span class="lineno">31</span>                 <span class="k">return</span> <span class="nf">getResources</span><span class="o">().</span><span class="na">getColor</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">color</span><span class="o">.</span><span class="na">colorAccent</span><span class="o">);</span>
+<span class="lineno">32</span>             <span class="o">}</span>
+<span class="lineno">33</span>         <span class="o">});</span>
+<span class="lineno">34</span>         <span class="c1">// initialize the tablayout&#39;s viewPager</span>
+<span class="lineno">35</span>         <span class="n">tabLayout</span><span class="o">.</span><span class="na">setViewPager</span><span class="o">(</span><span class="n">viewPager</span><span class="o">);</span>
+<span class="lineno">36</span>     <span class="o">}</span>
+<span class="lineno">37</span> <span class="o">}</span></code></pre></div>
 
 <p>Now lets try running our app,it should look perfect! our tabs are working nicely. But what if we want to customize the text color of our tabs Title for a specific event?
 i.e how do we show our users the active tab he/she is on?</p>
@@ -351,26 +340,24 @@ i.e how do we show our users the active tab he/she is on?</p>
 
 <h4 id="selectorxml">selector.xml</h4>
 
-<p><code>xml
-&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;selector xmlns:android="http://schemas.android.com/apk/res/android"&gt;
-    &lt;item android:state_selected="true" android:color="#FFF" /&gt;
-    &lt;item android:state_focused="true" android:color="#FFF" /&gt;
-    &lt;item android:state_pressed="true" android:color="#FFF" /&gt;
-    &lt;item android:color="#bdbdbd" /&gt;
-&lt;/selector&gt;
-</code></p>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="lineno">1</span> package com.watabelabs.tabdemo;
+<span class="lineno">2</span> <span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="lineno">3</span> <span class="nt">&lt;selector</span> <span class="na">xmlns:android=</span><span class="s">&quot;http://schemas.android.com/apk/res/android&quot;</span><span class="nt">&gt;</span>
+<span class="lineno">4</span>     <span class="nt">&lt;item</span> <span class="na">android:state_selected=</span><span class="s">&quot;true&quot;</span> <span class="na">android:color=</span><span class="s">&quot;#FFF&quot;</span> <span class="nt">/&gt;</span>
+<span class="lineno">5</span>     <span class="nt">&lt;item</span> <span class="na">android:state_focused=</span><span class="s">&quot;true&quot;</span> <span class="na">android:color=</span><span class="s">&quot;#FFF&quot;</span> <span class="nt">/&gt;</span>
+<span class="lineno">6</span>     <span class="nt">&lt;item</span> <span class="na">android:state_pressed=</span><span class="s">&quot;true&quot;</span> <span class="na">android:color=</span><span class="s">&quot;#FFF&quot;</span> <span class="nt">/&gt;</span>
+<span class="lineno">7</span>     <span class="nt">&lt;item</span> <span class="na">android:color=</span><span class="s">&quot;#bdbdbd&quot;</span> <span class="nt">/&gt;</span>
+<span class="lineno">8</span> <span class="nt">&lt;/selector&gt;</span></code></pre></div>
 
 <p>We should the add it to our SlidingTabLayout.java</p>
 
 <p>In SlidingTabLayout.java we’ll look for a method private void populateTabStrip(), 
 and add the following lines of code</p>
 
-<p><code>java 
-tabTitleView.setTextColor(getResources().getColorStateList(R.drawable.selector));
-tabTitleView.setTextSize(16);
-</code>
-Now let’s take our app for a spin again, cool huh? </p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="lineno">1</span> <span class="n">tabTitleView</span><span class="o">.</span><span class="na">setTextColor</span><span class="o">(</span><span class="n">getResources</span><span class="o">().</span><span class="na">getColorStateList</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">drawable</span><span class="o">.</span><span class="na">selector</span><span class="o">));</span>
+<span class="lineno">2</span> <span class="n">tabTitleView</span><span class="o">.</span><span class="na">setTextSize</span><span class="o">(</span><span class="mi">16</span><span class="o">);</span></code></pre></div>
+
+<p>Now let’s take our app for a spin again, cool huh? </p>
 
 <p>If you liked the tutorial please share it, buy me a cup of coffee, or just drop in a comment in the comment section below.</p>
 

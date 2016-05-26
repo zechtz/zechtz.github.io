@@ -18,7 +18,9 @@ Lets get started.
 
 #### Android Studio 1.5
 
+{% highlight html linenos%}
 https://github.com/google/iosched/blob/master/android/src/main/java/com/google/samples/apps/iosched/ui/widget/SlidingTabLayout.java & https://github.com/google/iosched/blob/master/android/src/main/java/com/google/samples/apps/iosched/ui/widget/SlidingTabLayout.java from IOsched google app.
+{% endhighlight %}
 
 ### SlidingTabLayout Implementation Overview
 
@@ -35,7 +37,7 @@ First thing we need is to define how our app will look like and we'll use this s
 
 We'll define our color scheme in the resources/values/color.xml file 
 
-``` xml
+{% highlight xml linenos%}
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#2196F3</color>
@@ -43,7 +45,8 @@ We'll define our color scheme in the resources/values/color.xml file
     <color name="colorAccent">#FF9800</color>
     <color name="white">#FFF</color>
 </resources>
-```
+{% endhighlight %}
+
 Next up, let's get  SlidingTabLayout.java and StripTabLayout.java from the links provided in the prerequisite section and add them to our project.
 
 Now lets add the SlidingTabLayout to our main.xml file, this file should be activity_main.xml in our project.
@@ -51,6 +54,7 @@ Now lets add the SlidingTabLayout to our main.xml file, this file should be acti
 Note that, the SlidingTabLayout has an id 'tabs'.
 
  ```xml
+{% highlight xml linenos%}
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -67,12 +71,12 @@ Note that, the SlidingTabLayout has an id 'tabs'.
         android:elevation="2dp"
         android:background="@color/colorPrimary"/>
 </LinearLayout>
+{% endhighlight %}
 ```
 Finally, we'll add a ViewPager to our main.xml file,  we'll give it an id the id 'pager',
 our main.xml file should now look like this:
-
 ```xml
-``` xml
+{% highlight xml linenos%}
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -95,13 +99,13 @@ our main.xml file should now look like this:
         android:layout_weight="1">
     </android.support.v4.view.ViewPager>
 </LinearLayout>
-``` 
+{% endhighlight %}
 
 With that done, now lets create the layout files for our tabs. For demonstration purposes we will have two tabs, which means, we'll make two tab_layouts, you can make as many as the tab design spec allows but for our app we'll just have ourwork and blog tab layouts.
 
 #### ourwork.xml
 
-``` xml
+{% highlight xml linenos%}
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
@@ -114,11 +118,11 @@ With that done, now lets create the layout files for our tabs. For demonstration
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>
-````  
+{% endhighlight %}
 
 #### blog.xml
 
-``` xml
+{% highlight xml linenos%}
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
@@ -131,6 +135,7 @@ With that done, now lets create the layout files for our tabs. For demonstration
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>
+{% endhighlight %}
 ```
 
 With the layouts done, now lets write our app logic.
@@ -138,7 +143,7 @@ We are going to have two fragments. A fragment for each tab. So in the same pack
 
 #### Blog.java
 
-``` java
+{% highlight java linenos%}
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -154,11 +159,11 @@ public class Blog extends Fragment {
         return view;
     }
 }
-```
+{% endhighlight %}
 
 #### OurWork.java
 
-``` java
+{% highlight java linenos%}
 package com.watabelabs.tabdemo.tab_fragments;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -178,14 +183,14 @@ public class OurWork  extends Fragment{
         return view;
     }
 }
-```
+{% endhighlight %}
 
 Next up, we need an adapter to serve the view for each page. we'll Create a new java file ViewPagerAdapter.java
 and add the following code. I will comment for more clarity on what's happening, no magic!
 
 #### ViewPagerAdapter.java
 
-``` java
+{% highlight java linenos%}
 package com.watabelabs.tabdemo.adapters;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -232,13 +237,13 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
         return numOfTabs;
     }
 }
-```
+{% endhighlight %}
 
 Now lets put everything together in our MainActivity.java file, comments should make everything clear.
 
 #### Main.java
 
-``` java
+{% highlight java linenos%}
 package com.watabelabs.tabdemo;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -276,7 +281,7 @@ public class Main extends AppCompatActivity {
         tabLayout.setViewPager(viewPager);
     }
 }
-```
+{% endhighlight %}
 
 Now lets try running our app,it should look perfect! our tabs are working nicely. But what if we want to customize the text color of our tabs Title for a specific event?
 i.e how do we show our users the active tab he/she is on?
@@ -285,7 +290,8 @@ We need to create a selector.xml file inside  our res/drawable/ folder, it shou
 
 #### selector.xml
 
-``` xml
+{% highlight xml linenos%}
+package com.watabelabs.tabdemo;
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_selected="true" android:color="#FFF" />
@@ -293,17 +299,18 @@ We need to create a selector.xml file inside  our res/drawable/ folder, it shou
     <item android:state_pressed="true" android:color="#FFF" />
     <item android:color="#bdbdbd" />
 </selector>
-```
+{% endhighlight %}
 
 We should the add it to our SlidingTabLayout.java
 
 In SlidingTabLayout.java we'll look for a method private void populateTabStrip(), 
 and add the following lines of code
 
-``` java 
+{% highlight java linenos%}
 tabTitleView.setTextColor(getResources().getColorStateList(R.drawable.selector));
 tabTitleView.setTextSize(16);
-```
+{% endhighlight %}
+
 Now let's take our app for a spin again, cool huh? 
 
 If you liked the tutorial please share it, buy me a cup of coffee, or just drop in a comment in the comment section below.

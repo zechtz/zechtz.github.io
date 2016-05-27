@@ -75,7 +75,7 @@ How to Pluck Multiple Columns in Rails 3
 
 <p>A few days ago, i was trying to see how many people have logged in into my application and wanted to display their sign_in_count next to their email addresses. Usually this is simple in rails 4 as you can just do </p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">User</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="s1">&#39;sign_in_count &gt; 0&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">pluck</span><span class="p">(</span><span class="ss">:email</span><span class="p">,</span> <span class="ss">:sign_in_count</span><span class="p">)</span></code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="lineno">1</span> <span class="no">User</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="s1">&#39;sign_in_count &gt; 0&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">pluck</span><span class="p">(</span><span class="ss">:email</span><span class="p">,</span> <span class="ss">:sign_in_count</span><span class="p">)</span></code></pre></div>
 
 <p>The app is runs on rails 3 and the pluck method in Rails 3 only allows plucking a single column, so we had to find a way to make our owm method to overcome this.</p>
 
@@ -106,7 +106,7 @@ How to Pluck Multiple Columns in Rails 3
 
 <p>Now you can just do </p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">User</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="s1">&#39;sign_in_count &gt; 0&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">pluck_multiple</span><span class="p">(</span><span class="ss">:email</span><span class="p">,</span> <span class="ss">:sign_in_count</span><span class="p">)</span></code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="lineno">1</span> <span class="no">User</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="s1">&#39;sign_in_count &gt; 0&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">pluck_multiple</span><span class="p">(</span><span class="ss">:email</span><span class="p">,</span> <span class="ss">:sign_in_count</span><span class="p">)</span></code></pre></div>
 
 <p>Remember, my <strong>User Model</strong> is a devise model</p>
 

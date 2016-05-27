@@ -8,7 +8,7 @@ Plucking multiple columns from a rails 3 app could be a pain in the ass. Fortuna
 
 A few days ago, i was trying to see how many people have logged in into my application and wanted to display their sign_in_count next to their email addresses. Usually this is simple in rails 4 as you can just do 
 
-  {% highlight ruby %}
+  {% highlight ruby linenos%}
     User.where('sign_in_count > 0').pluck(:email, :sign_in_count)
   {% endhighlight %}
 
@@ -42,7 +42,8 @@ Thanks to monkey-patching, we just had to re-open the **Active Record** *Module*
   {% endhighlight %}
 
   Now you can just do 
-  {% highlight ruby %}
+
+  {% highlight ruby linenos%}
   User.where('sign_in_count > 0').pluck_multiple(:email, :sign_in_count)
   {% endhighlight %}
 

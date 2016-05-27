@@ -80,13 +80,14 @@ page but its outdated, also we will use StripTabLayout from the iosched app.</p>
 
 <p>Lets get started.</p>
 
-<h3 id="prerequisites">Prerequisites</h3>
-
-<h4 id="android-studio-15">Android Studio 1.5</h4>
+<h2>Prerequisites</h2>
+<h3>Android Studio 1.5</h3>
 
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="lineno">1</span> https://github.com/google/iosched/blob/master/android/src/main/java/com/google/samples/apps/iosched/ui/widget/SlidingTabLayout.java <span class="err">&amp;</span> https://github.com/google/iosched/blob/master/android/src/main/java/com/google/samples/apps/iosched/ui/widget/SlidingTabLayout.java from IOsched google app.</code></pre></div>
 
-<h3 id="slidingtablayout-implementation-overview">SlidingTabLayout Implementation Overview</h3>
+<h2>
+  SlidingTabLayout Implementation Overview
+</h2>
 
 <p>We are going to have a LinearLayout with vertical orientation so that view children are placed in a hierachy
 one below the other.</p>
@@ -95,7 +96,9 @@ one below the other.</p>
 
 <p>The second child of our layout is the ViewPager, which is required  for swiping pages.</p>
 
-<h4 id="implementing-sliding-tablayout">Implementing Sliding TabLayout</h4>
+<h3>
+  Implementing Sliding TabLayout
+</h3>
 
 <p>First thing we need is to define how our app will look like and we’ll use this site’s color scheme for the puporse of uniformity.</p>
 
@@ -160,7 +163,7 @@ our main.xml file should now look like this:</p>
 
 <p>With that done, now lets create the layout files for our tabs. For demonstration purposes we will have two tabs, which means, we’ll make two tab_layouts, you can make as many as the tab design spec allows but for our app we’ll just have ourwork and blog tab layouts.</p>
 
-<h4 id="ourworkxml">ourwork.xml</h4>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml">ourwork.xml</code></pre></div>
 
 <div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="lineno"> 1</span> <span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
 <span class="lineno"> 2</span> <span class="nt">&lt;RelativeLayout</span> <span class="na">xmlns:android=</span><span class="s">&quot;http://schemas.android.com/apk/res/android&quot;</span>
@@ -175,7 +178,7 @@ our main.xml file should now look like this:</p>
 <span class="lineno">11</span>         <span class="na">android:layout_centerHorizontal=</span><span class="s">&quot;true&quot;</span> <span class="nt">/&gt;</span>
 <span class="lineno">12</span> <span class="nt">&lt;/RelativeLayout&gt;</span></code></pre></div>
 
-<h4 id="blogxml">blog.xml</h4>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml">blog.xml</code></pre></div>
 
 <div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="lineno"> 1</span> <span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
 <span class="lineno"> 2</span> <span class="nt">&lt;RelativeLayout</span> <span class="na">xmlns:android=</span><span class="s">&quot;http://schemas.android.com/apk/res/android&quot;</span>
@@ -193,7 +196,7 @@ our main.xml file should now look like this:</p>
 <p>With the layouts done, now lets write our app logic.
 We are going to have two fragments. A fragment for each tab. So in the same package where your MainActivity.java file is, create two java files: OurWork.java and Blog.java.</p>
 
-<h4 id="blogjava">Blog.java</h4>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Blog</span><span class="o">.</span><span class="na">java</span></code></pre></div>
 
 <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="lineno"> 1</span> <span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
 <span class="lineno"> 2</span> <span class="kn">import</span> <span class="nn">android.support.annotation.Nullable</span><span class="o">;</span>
@@ -211,7 +214,7 @@ We are going to have two fragments. A fragment for each tab. So in the same pack
 <span class="lineno">14</span>     <span class="o">}</span>
 <span class="lineno">15</span> <span class="o">}</span></code></pre></div>
 
-<h4 id="ourworkjava">OurWork.java</h4>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">OurWork</span><span class="o">.</span><span class="na">java</span></code></pre></div>
 
 <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="lineno"> 1</span> <span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">watabelabs</span><span class="o">.</span><span class="na">tabdemo</span><span class="o">.</span><span class="na">tab_fragments</span><span class="o">;</span>
 <span class="lineno"> 2</span> <span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
@@ -236,7 +239,7 @@ We are going to have two fragments. A fragment for each tab. So in the same pack
 <p>Next up, we need an adapter to serve the view for each page. we’ll Create a new java file ViewPagerAdapter.java
 and add the following code. I will comment for more clarity on what’s happening, no magic!</p>
 
-<h4 id="viewpageradapterjava">ViewPagerAdapter.java</h4>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">ViewPagerAdapter</span><span class="o">.</span><span class="na">java</span></code></pre></div>
 
 <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="lineno"> 1</span> <span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">watabelabs</span><span class="o">.</span><span class="na">tabdemo</span><span class="o">.</span><span class="na">adapters</span><span class="o">;</span>
 <span class="lineno"> 2</span> <span class="kn">import</span> <span class="nn">android.support.v4.app.Fragment</span><span class="o">;</span>
@@ -287,7 +290,7 @@ and add the following code. I will comment for more clarity on what’s happenin
 
 <p>Now lets put everything together in our MainActivity.java file, comments should make everything clear.</p>
 
-<h4 id="mainjava">Main.java</h4>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Main</span><span class="o">.</span><span class="na">java</span></code></pre></div>
 
 <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="lineno"> 1</span> <span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">watabelabs</span><span class="o">.</span><span class="na">tabdemo</span><span class="o">;</span>
 <span class="lineno"> 2</span> <span class="kn">import</span> <span class="nn">android.support.v4.view.ViewPager</span><span class="o">;</span>
@@ -332,7 +335,7 @@ i.e how do we show our users the active tab he/she is on?</p>
 
 <p>We need to create a selector.xml file inside  our res/drawable/ folder, it should look like this, but you can use any color you like</p>
 
-<h4 id="selectorxml">selector.xml</h4>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml">selector.xml</code></pre></div>
 
 <div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="lineno">1</span> package com.watabelabs.tabdemo;
 <span class="lineno">2</span> <span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>

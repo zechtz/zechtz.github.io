@@ -16,15 +16,16 @@ page but its outdated, also we will use StripTabLayout from the iosched app.
 
 Lets get started.
 
-### Prerequisites
-
-#### Android Studio 1.5
+<h2>Prerequisites</h2>
+<h3>Android Studio 1.5</h3>
 
 {% highlight html linenos%}
 https://github.com/google/iosched/blob/master/android/src/main/java/com/google/samples/apps/iosched/ui/widget/SlidingTabLayout.java & https://github.com/google/iosched/blob/master/android/src/main/java/com/google/samples/apps/iosched/ui/widget/SlidingTabLayout.java from IOsched google app.
 {% endhighlight %}
 
-### SlidingTabLayout Implementation Overview
+<h2>
+  SlidingTabLayout Implementation Overview
+</h2>
 
 We are going to have a LinearLayout with vertical orientation so that view children are placed in a hierachy
 one below the other.
@@ -33,7 +34,9 @@ In our case, since we wont be having a toolbar, we are not going to define it. N
 
 The second child of our layout is the ViewPager, which is required  for swiping pages.
 
-#### Implementing Sliding TabLayout
+<h3>
+  Implementing Sliding TabLayout
+</h3>
 
 First thing we need is to define how our app will look like and we'll use this site's color scheme for the puporse of uniformity.
 
@@ -104,7 +107,9 @@ our main.xml file should now look like this:
 
 With that done, now lets create the layout files for our tabs. For demonstration purposes we will have two tabs, which means, we'll make two tab_layouts, you can make as many as the tab design spec allows but for our app we'll just have ourwork and blog tab layouts.
 
-#### ourwork.xml
+{% highlight xml %}
+ ourwork.xml
+{% endhighlight %}
 
 {% highlight xml linenos%}
 <?xml version="1.0" encoding="utf-8"?>
@@ -121,7 +126,9 @@ With that done, now lets create the layout files for our tabs. For demonstration
 </RelativeLayout>
 {% endhighlight %}
 
-#### blog.xml
+{% highlight xml %}
+  blog.xml
+{% endhighlight %}
 
 {% highlight xml linenos%}
 <?xml version="1.0" encoding="utf-8"?>
@@ -141,7 +148,9 @@ With that done, now lets create the layout files for our tabs. For demonstration
 With the layouts done, now lets write our app logic.
 We are going to have two fragments. A fragment for each tab. So in the same package where your MainActivity.java file is, create two java files: OurWork.java and Blog.java.
 
-#### Blog.java
+{% highlight java %}
+Blog.java
+{% endhighlight %}
 
 {% highlight java linenos%}
 import android.os.Bundle;
@@ -161,7 +170,9 @@ public class Blog extends Fragment {
 }
 {% endhighlight %}
 
-#### OurWork.java
+{% highlight java %}
+ OurWork.java
+{% endhighlight %}
 
 {% highlight java linenos%}
 package com.watabelabs.tabdemo.tab_fragments;
@@ -188,7 +199,9 @@ public class OurWork  extends Fragment{
 Next up, we need an adapter to serve the view for each page. we'll Create a new java file ViewPagerAdapter.java
 and add the following code. I will comment for more clarity on what's happening, no magic!
 
-#### ViewPagerAdapter.java
+{% highlight java %}
+ViewPagerAdapter.java
+{% endhighlight %}
 
 {% highlight java linenos%}
 package com.watabelabs.tabdemo.adapters;
@@ -241,7 +254,9 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
 Now lets put everything together in our MainActivity.java file, comments should make everything clear.
 
-#### Main.java
+{% highlight java  %}
+ Main.java
+{% endhighlight %}
 
 {% highlight java linenos%}
 package com.watabelabs.tabdemo;
@@ -288,7 +303,10 @@ i.e how do we show our users the active tab he/she is on?
 
 We need to create a selector.xml file inside  our res/drawable/ folder, it should look like this, but you can use any color you like
 
-#### selector.xml
+{% highlight xml %}
+ selector.xml
+{% endhighlight %}
+
 
 {% highlight xml linenos%}
 package com.watabelabs.tabdemo;

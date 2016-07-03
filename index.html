@@ -1,29 +1,83 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>  Personal Page of Zachariah Ngonyani - Software Engineer </title>
+<link href='https://fonts.googleapis.com/css?family=Cabin:400,500,400italic,500italic,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400italic' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="fonts.css" media="all">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css" media="all">
+<script src="https://use.typekit.net/moj1mvi.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+<link rel="stylesheet" href="/css/fonts/stylesheet.css">
+<link rel="stylesheet" href="/css/normalize.css">
+<link rel="stylesheet" href="/css/foundation.css">
+<link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="http://yourdomain.com/">
+<meta name="copyright" content="Web Developer from Arusha, Tanzania<"/>
+<meta name="content-language" content="en, "/>
+<meta name="author" content="Zachariah Ngonyani"/>
+<meta name="title" content="Personal Profile page for Zachariah Ngonyani"/>
+<meta name="keywords" content="Software,Developer, Arusha, Tanzania, Web, Programming, Data, Visualization, Dashboard, Designer, Angularjs, Nodejs, Ruby on Rails"/>
+<meta name="description" content="i am a web developer and software engineer based in arusha, tanzania. i work at watabelabs, a web development shop which i co-founded<"/>
+</head>
 
-<div class="header">
-  {% include new_nav.html %}
+<body class="home" id="home">
+  <div class="header">
+  <div class="main-navigation">
+  <div class="logo-container">
+    <a href="/">
+      <div class="logo">
+        <img src="/images/logo.svg" alt="logo">
+      </div>
+    </a>
+  </div>
+  <div class="phone-container">
+    <i class="fa fa-phone"></i>
+  </div>
+  <div class="button-container" id="toggle">
+    <span class="top"></span>
+    <span class="middle"></span>
+    <span class="bottom"></span>
+  </div>
+  <div class="overlay" id="overlay">
+    <nav class="overlay-menu">
+      <ul>
+        <li ><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#">Projects</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="clearfix"></div>
+</div>
+
   <div class="wrapper">
     <div class="container">
       <p>Hello, i am</p>
-      <a class="link link-zack" href="#"><span data-letters-l="ZA" data-letters-r="CH">ZACHARIAH Ngonyani</span></a>
-      <p class="baseline">A Rubyst <em>&amp;</em> Front-end Web Developer from Tanzania</p>
-      <a class="button round" href="#about">About me <em>&amp;</em> contact</a>
-      <div class="clearfix"></div>
-      <div class="clearfix"></div>
-      <div class="social">
-        <ul>
-          <li><i class="fa fa-inbox"></i><a href="#">zachariahn@gmail.com</a></li>
-          <li><i class="fa fa-github"></i><a href="https://github.com/zechtz/">github/zechtz</a></li>
-          <li><i class="fa fa-twitter"></i><a href="https://twitter.com/zechtz">twitter/zechtz</a></li>
-        </ul>
-      </div>
-      <a class="button round view-project" href="#">view my skills</a>
+<a class="link link-zack" href="#"><span class="animated fadeInLeft">Zachariah</span> <span class="animated slideInLeft">Ngonyani</span></a>
+<p class="baseline">A Rubyst <em>&amp;</em> Front-end Web Developer from Tanzania</p>
+<a class="button round" href="#about">About me <em>&amp;</em> contact</a>
+<div class="clearfix"></div>
+<div class="clearfix"></div>
+<div class="social">
+  <ul>
+    <li><i class="fa fa-inbox"></i><a href="#">zachariahn@gmail.com</a></li>
+    <li><i class="fa fa-github"></i><a href="https://github.com/zechtz/">github/zechtz</a></li>
+    <li><i class="fa fa-twitter"></i><a href="https://twitter.com/zechtz">twitter/zechtz</a></li>
+  </ul>
+</div>
+<a class="button round view-project" href="#">view my skills</a>
+
+
     </div>
   </div>
 </div>
-<!--about me-->
+
+  <!--about me -->
 <div class="about" id="about">
   <div class="clearfix"></div>
   <section class="features section-padding" id="features">
@@ -32,23 +86,13 @@ layout: default
         <div class="medium-7 medium-push-right-5">
           <div class="text">
             <div class="feature-list">
-              <h1>01/ About Me</h1>
-              <p>This is where i talk about me, but i am a bit keyword shy today to i'll just placehold this section with some jibber </p>
-              <p>I am a geek who spend my time traveling through East Africa. I splimt most of my time between Mombasa, Kenya and Arusha, Tanzania which is where I am basically based</p>
-              <p>I am a self taught computer programmer and an overall nice guy, but i am not a very 'politically correct' kind of guy,so i will always tell you as it is even if you won't like it</p>
-              <p>I love making web based software applications and I am the founder of WatabeLabs(link), a web dev shop in Arusha</p>
-            </div>
-            <div class="code-block">
-              <p class="title">ruby</p>
-              {% highlight ruby linenos %}
-              def name(name)
-              @widget = Widget.new
-              respond_to do |format|
-              format.html # show.html.erb
-              format.json { render json: @widget }
-              end
-              end
-              {% endhighlight %}
+              <h1 class="intro"> About Me</h1>
+              <p>I made all this nonsense because I am still trying to figure out what to say about me in my profile so don't read too much into this</p>
+              <p>I am a digital nomad from Arusha, Tanzania. I work as a freelance web developer specialzing in making beautiful and functional web based software applications. You can think of me as a hired gun developer</p>
+              <p>I am an overall nice guy, but I am not a very 'Politically Correct' kind of guy so if you need someone to give you a pat on the back, i am not your guy </p>
+              <p>I love making web based software solutions. I work at <a href="http://watabelabs.com">WatabeLabs</a>, check out the link for more about the company i work for </p>
+              <p>The picture you see on the right side? that's me when I am smiling, no kidding (you don't wanna come accross me when i am mad)</p>
+              <p>---end of story, keep coming back i might update this profile---</p>
             </div>
           </div>
         </div>
@@ -58,3 +102,235 @@ layout: default
   </section>
 </div>
 <!--about me ends-->
+<!--.blog starts-->
+<div id="blog" class="blog">
+  <div class="wrapper">
+    <div class="blog-top">
+      <h1 class="blog-title">Crazy Rants <span class="char">&</span> Mumblings</h1>
+      <h3 class="blog-leading">Programming. Design. Technology. Whatever.</h3>
+    </div>
+  <ul class="large-block-grid-3 medium-block-grid-3 small-block-grid1" data-equalizer>
+    
+    <li>
+    <div class="blog-content" data-equalizer-watch>
+      <header class="blog-header">
+        <div class="blog-info">
+          <a class="blog-author" href="#">
+            Zachariah Ngonyani
+          </a>
+          <time class="blog-time">
+              Mar 15, 2016
+          </time>
+        </div>
+        <h2 class="blog-title">
+          <a class="post-link" href="/blog/creating-amazing-sliding-tabs-with-android-material-design">Creating Amazing Sliding Tabs with Android Material Design</a>
+          </a>
+        </h2>
+      </header>
+      <div class="blog-summary">
+        <p>
+          Android Material Design enable developers to create amazing UI/UX. This helps developers dedicate
+        </p>
+      </div>
+    </div>
+    </li>
+    
+    <li>
+    <div class="blog-content" data-equalizer-watch>
+      <header class="blog-header">
+        <div class="blog-info">
+          <a class="blog-author" href="#">
+            Zachariah Ngonyani
+          </a>
+          <time class="blog-time">
+              Sep 17, 2015
+          </time>
+        </div>
+        <h2 class="blog-title">
+          <a class="post-link" href="/blog/pluck-multiple-columns-rails-3">How to Pluck Multiple Columns in Rails 3</a>
+          </a>
+        </h2>
+      </header>
+      <div class="blog-summary">
+        <p>
+          Open Active record relation class and adding a method to Pluck Multiple Columns
+        </p>
+      </div>
+    </div>
+    </li>
+    
+    <li>
+    <div class="blog-content" data-equalizer-watch>
+      <header class="blog-header">
+        <div class="blog-info">
+          <a class="blog-author" href="#">
+            Zachariah Ngonyani
+          </a>
+          <time class="blog-time">
+              Sep 12, 2015
+          </time>
+        </div>
+        <h2 class="blog-title">
+          <a class="post-link" href="/blog/an-idiots-guide-getting-vimmed">An Idiot's Guide to Getting Comfortable with Vim</a>
+          </a>
+        </h2>
+      </header>
+      <div class="blog-summary">
+        <p>
+          Learn how to code faster using Emmet and Sublime Text
+        </p>
+      </div>
+    </div>
+    </li>
+    
+    <li>
+    <div class="blog-content" data-equalizer-watch>
+      <header class="blog-header">
+        <div class="blog-info">
+          <a class="blog-author" href="#">
+            Zachariah Ngonyani
+          </a>
+          <time class="blog-time">
+              Oct 26, 2014
+          </time>
+        </div>
+        <h2 class="blog-title">
+          <a class="post-link" href="/blog/submiting-expression-engine-contact-form-with-ajax">Submit ExpressionEngine Contact Form With Ajax</a>
+          </a>
+        </h2>
+      </header>
+      <div class="blog-summary">
+        <p>
+          Control ExpressionEngine Default form submit behaviour and use Ajax to provide a better user experience
+        </p>
+      </div>
+    </div>
+    </li>
+    
+    <li>
+    <div class="blog-content" data-equalizer-watch>
+      <header class="blog-header">
+        <div class="blog-info">
+          <a class="blog-author" href="#">
+            Zachariah Ngonyani'
+          </a>
+          <time class="blog-time">
+              Aug 11, 2014
+          </time>
+        </div>
+        <h2 class="blog-title">
+          <a class="post-link" href="/blog/unorthodox-re-aligning-of-elements-using-media-queries-and-jquery-transport">Unorthodox Re-aligning of Elements Using Media Queries & jQuery Transport</a>
+          </a>
+        </h2>
+      </header>
+      <div class="blog-summary">
+        <p>
+          Using Media Queries and jQuery Transport plugin to teleport DOM elements to unusual places
+        </p>
+      </div>
+    </div>
+    </li>
+    
+    <li>
+    <div class="blog-content" data-equalizer-watch>
+      <header class="blog-header">
+        <div class="blog-info">
+          <a class="blog-author" href="#">
+            Zachariah Ngonyani
+          </a>
+          <time class="blog-time">
+              Mar 10, 2014
+          </time>
+        </div>
+        <h2 class="blog-title">
+          <a class="post-link" href="/blog/smart-and-faster-coding-with-sublime-text-and-emmet-aka-zen-coding">Smart and Faster Coding with Sublime Text and Emmet</a>
+          </a>
+        </h2>
+      </header>
+      <div class="blog-summary">
+        <p>
+          Learn how to code faster using Emmet and Sublime Text
+        </p>
+      </div>
+    </div>
+    </li>
+    
+    <li>
+    <div class="blog-content" data-equalizer-watch>
+      <header class="blog-header">
+        <div class="blog-info">
+          <a class="blog-author" href="#">
+            Zachariah Ngonyani
+          </a>
+          <time class="blog-time">
+              Aug 13, 2013
+          </time>
+        </div>
+        <h2 class="blog-title">
+          <a class="post-link" href="/blog/how-to-create-an-interactive-map-with-jquery">How to Create an Interactive Map with jQuery</a>
+          </a>
+        </h2>
+      </header>
+      <div class="blog-summary">
+        <p>
+          Laveraging the power of CSS positioning and jQuery to create a simple Interactive map
+        </p>
+      </div>
+    </div>
+    </li>
+    
+  </ul>
+  </div>
+</div>
+<!--.blog ends-->
+  <footer>
+  <div class="cta">
+    <div class="wrapper">
+      <a href="#" class="button call-to-action">
+        <img src="/images/logo.svg" alt="logo" />
+      </a>
+    <div class="clearfix"></div>
+    </div>
+  </div>
+  <div class="nav">
+    <div class="wrapper">
+      <div class="name">
+        <h1>zachariah ngonyani</h1>
+      </div>
+      <div class="navigation">
+        <ul>
+          <li><a href="#">home</a></li>
+          <li><a href="#">about</a></li>
+          <li><a href="#">projects</a></li>
+          <li><a href="#">blog</a></li>
+          <li><a href="#">contact</a></li>
+        </ul>
+      </div>
+      <div class="copyright"></div>
+    </div>
+  </div>
+</footer>
+
+  <script src="/js/vendor/jquery.js"> </script>
+<scrpit src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/vendor/fastclick.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/vendor/jquery.cookie.js"></script>
+<script src="/js/vendor/modernizr.js"> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation.min.js"></script>
+<script src="/js/app.js"> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.0/jquery.nicescroll.min.js"></script>
+<script src="/js/foundation.equalizer.js"> </script>
+<script>
+$(document).ready(
+  function() { 
+    $("html").niceScroll();
+  }
+);
+$(document).foundation({
+  equalizer : {
+    equalize_on_stack: true
+  }
+});
+</script>
+
+</body>
+</html>

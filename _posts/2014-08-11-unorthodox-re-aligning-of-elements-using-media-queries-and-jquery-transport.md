@@ -6,3 +6,8 @@ abstract: Using Media Queries and jQuery Transport plugin to teleport DOM elemen
 ---
 
 Using Media Queries and jQuery Transport plugin to teleport DOM elements to unusual places
+
+A while ago, i wrote an article on Skyline Design's blog on how to use the JQuery Transport 
+plugin to teleport DOM elements.
+
+See the Article here http://skylinedesign.co.ke/unorthodox-re-aligning-of-elements-using-media-queries-jquery-transport/

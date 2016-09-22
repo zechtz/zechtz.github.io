@@ -1,0 +1,12 @@
+---
+title: Personal Page for Zachariah Ngonyani
+email: zachariahn@gmail.com
+description: |
+  Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+baseurl: ''
+url: http://yourdomain.com
+twitter_username: zechtz
+github_username: zechtz
+markdown: kramdown
+permalink: "/blog/:title"
+timezone: 

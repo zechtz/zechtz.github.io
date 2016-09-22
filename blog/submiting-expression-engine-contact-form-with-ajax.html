@@ -79,30 +79,56 @@ First we need to capture the form’s submit event and prevent it from doing the
 <h2 id="the-codehtml">The code(HTML)</h2>
 <div class="code-block">
   
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="lineno"> 1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;contact_form&quot;</span><span class="nt">&gt;</span>
-<span class="lineno"> 2</span>     <span class="nt">&lt;h2&gt;</span>How can we help?<span class="nt">&lt;/h2&gt;</span>
-<span class="lineno"> 3</span>     <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;show-message&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
-<span class="lineno"> 4</span>     {exp:email:contact_form user_recipients=&quot;no&quot; recipients=&quot;youremail@website.com&quot; charset=&quot;utf-8&quot; form_class=&quot;custom&quot;}
-<span class="lineno"> 5</span>     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
-<span class="lineno"> 6</span>         <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;email_address&quot;</span><span class="nt">&gt;</span>Email Address<span class="nt">&lt;/label&gt;</span>
-<span class="lineno"> 7</span>         <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;email&quot;</span> <span class="na">id=</span><span class="s">&quot;email_address&quot;</span> <span class="na">name=</span><span class="s">&quot;from&quot;</span> <span class="na">required=</span><span class="s">&quot;required&quot;</span> <span class="nt">/&gt;</span>
-<span class="lineno"> 8</span>     <span class="nt">&lt;/div&gt;</span>
-<span class="lineno"> 9</span>     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
-<span class="lineno">10</span>         <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;full_name&quot;</span><span class="nt">&gt;</span>Full Name<span class="nt">&lt;/label&gt;</span>
-<span class="lineno">11</span>         <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">id=</span><span class="s">&quot;full_name&quot;</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span> <span class="na">required=</span><span class="s">&quot;required&quot;</span><span class="nt">&gt;</span>
-<span class="lineno">12</span>     <span class="nt">&lt;/div&gt;</span>
-<span class="lineno">13</span>     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
-<span class="lineno">14</span>         <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;message&quot;</span><span class="nt">&gt;</span>Your Message<span class="nt">&lt;/label&gt;</span>
-<span class="lineno">15</span>         <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">&quot;message&quot;</span> <span class="na">id=</span><span class="s">&quot;message&quot;</span> <span class="na">name=</span><span class="s">&quot;message&quot;</span> <span class="na">required=</span><span class="s">&quot;required&quot;</span><span class="nt">&gt;&lt;/textarea&gt;</span>
-<span class="lineno">16</span>     <span class="nt">&lt;/div&gt;</span>
-<span class="lineno">17</span> 
-<span class="lineno">18</span>     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
-<span class="lineno">19</span>         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;right&quot;</span><span class="nt">&gt;</span>
-<span class="lineno">20</span>             <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">&quot;submit&quot;</span> <span class="na">type=</span><span class="s">&#39;submit&#39;</span> <span class="na">value=</span><span class="s">&#39;Contact Us&#39;</span> <span class="na">class=</span><span class="s">&quot;button small&quot;</span> <span class="nt">/&gt;</span>
-<span class="lineno">21</span>         <span class="nt">&lt;/div&gt;</span>
-<span class="lineno">22</span>     <span class="nt">&lt;/div&gt;</span>
-<span class="lineno">23</span>     {/exp:email:contact_form}
-<span class="lineno">24</span> <span class="nt">&lt;/div&gt;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"contact_form"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h2&gt;</span>How can we help?<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"show-message"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    {exp:email:contact_form user_recipients="no" recipients="youremail@website.com" charset="utf-8" form_class="custom"}
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"email_address"</span><span class="nt">&gt;</span>Email Address<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">id=</span><span class="s">"email_address"</span> <span class="na">name=</span><span class="s">"from"</span> <span class="na">required=</span><span class="s">"required"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"full_name"</span><span class="nt">&gt;</span>Full Name<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"full_name"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">required=</span><span class="s">"required"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"message"</span><span class="nt">&gt;</span>Your Message<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"message"</span> <span class="na">id=</span><span class="s">"message"</span> <span class="na">name=</span><span class="s">"message"</span> <span class="na">required=</span><span class="s">"required"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"right"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"submit"</span> <span class="na">type=</span><span class="s">'submit'</span> <span class="na">value=</span><span class="s">'Contact Us'</span> <span class="na">class=</span><span class="s">"button small"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    {/exp:email:contact_form}
+<span class="nt">&lt;/div&gt;</span>
+  <span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 </div>
 

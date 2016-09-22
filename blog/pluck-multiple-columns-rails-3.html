@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>  How to Pluck Multiple Columns in Rails 3 |  Personal Page of Zachariah Ngonyani - Software Engineer </title>
+<link href='https://fonts.googleapis.com/css?family=Cabin:400,500,400italic,500italic,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400italic' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="fonts.css" media="all">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css" media="all">
+<script src="https://use.typekit.net/moj1mvi.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+<link rel="stylesheet" href="/css/fonts/stylesheet.css">
+<link rel="stylesheet" href="/css/normalize.css">
+<link rel="stylesheet" href="/css/foundation.css">
+<link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="http://yourdomain.com/blog/pluck-multiple-columns-rails-3">
+<meta name="copyright" content="Web Developer from Arusha, Tanzania<"/>
+<meta name="content-language" content="en, "/>
+<meta name="author" content="Zachariah Ngonyani"/>
+<meta name="title" content="Personal Profile page for Zachariah Ngonyani"/>
+<meta name="keywords" content="Software,Developer, Arusha, Tanzania, Web, Programming, Data, Visualization, Dashboard, Designer, Angularjs, Nodejs, Ruby on Rails"/>
+<meta name="description" content="i am a web developer and software engineer based in arusha, tanzania. i work at watabelabs, a web development shop which i co-founded<"/>
+</head>
+
+<body class="post" id="home">
+  <div class="header">
+  <div class="main-navigation">
+  <div class="logo-container">
+    <a href="/">
+      <div class="logo">
+        <img src="/images/logo-2.svg" alt="logo">
+      </div>
+    </a>
+  </div>
+  <div class="phone-container">
+    <i class="fa fa-phone"></i>
+  </div>
+  <div class="button-container" id="toggle">
+    <span class="top"></span>
+    <span class="middle"></span>
+    <span class="bottom"></span>
+  </div>
+  <div class="overlay" id="overlay">
+    <nav class="overlay-menu">
+      <ul>
+        <li ><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#">Projects</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="clearfix"></div>
+</div>
+
+  <div class="wrapper">
+    <div class="container">
+      <h1 class="post-header-title">
+How to Pluck Multiple Columns in Rails 3
+</h1>
+
+    </div>
+  </div>
+</div>
+
+  <!--post container starts-->
+  <div class="post-container">
+    <section class="dynamic">
+      <div class="container">
+        <div class="row">
+          <div class="large-8 medium-6 small-12 columns">
+            <p>Plucking multiple columns from a rails 3 app could be a pain in the ass. Fortunately rails 4 addressed this but still for those still running on the previous versions of rails this is still an issue.</p>
+
+<p>A few days ago, i was trying to see how many people have logged in into my application and wanted to display their sign_in_count next to their email addresses. Usually this is simple in rails 4 as you can just do</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre>    <span class="no">User</span><span class="p">.</span><span class="nf">where</span><span class="p">(</span><span class="s1">'sign_in_count &gt; 0'</span><span class="p">).</span><span class="nf">pluck</span><span class="p">(</span><span class="ss">:email</span><span class="p">,</span> <span class="ss">:sign_in_count</span><span class="p">)</span>
+  <span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>The app is runs on rails 3 and the pluck method in Rails 3 only allows plucking a single column, so we had to find a way to make our owm method to overcome this.</p>
+
+<p>Thanks to monkey-patching, we just had to re-open the <strong>Active Record</strong> <em>Module</em> and add the mothod, check the code below, put that code in the config/initializers directory, restart your application and you’re good to go</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre></td><td class="code"><pre>  <span class="k">module</span> <span class="nn">ActiveRecord</span>
+    <span class="k">class</span> <span class="nc">Relation</span>
+      <span class="k">def</span> <span class="nf">pluck_multiple</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+        <span class="n">args</span><span class="p">.</span><span class="nf">map!</span> <span class="k">do</span> <span class="o">|</span><span class="n">column_name</span><span class="o">|</span>
+          <span class="k">if</span> <span class="n">column_name</span><span class="p">.</span><span class="nf">is_a?</span><span class="p">(</span><span class="no">Symbol</span><span class="p">)</span> <span class="o">&amp;&amp;</span> 
+            <span class="n">column_names</span><span class="p">.</span><span class="nf">include?</span><span class="p">(</span><span class="n">column_name</span><span class="p">.</span><span class="nf">to_s</span><span class="p">)</span>
+            <span class="s2">"</span><span class="si">#{</span><span class="n">connection</span><span class="p">.</span><span class="nf">quote_table_name</span><span class="p">(</span><span class="n">table_name</span><span class="p">)</span><span class="si">}</span><span class="s2">.</span><span class="si">#{</span><span class="n">connection</span><span class="p">.</span><span class="nf">quote_column_name</span><span class="p">(</span><span class="n">column_name</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span>
+          <span class="k">else</span>
+            <span class="n">column_name</span><span class="p">.</span><span class="nf">to_s</span>
+          <span class="k">end</span>
+        <span class="k">end</span>
+        <span class="n">relation</span> <span class="o">=</span> <span class="nb">clone</span>
+        <span class="n">relation</span><span class="p">.</span><span class="nf">select_values</span> <span class="o">=</span> <span class="n">args</span>
+        <span class="n">klass</span><span class="p">.</span><span class="nf">connection</span><span class="p">.</span><span class="nf">select_all</span><span class="p">(</span><span class="n">relation</span><span class="p">.</span><span class="nf">arel</span><span class="p">).</span><span class="nf">map!</span> <span class="k">do</span> <span class="o">|</span><span class="n">attributes</span><span class="o">|</span>
+          <span class="n">initialized_attributes</span> <span class="o">=</span> <span class="n">klass</span><span class="p">.</span><span class="nf">initialize_attributes</span><span class="p">(</span><span class="n">attributes</span><span class="p">)</span>
+          <span class="n">attributes</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">key</span><span class="p">,</span> <span class="n">attribute</span><span class="o">|</span>
+            <span class="n">attributes</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">klass</span><span class="p">.</span><span class="nf">type_cast_attribute</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">initialized_attributes</span><span class="p">)</span>
+          <span class="k">end</span>
+        <span class="k">end</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+  <span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Now you can just do</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre>  <span class="no">User</span><span class="p">.</span><span class="nf">where</span><span class="p">(</span><span class="s1">'sign_in_count &gt; 0'</span><span class="p">).</span><span class="nf">pluck_multiple</span><span class="p">(</span><span class="ss">:email</span><span class="p">,</span> <span class="ss">:sign_in_count</span><span class="p">)</span>
+  <span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Remember, my <strong>User Model</strong> is a devise model</p>
+
+          </div>
+          <div class="author-image large-4 medium-6 small-12 columns">
+            <aside>
+              <span class="avatar">
+                <img src="/images/zech_profile.svg" width="90" height="90">
+                </span>
+                <h5>Zachariah Ngonyani <br><em>Executive Creative Director</em></h5>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!--post container section ends-->
+    <footer>
+  <div class="cta">
+    <div class="wrapper">
+      <a href="#" class="button call-to-action">
+        <img src="/images/logo.svg" alt="logo" />
+      </a>
+    <div class="clearfix"></div>
+    </div>
+  </div>
+  <div class="nav">
+    <div class="wrapper">
+      <div class="name">
+        <h1>zachariah ngonyani</h1>
+      </div>
+      <div class="navigation">
+        <ul>
+          <li><a href="#">home</a></li>
+          <li><a href="#">about</a></li>
+          <li><a href="#">projects</a></li>
+          <li><a href="#">blog</a></li>
+          <li><a href="#">contact</a></li>
+        </ul>
+      </div>
+      <div class="copyright"></div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/js/vendor/jquery.js"> </script>
+<scrpit src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/vendor/fastclick.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/vendor/jquery.cookie.js"></script>
+<script src="/js/vendor/modernizr.js"> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation.min.js"></script>
+<script src="/js/app.js"> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.0/jquery.nicescroll.min.js"></script>
+<script src="/js/foundation.equalizer.js"> </script>
+<script>
+$(document).ready(
+  function() { 
+    $("html").niceScroll();
+  }
+);
+$(document).foundation({
+  equalizer : {
+    equalize_on_stack: true
+  }
+});
+</script>
+
+  </body>
+</html>

@@ -74,63 +74,8 @@ Submit ExpressionEngine Contact Form With Ajax
             <p>If you ever used ExpressionEngine on your website,then at some point you must have been annoyed by its default contact form submission action, which redirects you to this ‘almost impossible to style message’ telling you that your message was successfully submitted before it takes you back to your specified redirect url. A friend of mine asked me to show him how we managed to escape that ‘ugliness’ on our website, so i thought it would be cool to share it here as well, Here’s how we managed to get it done.</p>
 
 <p>Basically all computer problems get solved when you note down what needs to be done, breaking down the big problem into smaller manageable parts is how most problems get solved in programming, here’s is our thought process on how we arrived to our solution.
-First we need to capture the form’s submit event and prevent it from doing the stuff that it does normaly, Then we use ajax to send the message. If there’s any error we display the error(s), If some required fields are not filled, we we display a message to the user, telling him/her that those fields need to be filled, otherwise just let the user know that his / her message was successfully sent and that’s it!</p>
-
-<h2 id="the-codehtml">The code(HTML)</h2>
-<div class="code-block">
-  
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"contact_form"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;h2&gt;</span>How can we help?<span class="nt">&lt;/h2&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"show-message"</span><span class="nt">&gt;&lt;/div&gt;</span>
-    {exp:email:contact_form user_recipients="no" recipients="youremail@website.com" charset="utf-8" form_class="custom"}
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"email_address"</span><span class="nt">&gt;</span>Email Address<span class="nt">&lt;/label&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">id=</span><span class="s">"email_address"</span> <span class="na">name=</span><span class="s">"from"</span> <span class="na">required=</span><span class="s">"required"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"full_name"</span><span class="nt">&gt;</span>Full Name<span class="nt">&lt;/label&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"full_name"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">required=</span><span class="s">"required"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"message"</span><span class="nt">&gt;</span>Your Message<span class="nt">&lt;/label&gt;</span>
-        <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"message"</span> <span class="na">id=</span><span class="s">"message"</span> <span class="na">name=</span><span class="s">"message"</span> <span class="na">required=</span><span class="s">"required"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"right"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"submit"</span> <span class="na">type=</span><span class="s">'submit'</span> <span class="na">value=</span><span class="s">'Contact Us'</span> <span class="na">class=</span><span class="s">"button small"</span> <span class="nt">/&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    {/exp:email:contact_form}
-<span class="nt">&lt;/div&gt;</span>
-  <span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
-
-</div>
+First we need to capture the form’s submit event and prevent it from doing the stuff that it does normaly, Then we use ajax to send the message. If there’s any error we display the error(s), If some required fields are not filled, we we display a message to the user, telling him/her that those fields need to be filled, otherwise just let the user know that his / her message was successfully sent and that’s it!
+Read the rest of the blog <a href="http://watabelabs.com/blog/view/submitting-expressionengines-contact-form-with-ajax">here</a></p>
 
           </div>
           <div class="author-image large-4 medium-6 small-12 columns">

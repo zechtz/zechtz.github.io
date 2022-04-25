@@ -1,6 +1,6 @@
 ---
 title: How to Create an Interactive Map with jQuery
-date: '2013-08-13 00:00:00'
+date: '2014-08-13 00:00:00'
 layout: posts
 author: Zachariah Ngonyani
 abstract: Laveraging the power of CSS positioning and jQuery to create a simple Interactive
